@@ -1,0 +1,61 @@
+header#banner { text-align: center }
+header#banner { background-color: @darkblue2 }
+
+div#noscript {
+  padding: 5px;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+#content { margin: 1em 1em 1em 1em }
+
+div.spotmap { padding: 1em; display: inline-block }
+img.spotmap { border: 12px solid @offblue }
+img.spotmap { border-radius: 6px }
+div.spotmap { margin: 0 auto }
+img.spotmap { margin-right: 2em }
+img.spotmap { cursor: pointer }
+img.spotmap { box-shadow: 0px 0px 20px 20px @offwhite3 }
+img.spotmap:hover { box-shadow: 0px 0px 20px 20px @offwhite3hover }
+
+div.wrap { width: 80%; margin: 0 auto }
+div.group { margin: 0 auto; text-align: center }
+div.spotmap .label { color: @offwhite2 }
+div.spotmap .value { margin-bottom: 1em}
+.filmtitle { color: @white; font-size: 1.6em }
+
+.super { font-size: 0.5em; vertical-align: super }
+
+hr { margin: 0.4em ; color: @darkblue3 }
+.wrap { padding: 1em }
+.wrap { background-color: @darkblue1}
+.wrap p { margin-bottom: 1em ; font-size: 0.9em }
+.wrap p a { color: @offyellow }
+.wrap p a:hover { color: @offblue }
+
+.label,
+.value {text-align: left; font-size: 0.7em}
+
+img.spotmap,
+div.notes { float: left  }
+div.notes { width: 200px  }
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0
+}
+
+.clearfix:after {
+  clear: both;
+  content: '-';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0
+}

@@ -1,0 +1,53 @@
+/* ===== == = === 20em (320px) === = == ===== */
+// Smartphone portrait
+@media only screen and (min-width : 20em) {
+  body { font-size: 100% }
+  img { width: 150px }
+  div.spotmap .notes { font-size: 0.7em}
+  .filmtitle { color: @white; font-size: 1.2em }
+}
+
+/* ===== == = === 30em (480px) === = == ===== */
+// Smartphone landscape
+@media only screen and (min-width : 30em) {
+  body { font-size: 120% }
+  header#banner h1 { margin-right: 1em }
+  header#banner  {
+    -moz-box-shadow: 0 0 130px 130px rgba(255,255,255,0.07);
+    -webkit-box-shadow: 0 0 130px 130px rgba(255,255,255,0.07);
+    box-shadow: 0 0 130px 130px rgba(255,255,255,0.07);
+  }
+  header#banner h1,
+  header#banner nav { display: inline-block }
+  img { width: 200px }
+}
+
+/* ===== == = === 37.5em (600px) === = == ===== */
+@media only screen and (min-width: 37.5em) {}
+
+/* ===== == = === 48em (768px) === = == ===== */
+// Ipad portrait
+@media only screen and (min-width : 48em) {
+  body { font-size: 140% }
+  img { width: 300px }
+  div.spotmap .notes { font-size: 1em }
+}
+
+/* ===== == = === 56.25em (900px) === = == ===== */
+// Ipad landscape
+@media only screen and (min-width : 56.25em) {
+    body { font-size: 180% }
+}
+
+/* ===== == = === 68.75em (1100px) === = == ===== */
+@media only screen and (min-width : 68.75em) {
+}
+
+/* ===== == = === 81.25em (1300px) === = == ===== */
+@media only screen and (min-width : 81.25em) {
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {}
