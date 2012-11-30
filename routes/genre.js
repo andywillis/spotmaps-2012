@@ -1,7 +1,7 @@
 /**
- * Home page
+ * Genre page
  */
 
 module.exports = function(req, res){
-  res.render('about');
+  res.render('genre');
 };

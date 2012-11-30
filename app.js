@@ -3,11 +3,9 @@
  */
 
 var express = require('express')
-  , routes = require('./routes')
-  , spotmaps = require('./routes/spotmaps')
-  , about = require('./routes/about')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , staticAsset = require('static-asset')
 
 /**
  * Initialise express
@@ -28,6 +26,7 @@ app.configure(function(){
   app.use(express.session());
   app.use(app.router);
   app.use(require('less-middleware')({ src: __dirname + '/public' }));
+  app.use(staticAsset(__dirname + 'public') );
   app.use(express.static(path.join(__dirname, 'public')));
 });
 
@@ -39,9 +38,11 @@ app.configure('development', function(){
  * Descrive the site routes
  */
 
-app.get(/^(\/|\/home)$/, routes.index);
-app.get('/latest', spotmaps.latest);
-app.get('/about', about.view);
+app.get(/^(\/|\/home)$/, require('./routes/index'));
+//app.get('/latest', routes.spotmaps.latest);
+app.get('/genre/*', require('./routes/genre'));
+app.get('/about', require('./routes/about'));
+app.get('/get/*', require('./routes/get'));
 
 /**
  * Run the server

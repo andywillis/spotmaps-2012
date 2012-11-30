@@ -15,15 +15,12 @@
   core.toType = function(x) { return ({}).toString.call(x).match(/\s([a-zA-Z]+)/)[1].toLowerCase() }
 
   // Entended element creation function that returns either a docfrag
-  // or a DOM element with classes and ids set.
+  // or a DOM element with classes and ids set where appropriate.
   core.create = function () { 
     var args = arguments[0], el, del = ['type','el']
-    if (args.type === 'el') {
-      el = document.createElement(args.el)
-      for (var p in args) { if (!~del.indexOf(p)) { el.setAttribute(p, args[p]) } }
-    } else {
-      el = document.createDocumentFragment()
-    }
+    if (args.type === 'frag') return document.createDocumentFragment()
+    el = document.createElement(args.el)
+    for (var p in args) { if (!~del.indexOf(p)) { el.setAttribute(p, args[p]) } }
     return el
   }
   

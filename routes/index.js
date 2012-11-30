@@ -2,6 +2,6 @@
  * Home page
  */
 
-exports.index = function(req, res){
+module.exports = function(req, res){
   res.render('index');
 };

@@ -2,11 +2,14 @@ $(document).ready(function () {
 
   (function() {
 
+    // Set variables
+    var pathname = window.location.pathname
+
     function processData(spotmapList) {
 
       // Create the containing element and docfrag
 
-      var group = core.create({ type: 'el', el: 'div', class: 'group' })
+      var group = core.create({ el: 'div', class: 'group' })
         , frag = core.create({ type: 'frag' })
 
       // For each film in the returned film list
@@ -14,10 +17,10 @@ $(document).ready(function () {
       // append them to the group div.
 
       spotmapList.forEach(function(map) {
-        var frame = core.create({ type: 'el', el: 'div', id: map.id, class: 'spotmap clearfix' })
-          , notes = core.create({ type: 'el', el: 'div', class: 'notes' })
+        var frame = core.create({ el: 'div', id: map.id, class: 'spotmap clearfix' })
+          , notes = core.create({ el: 'div', class: 'notes' })
           , br = core.create({type: 'el', el: 'br'})
-          , img = core.create({ type: 'el', el: 'img', class: 'spotmap box-shadow' })
+          , img = core.create({ el: 'img', class: 'spotmap box-shadow' })
           , directorLabel = core.toType(map.director) == 'array' ? 'Directors' : 'Director'
           , writerLabel = core.toType(map.writer) === 'array' ? 'Writers' : 'Writer'
           , writer = core.toType(map.writer) === 'array' ? map.writer.join('<br/>') : map.writer
@@ -35,7 +38,7 @@ $(document).ready(function () {
         html += '<p class="label">Spots</p>'
         html += '<p class="value">' + map.numberOfSpots + ' ('+ minutes +' mins)</p>'
         notes.innerHTML = html
-        img.src = '/images/spotmaps/' + map.filename
+        img.src = '/images/spotmaps/' + map.filename + '.png'
         
         // Append the image, notes to the spotmap div,
         // append the spotmap div to the docfrag,
@@ -53,24 +56,44 @@ $(document).ready(function () {
       return group
     }
 
-    // Set variables
-    var pathname = window.location.pathname
-
-    if (!!~['/', '/home'].indexOf(pathname)) {
+    function getData(obj) {
       $.ajax({
         type: 'GET',
-        url: '/latest',
+        url: '/get/?' + 'genre=' + obj.genre,
         success: function(data) {
-          var content = core.get('content'), group = processData(JSON.parse(data))
-          content.appendChild(group)
+          if (data) {
+            var $content = $('#content'), group = processData(JSON.parse(data))
+            $content.empty()
+            $content.append(group)            
+          } else {
+            console.log('No data.');
+          }
         },
         error: function(err) {
           console.log(err);
         }
       })
-
     }
 
+    // Get data based on path
+    if (!!~['/', '/home'].indexOf(pathname)) getData({genre: 'all'})
+    if (/^\/genre/.test(pathname)) {
+      genre = pathname.replace('/genre/','')
+      getData({genre: genre})
+    }
+
+/*    genre.addEventListener('click', function(event) {
+      event.preventDefault();
+      var c = slice.call(core.get('genre').childNodes)
+      console.log(c);
+      c.forEach(function(node){
+        node.style.display = 'none'
+        node.style.display = 'block'
+      })
+      var url = event.target.attributes[0].value;
+      getData(url)
+    })
+*/
   }())
 
 })
