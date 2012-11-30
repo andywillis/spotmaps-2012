@@ -4,6 +4,9 @@ $(document).ready(function () {
 
     // Set variables
     var pathname = window.location.pathname
+      , $content = $('#content')
+      , $genre = $('#genre')
+      , $genreList = $('nav ul ul')
 
     function processData(spotmapList) {
 
@@ -62,7 +65,7 @@ $(document).ready(function () {
         url: '/get/?' + 'genre=' + obj.genre,
         success: function(data) {
           if (data) {
-            var $content = $('#content'), group = processData(JSON.parse(data))
+            var group = processData(JSON.parse(data))
             $content.empty()
             $content.append(group)            
           } else {
@@ -75,25 +78,20 @@ $(document).ready(function () {
       })
     }
 
-    // Get data based on path
+    // Hide the menu on item.onClick - This doesn't happen automatically - it's
+    // a CSS-only menu.
+
+    $genre.live('click', function (e) { $genreList.css({'display': 'none'}) })
+
+    // Send instructions to getData to load the correct spotmaps
+    // based on the URL.
+
     if (!!~['/', '/home'].indexOf(pathname)) getData({genre: 'all'})
     if (/^\/genre/.test(pathname)) {
       genre = pathname.replace('/genre/','')
       getData({genre: genre})
     }
 
-/*    genre.addEventListener('click', function(event) {
-      event.preventDefault();
-      var c = slice.call(core.get('genre').childNodes)
-      console.log(c);
-      c.forEach(function(node){
-        node.style.display = 'none'
-        node.style.display = 'block'
-      })
-      var url = event.target.attributes[0].value;
-      getData(url)
-    })
-*/
   }())
 
 })
