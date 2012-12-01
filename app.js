@@ -7,13 +7,14 @@ var express = require('express')
   , http = require('http')
   , path = require('path')
   , staticAsset = require('static-asset')
+  , controller = require('./routes/controller')
 
 /**
  * Initialise express
  */
 
 core.clear()
-app = express();
+var app = express();
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -43,8 +44,8 @@ app.configure('development', function(){
 var config = require('./config')
 var dbox  = require("dbox")
 var dbApp   = dbox.app({ "app_key": config.key, "app_secret": config.secret })
-app.dbox = dbApp.client(config.access_token)
-app.dbox.account(function(status, reply){
+dbox = dbApp.client(config.access_token)
+dbox.account(function(status, reply){
   if (reply.uid === 80737100) console.log('Dropbox account found');
   else console.log('Error locating Dropbox account.');
 })
@@ -53,12 +54,12 @@ app.dbox.account(function(status, reply){
  * Descrive the site routes
  */
 
-app.get(/^(\/|\/home)$/, require('./routes/index'));
+//app.get(/^(\/|\/home)$/, require('./routes/index'));
 //app.get('/latest', routes.spotmaps.latest);
 app.get('/genre/*', require('./routes/genre'));
 app.get('/about', require('./routes/about'));
 app.get('/get/*', require('./routes/get'));
-app.get('/static/*', require('./routes/static'))
+app.get('/static/*', require('./routes/static')(dbox))
 
 /**
  * Run the server
