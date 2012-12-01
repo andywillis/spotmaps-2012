@@ -7,7 +7,6 @@ var express = require('express')
   , http = require('http')
   , path = require('path')
   , staticAsset = require('static-asset')
-  , controller = require('./routes/controller')
 
 /**
  * Initialise express
@@ -54,7 +53,7 @@ dbox.account(function(status, reply){
  * Descrive the site routes
  */
 
-//app.get(/^(\/|\/home)$/, require('./routes/index'));
+app.get(/^(\/|\/home)$/, require('./routes/index'));
 //app.get('/latest', routes.spotmaps.latest);
 app.get('/genre/*', require('./routes/genre'));
 app.get('/about', require('./routes/about'));

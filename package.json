@@ -1,24 +1,23 @@
 {
   "name": "spotmaps",
   "preferGlobal": "false",
-  "version": "0.0.1-17",
+  "version": "0.0.1-36",
   "scripts": {
     "start": "app.js"
   },
-  "subdomain": "spotmaps",
+  "subdomain": "uws.spotmaps",
   "dependencies": {
-    "express": "*",
-    "jade": "*",
-    "less-middleware": "0.1.8",
+    "express": "3.x",
+    "jade": "0.27.7",
     "static-asset": "0.5.0",
-    "dbox": "0.5.x"
+    "dbox": "0.5.5"
   },
   "author": {
     "name": "Andy Willis",
     "email": "awillis@lavabit.com"
   },
   "engines": {
-    "node": ">= 0.5.0"
+    "node": ">= 0.6.0"
   },
   "description": "Film colour blueprints.",
   "keywords": [

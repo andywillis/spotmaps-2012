@@ -55,6 +55,7 @@
     }
   }
 
+
   // Attach the core to window
   if (!window.core) window.core = core;
 
