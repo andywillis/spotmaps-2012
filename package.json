@@ -10,7 +10,8 @@
     "express": "3.x",
     "jade": "0.27.7",
     "static-asset": "0.5.0",
-    "dbox": "0.5.5"
+    "dbox": "0.5.5",
+    "core": "0.0.1"
   },
   "author": {
     "name": "Andy Willis",
