@@ -3,6 +3,7 @@
  */
 
 var express = require('express')
+  , core = require('core')
   , http = require('http')
   , path = require('path')
   , staticAsset = require('static-asset')
@@ -11,15 +12,16 @@ var express = require('express')
  * Initialise express
  */
 
-var app = express();
+core.clear()
+app = express();
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view options', { layout: false });
   app.set('view engine', 'jade');
-  app.use(express.favicon());
-  app.use(express.logger('dev'));
+  app.use(express.favicon('public/favicon.ico'));
+//  app.use(express.logger('dev'));
 //  app.use(express.bodyParser());
 //  app.use(express.methodOverride());
 //  app.use(express.cookieParser('your secret here'));
@@ -35,6 +37,19 @@ app.configure('development', function(){
 });
 
 /**
+  * Add dropbox access
+  */
+
+var config = require('./config')
+var dbox  = require("dbox")
+var dbApp   = dbox.app({ "app_key": config.key, "app_secret": config.secret })
+app.dbox = dbApp.client(config.access_token)
+app.dbox.account(function(status, reply){
+  if (reply.uid === 80737100) console.log('Dropbox account found');
+  else console.log('Error locating Dropbox account.');
+})
+
+/**
  * Descrive the site routes
  */
 
@@ -43,6 +58,7 @@ app.get(/^(\/|\/home)$/, require('./routes/index'));
 app.get('/genre/*', require('./routes/genre'));
 app.get('/about', require('./routes/about'));
 app.get('/get/*', require('./routes/get'));
+app.get('/static/*', require('./routes/static'))
 
 /**
  * Run the server

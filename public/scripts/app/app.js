@@ -41,7 +41,7 @@ $(document).ready(function () {
         html += '<p class="label">Spots</p>'
         html += '<p class="value">' + map.numberOfSpots + ' ('+ minutes +' mins)</p>'
         notes.innerHTML = html
-        img.src = '/images/spotmaps/' + map.filename + '.png'
+        img.src = '/static/images/' + map.filename + '.png'
         
         // Append the image, notes to the spotmap div,
         // append the spotmap div to the docfrag,

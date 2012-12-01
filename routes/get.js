@@ -1,6 +1,4 @@
 var core = require('core')
-  , querystring = require('querystring')
-  , url = require('url')
 
 var limit = 5
 
@@ -78,20 +76,6 @@ var arr = [
   }
 ]
 
-//var data = core.jsonPath(arr, '$..[?(@.genre==="Science Fiction and Fantasy")]')
-
-function getUrlObj(req) {
-  var obj = {}, q
-  obj.path = url.parse(req.url).pathname
-  obj.query = {}
-  q = url.parse(req.url).query.split('&')
-  for(var i = 0, len = q.length; i < len; i++) {
-    var arr = q[i].split('=')
-    obj.query[arr[0]] = core.decode(arr[1][0].toUpperCase() + arr[1].slice(1))
-  }
-  return obj
-}
-
 function extractData(obj, callback) {
   if (obj.genre === 'All') {
     callback(arr.slice(0, limit))
@@ -109,19 +93,8 @@ function extractData(obj, callback) {
   }
 }
 
-/*
-exports.latest = function(req, res) {
-  getUrlObj(req)
-  extractData({
-    genre: 'all'
-  }, function(data) {
-    res.send(JSON.stringify(data))
-  })
-}
-*/
-
 module.exports = function(req, res) {
-  var url = getUrlObj(req)
+  var url = core.getUrlObj(req)
   genre = url.query.genre
   extractData({
     genre: genre
