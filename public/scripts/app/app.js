@@ -3,22 +3,29 @@ $(document).ready(function () {
   (function() {
 
     // Set variables
-    var pathname = window.location.pathname
-      , $content = $('#content')
+
+    var $content = $('#content')
       , $genre = $('#genre')
       , $genreList = $('nav ul ul')
-      , imageCache = {}
+      , pathname = window.location.pathname
+      , root = '/' + pathname.split('/')[1]
+      , route = root.match(/^\/(home|genre)*$/g)[0] || '/'
+      , genre = route === '/' ? 'all' : pathname.replace('/genre/','')
+
+    /*
+     * For each film in the film list create a spotmap div, image and notes
+     * and append them to the group div. The function makes use of the 'create'
+     * and 'get' functions from the core module which allows elements and their
+     * ids and attributes to be created in one statement.
+     * 
+     * Native Javascript DOM coding is used instead of jQuery because it's 
+     * slightly more efficient.
+     */
 
     function processData(spotmapList) {
 
-      // Create the containing element and docfrag
-
       var group = core.create({ el: 'div', class: 'group' })
         , frag = core.create({ type: 'frag' })
-
-      // For each film in the returned film list
-      // create a spotmap div, image and notes and
-      // append them to the group div.
 
       spotmapList.forEach(function(map) {
         var frame = core.create({ el: 'div', id: map.id, class: 'spotmap clearfix' })
@@ -27,27 +34,27 @@ $(document).ready(function () {
           , img = core.create({ el: 'img', class: 'spotmap box-shadow' })
           , directorLabel = core.toType(map.director) == 'array' ? 'Directors' : 'Director'
           , writerLabel = core.toType(map.writer) === 'array' ? 'Writers' : 'Writer'
+          , director = core.toType(map.director) === 'array' ? map.director.join('<br/>') : map.director
           , writer = core.toType(map.writer) === 'array' ? map.writer.join('<br/>') : map.writer
           , html = ''
           , minutes = map.numberOfSpots/60
           , url = '/static/images/' + map.filename + '.png'
 
-        // At some point I'll move this to an underscore template
-        // Doesn't seem much point at the moment.
+        /*
+         * At some point I'll move this to an underscore template
+         * Doesn't seem much point at the moment.
+         */
 
         html += '<p class="value filmtitle">' + map.title + '</p>'
         html += '<p class="label">' + directorLabel + '</p>'
-        html += '<p class="value">' + map.director + '</p>'
+        html += '<p class="value">' + director + '</p>'
         html += '<p class="label">' + writerLabel + '</p>'
+        html += '<p class="value">' + writer + '</p>'
         html += '<p class="label">Spots</p>'
         html += '<p class="value">' + map.numberOfSpots + ' ('+ minutes +' mins)</p>'
         notes.innerHTML = html
         img.src = url
         
-        // Append the image, notes to the spotmap div,
-        // append the spotmap div to the docfrag,
-        // and append the whole lot to the group div
-
         frame.appendChild(img)
         frame.appendChild(notes)
         frag.appendChild(frame)
@@ -55,14 +62,18 @@ $(document).ready(function () {
         group.appendChild(frag)
       })
   
-      // Return the group of spotmaps
-
       return group
     }
 
-    function getData(obj) {
+    /*
+     * Immediately invoked function to pull the JSON film data
+     * from the server and run it through the processData function
+     * as soon as the page loads.
+     */
 
-      var url = '/get/?' + 'genre=' + obj.genre
+    (function getData(genre) {
+
+      var url = '/get/?' + 'genre=' + genre
 
       $.ajax({
         type: 'GET',
@@ -80,21 +91,14 @@ $(document).ready(function () {
           console.log(err);
         }
       })
-    }
+    }(genre))
 
-    // Hide the menu on item.onClick - This doesn't happen automatically - it's
-    // a CSS-only menu.
+    /*
+     * Hide the menu on item.onClick.
+     * This doesn't happen automatically as it's a CSS-only menu.
+     */
 
     $genre.live('click', function (e) { $genreList.css({'display': 'none'}) })
-
-    // Send instructions to getData to load the correct spotmaps
-    // based on the URL.
-
-    if (!!~['/', '/home'].indexOf(pathname)) getData({genre: 'all'})
-    if (/^\/genre/.test(pathname)) {
-      genre = pathname.replace('/genre/','')
-      getData({genre: genre})
-    }
 
   }())
 
