@@ -1,4 +1,4 @@
-var core = require('core')
+var core = require('../node_modules/core/core')
 
 var genres = [
   'Action and Adventure',

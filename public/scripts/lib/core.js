@@ -2,6 +2,19 @@
 
   var core = {}
 
+  // Checks to see if the URL exists in cache
+  core.UrlExists = function(url, callback)
+  {
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url);
+    http.onreadystatechange = function() {
+      if (this.readyState == this.DONE) {
+        callback(this.status);
+      }
+    };
+    http.send();
+  }
+
   // Returns a sorted list of available HTML5 and CSS3 features via Modernizr
   core.showModernizr = function() {
     var list = []

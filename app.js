@@ -3,7 +3,7 @@
  */
 
 var express = require('express')
-  , core = require('core')
+  , core = require('./tools/core/core')
   , http = require('http')
   , path = require('path')
   , staticAsset = require('static-asset')
@@ -43,11 +43,19 @@ app.configure('development', function(){
 var config = require('./config')
 var dbox  = require("dbox")
 var dbApp   = dbox.app({ "app_key": config.key, "app_secret": config.secret })
-dbox = dbApp.client(config.access_token)
-dbox.account(function(status, reply){
+app.dbox = dbApp.client(config.access_token)
+app.dbox.account(function(status, reply){
   if (reply.uid === 80737100) console.log('Dropbox account found');
   else console.log('Error locating Dropbox account.');
 })
+
+var staticObj = {
+  spotmaps: {},
+  maps: {},
+  rgb: {}
+}
+
+app.static = staticObj;
 
 /**
  * Descrive the site routes
@@ -58,7 +66,7 @@ app.get(/^(\/|\/home)$/, require('./routes/index'));
 app.get('/genre/*', require('./routes/genre'));
 app.get('/about', require('./routes/about'));
 app.get('/get/*', require('./routes/get'));
-app.get('/static/*', require('./routes/static')(dbox))
+app.get('/static/*', require('./routes/static')(app))
 
 /**
  * Run the server

@@ -7,6 +7,7 @@ $(document).ready(function () {
       , $content = $('#content')
       , $genre = $('#genre')
       , $genreList = $('nav ul ul')
+      , imageCache = {}
 
     function processData(spotmapList) {
 
@@ -29,6 +30,7 @@ $(document).ready(function () {
           , writer = core.toType(map.writer) === 'array' ? map.writer.join('<br/>') : map.writer
           , html = ''
           , minutes = map.numberOfSpots/60
+          , url = '/static/images/' + map.filename + '.png'
 
         // At some point I'll move this to an underscore template
         // Doesn't seem much point at the moment.
@@ -37,11 +39,10 @@ $(document).ready(function () {
         html += '<p class="label">' + directorLabel + '</p>'
         html += '<p class="value">' + map.director + '</p>'
         html += '<p class="label">' + writerLabel + '</p>'
-        html += '<p class="value">' + writer + '</p>'
         html += '<p class="label">Spots</p>'
         html += '<p class="value">' + map.numberOfSpots + ' ('+ minutes +' mins)</p>'
         notes.innerHTML = html
-        img.src = '/static/images/' + map.filename + '.png'
+        img.src = url
         
         // Append the image, notes to the spotmap div,
         // append the spotmap div to the docfrag,
@@ -60,9 +61,12 @@ $(document).ready(function () {
     }
 
     function getData(obj) {
+
+      var url = '/get/?' + 'genre=' + obj.genre
+
       $.ajax({
         type: 'GET',
-        url: '/get/?' + 'genre=' + obj.genre,
+        url: url,
         success: function(data) {
           if (data) {
             var group = processData(JSON.parse(data))

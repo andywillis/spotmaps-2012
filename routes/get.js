@@ -1,6 +1,5 @@
-var core = require('core')
-
-var limit = 5
+var core = require('../tools/core/core')
+  , limit = 5
 
 /**
  * This module listens to incoming spotmap requests
