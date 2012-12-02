@@ -31,6 +31,7 @@
   // or a DOM element with classes and ids set where appropriate.
   core.create = function () { 
     var args = arguments[0], el, del = ['type','el']
+    if (args.type === 'text') return document.createTextNode(args.text)
     if (args.type === 'frag') return document.createDocumentFragment()
     el = document.createElement(args.el)
     for (var p in args) { if (!~del.indexOf(p)) { el.setAttribute(p, args[p]) } }

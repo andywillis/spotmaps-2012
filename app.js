@@ -20,6 +20,7 @@ app.configure(function(){
   app.set('view options', { layout: false });
   app.set('view engine', 'jade');
   app.use(express.favicon('public/favicon.ico'));
+  app.use(require('less-middleware')({ src: __dirname + '/public/stylesheets/less' }));
   app.use(app.router);
   app.use(staticAsset(__dirname + 'public') );
   app.use(express.static(path.join(__dirname, 'public')));
@@ -54,13 +55,18 @@ app.static = staticObj = {
   rgb: {}
 }
 
-// Describe the site routes
+/*
+ * Describe the site routes.
+ * The last 'route' is middleware to catch 404s.
+ */
 
 app.get(/^(\/|\/home)$/, require('./routes/index'));
 app.get('/genre/*', require('./routes/genre'));
+app.get('/search', require('./routes/search'))
 app.get('/about', require('./routes/about'));
 app.get('/get/*', require('./routes/get'));
 app.get('/static/*', require('./routes/static')(app))
+app.use(function(req, res) { res.render('404') });
 
 // Run the server
 

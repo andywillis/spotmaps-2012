@@ -31,7 +31,7 @@ function serveData(app) {
 
       res.setHeader('Last-Modified', modified);
 
-      if (req.headers['if-none-match'] === etag) {
+      if (req.headers['if-none-match'] == etag) {
         res.statusCode = 304
         res.end()
       } else {

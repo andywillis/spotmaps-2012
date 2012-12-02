@@ -1,5 +1,5 @@
 module.exports = [
-  'Action and Adventure',
+  'Action and adventure',
   'Animation',
   'Comedy',
   'Crime',
@@ -7,8 +7,8 @@ module.exports = [
   'Drama',
   'Family',
   'Horror',
-  'Period and Historical',
-  'Science Fiction and Fantasy',
+  'Period and historical',
+  'Science fiction and fantasy',
   'Thriller',
   'Western'
 ]

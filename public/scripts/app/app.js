@@ -5,12 +5,19 @@ $(document).ready(function () {
     // Set variables
 
     var $content = $('#content')
-      , $genre = $('#genre')
+      , $genre = $('#genre .menuItem')
       , $genreList = $('nav ul ul')
       , pathname = window.location.pathname
       , root = '/' + pathname.split('/')[1]
       , route = root.match(/^\/(home|genre)*$/g)[0] || '/'
       , genre = route === '/' ? 'all' : pathname.replace('/genre/','')
+
+    /*
+     * Hide the menu on item.onClick.
+     * This doesn't happen automatically as it's a CSS-only menu.
+     */
+
+    $genre.live('click', function (e) { $genreList.css({'display': 'none'}) })
 
     /*
      * For each film in the film list create a spotmap div, image and notes
@@ -91,14 +98,8 @@ $(document).ready(function () {
           console.log(err);
         }
       })
+      
     }(genre))
-
-    /*
-     * Hide the menu on item.onClick.
-     * This doesn't happen automatically as it's a CSS-only menu.
-     */
-
-    $genre.live('click', function (e) { $genreList.css({'display': 'none'}) })
 
   }())
 
