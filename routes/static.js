@@ -46,7 +46,7 @@ function serveData(app) {
     if (foundStaticFile) {
       serve(foundStaticFile)
     } else {
-      app.dbox.get(pathname, function(status, data, metadata) {
+      app.dbox.get(core.decode(pathname), function(status, data, metadata) {
         var entry = app.static.spotmaps[pathname] = {}
         entry.data = data
         entry.metadata = metadata

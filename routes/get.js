@@ -23,7 +23,8 @@ function extractData(obj, callback) {
     var data = core.jsonPath(films, '$..[?(@.genre==="' + obj.genre + '")]')
     if (data) {
       if (data.length > limit) {
-        callback(data.slice(0, limit))
+        callback(data)
+        //callback(data.slice(0, limit))
       } else {
         callback(data)
       }

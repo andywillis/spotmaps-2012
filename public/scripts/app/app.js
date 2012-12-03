@@ -45,7 +45,9 @@ $(document).ready(function () {
           , writer = core.toType(map.writer) === 'array' ? map.writer.join('<br/>') : map.writer
           , html = ''
           , minutes = map.numberOfSpots/60
-          , url = '/static/images/' + map.filename + '.png'
+          , url = '/static/images/' + map.filename
+
+          console.log(url);
 
         /*
          * At some point I'll move this to an underscore template
@@ -53,6 +55,8 @@ $(document).ready(function () {
          */
 
         html += '<p class="value filmtitle">' + map.title + '</p>'
+        html += '<p class="label">Year</p>'
+        html += '<p class="value">' + map.year + '</p>'
         html += '<p class="label">' + directorLabel + '</p>'
         html += '<p class="value">' + director + '</p>'
         html += '<p class="label">' + writerLabel + '</p>'
