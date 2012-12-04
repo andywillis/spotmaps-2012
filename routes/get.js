@@ -28,12 +28,12 @@ function extractData(obj, callback) {
   } else {
     // Check for numeric or string
     if (key === 'year') {
-      data = core.jsonPath(films, '$..films[?(@.' + key + '===' + val + ')]')
+      data = core.jsonPath(library, '$..films[?(@.' + key + '===' + val + ')]')
     } else {
       if (key === 'director' || key === 'writer') {
-        data = jsonPath(films, '$..films[?(@.' + key + '.indexOf("'+ val +'") > -1)]')
+        data = core.jsonPath(library, '$..films[?(@.' + key + '.indexOf("'+ val +'") > -1)]')
       } else {
-        data = core.jsonPath(films, '$..films[?(@.' + key + '==="' + val + '")]')
+        data = core.jsonPath(library, '$..films[?(@.' + key + '==="' + val + '")]')
       }
     }
     if (data) {
