@@ -7,7 +7,8 @@
 
 var core = require('../tools/core/core')
   , genres = require('../data/genres')
-  , films = require('../data/films')
+  , library = require('../data/films')
+  , films = library.films
   , limit = 5
 
 /**
