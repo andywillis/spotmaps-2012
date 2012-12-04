@@ -61,7 +61,7 @@ app.static = staticObj = {
  */
 
 app.get(/^(\/|\/home)$/, require('./routes/index'));
-app.get('/genre/*', require('./routes/genre'));
+app.get(/^\/(genre|year|director|writer)\/*/, require('./routes/category'));
 app.get('/search', require('./routes/search'))
 app.get('/about', require('./routes/about'));
 app.get('/get/*', require('./routes/get'));

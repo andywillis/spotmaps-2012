@@ -33,6 +33,9 @@ core.getUrlObj = function(req) {
     , _url = url.parse(req.url)
     , pathname = _url.pathname
     , query = _url.query
+    , year = _url.year
+    , writer = _url.writer
+    , director = _url.director
     , extension = pathname.split('.').reverse()[0]
 
   obj.pathname = pathname

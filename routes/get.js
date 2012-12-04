@@ -17,10 +17,24 @@ var core = require('../tools/core/core')
  */
 
 function extractData(obj, callback) {
-  if (obj.genre === 'All') {
+  var key = Object.keys(obj)[0]
+    , val = obj[key]
+    , data
+    ;
+
+  if (val === 'All') {
     callback(films.slice(0, limit))
   } else {
-    var data = core.jsonPath(films, '$..[?(@.genre==="' + obj.genre + '")]')
+    // Check for numeric or string
+    if (key === 'year') {
+      data = core.jsonPath(films, '$..films[?(@.' + key + '===' + val + ')]')
+    } else {
+      if (key === 'director' || key === 'writer') {
+        data = jsonPath(films, '$..films[?(@.' + key + '.indexOf("'+ val +'") > -1)]')
+      } else {
+        data = core.jsonPath(films, '$..films[?(@.' + key + '==="' + val + '")]')
+      }
+    }
     if (data) {
       if (data.length > limit) {
         callback(data)
@@ -41,11 +55,12 @@ function extractData(obj, callback) {
  */
 
 module.exports = function(req, res) {
-  var url = core.getUrlObj(req)
-  genre = url.query.genre
-  extractData({
-    genre: genre
-  }, function(data) {
+  var url = core.getUrlObj(req), obj = {}
+  if (url.query.genre !== undefined) obj.genre = url.query.genre
+  if (url.query.year !== undefined) obj.year = url.query.year
+  if (url.query.writer !== undefined) obj.writer = url.query.writer
+  if (url.query.director !== undefined) obj.director = url.query.director
+  extractData(obj, function(data) {
     if (data) {
       res.send(JSON.stringify(data))
     } else {

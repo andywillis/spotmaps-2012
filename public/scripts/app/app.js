@@ -9,15 +9,11 @@ $(document).ready(function () {
       , $genreList = $('nav ul ul')
       , pathname = window.location.pathname
       , root = '/' + pathname.split('/')[1]
-      , route = root.match(/^\/(home|genre)*$/g)[0] || '/'
-      , genre = route === '/' ? 'all' : pathname.replace('/genre/','')
+      , route = root.match(/\/(home|genre|year|director|writer)*/g)[0] || '/'
+      , type = route === '/' ? 'all' : pathname.replace(route + '/','')
+      , getQuery = route === '/' ? 'genre=all' : [route.slice(1) + '=', type].join('')
 
-    /*
-     * Hide the menu on item.onClick.
-     * This doesn't happen automatically as it's a CSS-only menu.
-     */
-
-    $genre.live('click', function (e) { $genreList.css({'display': 'none'}) })
+    console.log(pathname, route);
 
     /*
      * For each film in the film list create a spotmap div, image and notes
@@ -35,38 +31,40 @@ $(document).ready(function () {
         , frag = core.create({ type: 'frag' })
 
       spotmapList.forEach(function(map) {
-        var frame = core.create({ el: 'div', id: map.id, class: 'spotmap clearfix' })
+        var frame = core.create({ el: 'div', class: 'spotmap clearfix' })
           , notes = core.create({ el: 'div', class: 'notes' })
           , br = core.create({type: 'el', el: 'br'})
-          , img = core.create({ el: 'img', class: 'spotmap box-shadow' })
-          , directorLabel = core.toType(map.director) == 'array' ? 'Directors' : 'Director'
-          , writerLabel = core.toType(map.writer) === 'array' ? 'Writers' : 'Writer'
-          , director = core.toType(map.director) === 'array' ? map.director.join('<br/>') : map.director
-          , writer = core.toType(map.writer) === 'array' ? map.writer.join('<br/>') : map.writer
+          , spotmap = core.create({ el: 'img', class: 'spotmap box-shadow' })
+          , directorLabel = map.director.length > 1 ? 'Directors' : 'Director'
+          , writerLabel = map.writer.length > 1 ? 'Writers' : 'Writer'
+          , director = map.director.join('</a><br/><a>')
+          , writer = map.writer.join('</a><br/><a>')
           , html = ''
           , minutes = map.numberOfSpots/60
           , url = '/static/images/' + map.filename
-
-          console.log(url);
 
         /*
          * At some point I'll move this to an underscore template
          * Doesn't seem much point at the moment.
          */
 
-        html += '<p class="value filmtitle">' + map.title + '</p>'
+        html += '<p class="filmtitle value">#{title}</p>'.replace('#{title}', map.title)
         html += '<p class="label">Year</p>'
-        html += '<p class="value">' + map.year + '</p>'
-        html += '<p class="label">' + directorLabel + '</p>'
-        html += '<p class="value">' + director + '</p>'
-        html += '<p class="label">' + writerLabel + '</p>'
-        html += '<p class="value">' + writer + '</p>'
+        html += '<p class="year value"><a>#{year}</a></p>'.replace('#{year}', map.year)
+        html += '<p class="label">#{directorLabel}</p>'.replace('#{directorLabel}', directorLabel)
+        html += '<p class="director value"><a>#{director}</a></p>'.replace('#{director}', director)
+        html += '<p class="label">#{writerLabel}</p>'.replace('#{writerLabel}', writerLabel)
+        html += '<p class="writer value"><a>#{writer}</a></p>'.replace('#{writer}', writer)
         html += '<p class="label">Spots</p>'
-        html += '<p class="value">' + map.numberOfSpots + ' ('+ minutes +' mins)</p>'
+        html += '<p class="value">#{numberOfSpots} (#{minutes} mins)</p>'
+          .replace('#{numberOfSpots}', map.numberOfSpots)
+          .replace('#{minutes}', minutes)
+
+        // html += '<p class="value"><img class="siteicon" src="/images/imdb.png"/><img class="siteicon" src="/images/letterboxd.png"/></p>'
         notes.innerHTML = html
-        img.src = url
+        spotmap.src = url
         
-        frame.appendChild(img)
+        frame.appendChild(spotmap)
         frame.appendChild(notes)
         frag.appendChild(frame)
         frag.appendChild(br)
@@ -82,9 +80,10 @@ $(document).ready(function () {
      * as soon as the page loads.
      */
 
-    (function getData(genre) {
+    function getData(getQuery) {
 
-      var url = '/get/?' + 'genre=' + genre
+      var url = '/get/?' + getQuery
+      console.log(url);
 
       $.ajax({
         type: 'GET',
@@ -103,7 +102,29 @@ $(document).ready(function () {
         }
       })
       
-    }(genre))
+    }
+
+    /*
+     * Load the data
+     */
+
+    getData(getQuery)
+
+    /*
+     * Hide the menu on item.onClick. This doesn't happen 
+     * automatically as it's a CSS-only menu.
+     */
+
+    $genre.live('click', function (e) { $genreList.css({'display': 'none'}) })
+
+    /*
+     * Get list of spotmaps according to year
+     */
+
+    $('.value a').live('click', function (e) { 
+      var labelType = ['/', this.parentNode.className.split(' ')[0], '/'].join('')
+      window.location = labelType + this.innerHTML
+    })
 
   }())
 
