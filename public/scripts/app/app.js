@@ -13,8 +13,6 @@ $(document).ready(function () {
       , type = route === '/' ? 'all' : pathname.replace(route + '/','')
       , getQuery = route === '/' ? 'genre=all' : [route.slice(1) + '=', type].join('')
 
-    console.log(pathname, route);
-
     /*
      * For each film in the film list create a spotmap div, image and notes
      * and append them to the group div. The function makes use of the 'create'
@@ -83,7 +81,6 @@ $(document).ready(function () {
     function getData(getQuery) {
 
       var url = '/get/?' + getQuery
-      console.log(url);
 
       $.ajax({
         type: 'GET',
@@ -108,7 +105,7 @@ $(document).ready(function () {
      * Load the data
      */
 
-    getData(getQuery)
+    if (['/about', '/search'].indexOf(pathname) < 0) getData(getQuery)
 
     /*
      * Hide the menu on item.onClick. This doesn't happen 
