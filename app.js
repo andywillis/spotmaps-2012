@@ -19,13 +19,13 @@ core.clear()
 console.log((config.name + ' v' + config.version).appName);
 app = express();
 
-app.configure(function(){
+app.configure(function () {
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view options', { layout: false });
   app.set('view engine', 'jade');
   app.use(express.favicon('public/favicon.ico'));
-  app.use(require('less-middleware')({ src: __dirname + '/public/stylesheets/less' }));
+  app.use(require('less-middleware')({ src: __dirname + '/public' }));
   app.use(app.router);
   app.use(staticAsset(__dirname + 'public') );
   app.use(express.static(path.join(__dirname, 'public')));
