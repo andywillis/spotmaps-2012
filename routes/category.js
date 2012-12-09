@@ -1,7 +1,9 @@
-// Render the Jade 'Genre' template
+// Home page
 
-var filmCount = require('../tools/count')()
+exports = module.exports = category;
 
-module.exports = function(req, res){
-  res.render('category', {filmCount: filmCount});
-};
+function category(app) {
+  return function category(req, res) {
+    res.render('category', {filmCount: app.library.count});
+  }
+}

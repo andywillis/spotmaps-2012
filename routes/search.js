@@ -1,7 +1,9 @@
-// Render the Jade 'Search' template
+// Home page
 
-var filmCount = require('../tools/count')()
+exports = module.exports = search;
 
-module.exports = function(req, res){
-  res.render('search', {filmCount: filmCount});
-};
+function search(app) {
+  return function search(req, res) {
+    res.render('search', {filmCount: app.library.count});
+  }
+}

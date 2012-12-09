@@ -1,4 +1,4 @@
-var core = require('../tools/core/core')
+var core = require('../lib/core/core')
   , fs = require('fs')
 
 exports = module.exports = serveData;
@@ -17,6 +17,7 @@ exports = module.exports = serveData;
 function serveData(app) {
 
   return function serveData(req, res) {
+
     var reqObj = core.getUrlObj(req)
       , pathname = reqObj.pathname.replace('/static/','')
       , contentType = reqObj.contentType
@@ -47,10 +48,15 @@ function serveData(app) {
       serve(foundStaticFile)
     } else {
       app.dbox.get(core.decode(pathname), function(status, data, metadata) {
-        var entry = app.static.spotmaps[pathname] = {}
-        entry.data = data
-        entry.metadata = metadata
-        serve(entry)
+        if (status && status === 200) {
+          var entry = app.static.spotmaps[pathname] = {}
+          entry.data = data
+          entry.metadata = metadata
+          serve(entry)
+        } else {
+          console.log('File not found');
+          res.send(404)
+        }
       })
     }
     

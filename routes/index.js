@@ -1,7 +1,9 @@
 // Home page
 
-var filmCount = require('../tools/count')()
+exports = module.exports = index;
 
-module.exports = function(req, res){
-  res.render('index', {filmCount: filmCount});
-};
+function index(app) {
+  return function index(req, res) {
+    res.render('index', {filmCount: app.library.count});
+  }
+}

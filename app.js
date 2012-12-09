@@ -1,18 +1,23 @@
 // Module dependencies.
 
-var express = require('express')
+var fs = require('fs')
+  , express = require('express')
   , config = require('./config')
   , colors = require('colors').setTheme(config.colorTheme)
-  , core = require('./tools/core/core')
+  , core = require('./lib/core/core')
   , http = require('http')
   , path = require('path')
   , staticAsset = require('static-asset')
+
+// Vars
+
+var app, dbox, dbApp, libraryLocation
 
 // Blank the console and configure express
 
 core.clear()
 console.log((config.name + ' v' + config.version).appName);
-var app = express();
+app = express();
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -35,11 +40,11 @@ app.configure('development', function(){
  * in the config file.
  */
 
-var dbox  = require("dbox")
-var dbApp   = dbox.app({ "app_key": config.dropbox.key, "app_secret": config.dropbox.secret })
+dbox  = require("dbox")
+dbApp   = dbox.app({ "app_key": config.dropbox.key, "app_secret": config.dropbox.secret })
 app.dbox = dbApp.client(config.dropbox.access_token)
-app.dbox.account(function(status, reply){
-  if (reply.uid === 80737100) console.log('Dropbox account found'.ok);
+app.dbox.account(function(status, reply) {
+  if (reply && reply.uid === 80737100) console.log('Dropbox account found'.ok);
   else console.log('Error locating Dropbox account.'.ok);
 })
 
@@ -56,17 +61,27 @@ app.static = staticObj = {
 }
 
 /*
- * Describe the site routes.
+ * Load the film library
+ */
+
+libraryLocation = './data/library.json'
+app.library = JSON.parse(fs.readFileSync(libraryLocation, 'utf-8'))
+app.library.count = require('./lib/count')()
+
+/*
+ * Describe the site routes, passing app as a parameter.
  * The last 'route' is middleware to catch 404s.
  */
 
-app.get(/^(\/|\/home)$/, require('./routes/index'));
-app.get(/^\/(genre|year|director|writer)\/*/, require('./routes/category'));
-app.get('/search', require('./routes/search'))
-app.get('/about', require('./routes/about'));
-app.get('/get/*', require('./routes/get'));
+app.get(/^(\/|\/home)$/, require('./routes/index')(app));
+app.get(/^\/(genre|year|director|writer)\/*/, require('./routes/category')(app));
+app.get('/search', require('./routes/search')(app))
+app.get('/about', require('./routes/about')(app));
+app.get('/show/*', require('./routes/show')(app));
+app.get('/json/*', require('./routes/json')(app));
+app.get('/bin/*', require('./routes/bin')(app));
 app.get('/static/*', require('./routes/static')(app))
-app.use(function(req, res) { res.render('404') });
+app.use(require('./routes/fourohfour')(app));
 
 // Run the server
 

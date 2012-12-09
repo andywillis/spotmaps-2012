@@ -1,7 +1,9 @@
-// Render the Jade 'About' template
+// Home page
 
-var filmCount = require('../tools/count')()
+exports = module.exports = about;
 
-module.exports = function(req, res){
-  res.render('about', {filmCount: filmCount});
-};
+function about(app) {
+  return function about(req, res) {
+    res.render('about', {filmCount: app.library.count});
+  }
+}
