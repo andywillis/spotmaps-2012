@@ -56,6 +56,7 @@ app.dbox.account(function(status, reply) {
 
 app.static = staticObj = {
   spotmaps: {},
+  hex: {},
   maps: {},
   rgb: {}
 }
