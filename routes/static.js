@@ -36,6 +36,8 @@ function serveData(app) {
         res.statusCode = 304
         res.end()
       } else {
+        res.setHeader('Cache-Control', 'public, max-age=345600');
+        res.setHeader('Expires', new Date(Date.now() + 345600000).toUTCString());
         res.setHeader('Content-length', bytes)
         res.setHeader('Content-Type', contentType)
         res.setHeader('ETag', etag);

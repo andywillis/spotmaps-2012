@@ -25,10 +25,18 @@ app.configure(function () {
   app.set('view options', { layout: false });
   app.set('view engine', 'jade');
   app.use(express.favicon('public/favicon.ico'));
-  app.use(require('less-middleware')({ src: __dirname + '/public' }));
+  app.use(require('less-middleware')({ 
+    compress:true, 
+    debug: false, 
+    once: true,
+    prefix: '/stylesheets',
+    src: __dirname + '/less', 
+    dest: __dirname + '/public/stylesheets/'
+  }));
   app.use(app.router);
+  app.use(express.compress());
   app.use(staticAsset(__dirname + 'public') );
-  app.use(express.static(path.join(__dirname, 'public')));
+  app.use(express.static(path.join(__dirname, 'public'), { maxAge: 2592000000 }));
 });
 
 app.configure('development', function(){

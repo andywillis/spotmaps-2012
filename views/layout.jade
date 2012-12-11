@@ -10,15 +10,10 @@ html
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="cleartype", content="on")
     link(rel="shortcut icon", href="/favicon.ico")
-    //link(rel="stylesheet", href="/stylesheets/less/style.css")
-    link(rel="stylesheet/less", href="/stylesheets/style.less")
-    script(src="/scripts/lib/less-1.3.1.min.js")
+    link(rel="stylesheet", href="/stylesheets/style.css")
+    //script(src="/scripts/lib/less-1.3.1.min.js")
   body
     include includes/header
     block content
     include includes/spotmapTemplate
-    script(src="/scripts/lib/jquery-1.7.2.min.js")
-    script(src="/scripts/lib/modernizr-2.5.3-min.js")
-    script(src="/scripts/lib/underscore-1.4.2-min.js")
-    script(src="/scripts/lib/core.js")
-    script(src="/scripts/app/app.js")
+    include includes/scripts
