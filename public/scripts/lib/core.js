@@ -2,39 +2,12 @@
 
   var core = {}
 
-  core.nbLoop3 = function() {
-    
-    var args = arguments[0]
-      , arr = args.arr
-      , len = arr.length
-      , out = args.out || []
-      , params = args.params
-      , callback = args.cb
-      , fn = args.fn
-      , el = 0
-      
-    if (arr && core.toType(arr) === 'array') { len = arr.length } else { throw new Error('No array') }
-    if (!args.fn) { throw new Error('No working function specified') }
-    if (!args.fn) { throw new Error('No working function specified') }
-    
-    (function iterator (el,arr,fn,out,params,callback) {
-      //console.log(el,arr,fn,out,params,callback)
-      // Run passed function with next iteration of array
-      fn({
-        el: arr[el],
-        i: el,
-        out: out,
-        params: params,
-        cb: function(out, iteration, params) {
-          // If the end of the array is found, callback!
-          if (iteration === len - 1) callback(++el, out)
-          // Otherwise, call the iterator again.
-          el++
-          if (el < len) setTimeout(function(){iterator(el,arr,fn,out,params,callback)}, 0)
-        }
-      })
-    }(el,arr,fn,out,params,callback))
+  core.encode = function(string) {
+    return encodeURIComponent(string)
+  }
 
+  core.decode = function(string) {
+    return decodeURIComponent(string.replace(/\+/g,  " "));
   }
 
   // Checks to see if the URL exists in cache

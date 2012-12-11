@@ -4,6 +4,12 @@ exports = module.exports = bin;
 
 function bin(app) {
 
+  /*
+   * Checks the library for the film with the right id,
+   * pulls the hex from the cache if it's available,
+   * or loads it from disk if it isn't.
+   */
+
   return function bin(req, res) {
     var library = app.library
       , core = require('../lib/core/core')

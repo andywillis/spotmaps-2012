@@ -1,0 +1,14 @@
+| <script type="text/template" id="spotmapTemplate">
+|   <img class="spotmap box-shadow" id="<%= map.id %>" src="<%= map.src %>" />
+|   <div class="notes">
+|     <p class="filmtitle value"><%= map.title %></p>
+|     <p class="label">Year</p>
+|     <p class="year value"><a><%= map.year %></a></p>
+|     <p class="label"><%= map.directorLabel %></p>
+|     <p class="director value"><a><%= map.director %></a></p>
+|     <p class="label"><%= map.writerLabel %></p>
+|     <p class="writer value"><a><%= map.writer %></a></p>
+|     <p class="label">Spots</p>
+|     <p class="value"><%= map.numberOfSpots %> (<%= map.minutes %> mins)</p>
+|   </div>
+| </script>

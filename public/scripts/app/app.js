@@ -7,6 +7,7 @@ $(document).ready(function () {
     var $content = $('#content')
       , $genre = $('#genre .menuItem')
       , $genreList = $('nav ul ul')
+      , spotmapTemplate = _.template($('#spotmapTemplate').html())
       , pathname = window.location.pathname
       , pathRegex = /(^\/$)|(^\/(home|genre|year|director|writer)+)/
       , showRegex = /(^\/show)/
@@ -25,61 +26,45 @@ $(document).ready(function () {
      * ids and attributes to be created in one statement.
      * 
      * Native Javascript DOM coding is used instead of jQuery because it's 
-     * slightly more efficient.
+     * slightly more efficient, and underscore templating has been implemented.
      */
 
     function processData(spotmapList) {
 
       var group = core.create({ el: 'div', class: 'group' })
         , frag = core.create({ type: 'frag' })
+        , br = core.create({type: 'el', el: 'br'})
 
       spotmapList.forEach(function(map) {
 
         // Create new elements
         var frame = core.create({ el: 'div', class: 'frame clearfix' })
-          , notes = core.create({ el: 'div', class: 'notes' })
           , br = core.create({type: 'el', el: 'br'})
-          , spotmap = core.create({ el: 'img', id: map.id, class: 'spotmap box-shadow' })
-        
+
         // Format the map information labels and data.
         map.directorLabel = map.director.length > 1 ? 'Directors' : 'Director'
         map.writerLabel = map.writer.length > 1 ? 'Writers' : 'Writer'
         map.director = map.director.join('</a><br/><a>')
         map.writer = map.writer.join('</a><br/><a>')
         map.minutes = map.numberOfSpots/60
-        map.url = '/static/images/' + map.filename
-        html = ''
+        map.src = '/static/images/' + map.filename
 
-        /*
-         * At some point I'll move this to an underscore template
-         * Doesn't seem much point at the moment.
-         */
-
-        html += '<p class="filmtitle value">#{title}</p>'.replace('#{title}', map.title)
-        html += '<p class="label">Year</p>'
-        html += '<p class="year value"><a>#{year}</a></p>'.replace('#{year}', map.year)
-        html += '<p class="label">#{directorLabel}</p>'.replace('#{directorLabel}', map.directorLabel)
-        html += '<p class="director value"><a>#{director}</a></p>'.replace('#{director}', map.director)
-        html += '<p class="label">#{writerLabel}</p>'.replace('#{writerLabel}', map.writerLabel)
-        html += '<p class="writer value"><a>#{writer}</a></p>'.replace('#{writer}', map.writer)
-        html += '<p class="label">Spots</p>'
-        html += '<p class="value">#{numberOfSpots} (#{minutes} mins)</p>'
-          .replace('#{numberOfSpots}', map.numberOfSpots)
-          .replace('#{minutes}', map.minutes)
-
-        // Attach the notes and the source the image
-        spotmap.src = map.url
-        notes.innerHTML = html
-        
-        frame.appendChild(spotmap)
-        frame.appendChild(notes)
+        // Push the data into the template and render it.
+        frame.innerHTML = spotmapTemplate({map: map})
         frag.appendChild(frame)
         frag.appendChild(br)
         group.appendChild(frag)
+
       })
   
       return group
     }
+
+    /*
+     * Picks up the hex imageData stored in the global var that
+     * is loaded when showMatch (the test for the show route) is true
+     * and loops over it building a canvas which is then returned.
+     */
 
     function createSpotmap(size) {
 
@@ -146,13 +131,9 @@ $(document).ready(function () {
     }
 
     /*
-     * Displays the spotmap canvas when an image is clicked.
+     * Either grab the image data from the imageData var, or
+     * load it in from the server. Call convertAndDisplay().
      */    
-
-    if (showMatch) {
-      getCanvasData();
-      $('.size').filter(function(){ return $(this).text() === '4' }).addClass('selected')
-    }
 
     function getCanvasData (size) {
       
@@ -174,6 +155,11 @@ $(document).ready(function () {
       }
      }
 
+     /*
+      * Use the imageData to build a new canvas, use that data for a new
+      * image and append it to the content div.
+      */
+
     function convertAndDisplay(size) {
       canvas = createSpotmap(size)
       img = core.create({
@@ -187,7 +173,17 @@ $(document).ready(function () {
      }
 
     /*
-     * If the route is a match (previously checked) load the data.
+     * If the showRoute is true load the spotmap hex data and
+     * preselect the 4 button as the default setting.
+     */
+
+    if (showMatch) {
+      getCanvasData();
+      $('.size').filter(function(){ return $(this).text() === '4' }).addClass('selected')
+    }
+
+    /*
+     * If the route is anything other than Show load the data.
      */
 
     if (routeMatch) {
