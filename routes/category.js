@@ -1,4 +1,4 @@
-// Home page
+// Category page
 
 exports = module.exports = category;
 

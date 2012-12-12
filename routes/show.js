@@ -1,8 +1,13 @@
-// Home page
+// Show page
 
 exports = module.exports = show;
 
 function show(app) {
+
+  /*
+   * Picks the correct film from the library based on the id in the url query
+   * and renders the html.
+   */
 
   return function show(req, res) {
 

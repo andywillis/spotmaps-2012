@@ -1,4 +1,4 @@
-// Home page
+// 404 page
 
 exports = module.exports = fourohfour;
 

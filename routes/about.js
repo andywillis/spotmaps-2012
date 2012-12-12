@@ -1,4 +1,4 @@
-// Home page
+// About page
 
 exports = module.exports = about;
 

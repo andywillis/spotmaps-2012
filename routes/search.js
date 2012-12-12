@@ -1,4 +1,4 @@
-// Home page
+// Search page
 
 exports = module.exports = search;
 
