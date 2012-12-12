@@ -5,6 +5,7 @@ body{text-rendering:optimizeLegibility;}
 h1{font-size:2em;}
 #content ul{list-style:none;}
 a{text-decoration:none;}
+h2{font-size:1.4em ;margin:0;padding:0;color:rgba(150, 160, 180, 0.8);}
 body,a{color:rgba(255, 255, 255, 0.6);}
 body{background-color:#1e283c;}
 header[role="banner"]{color:#ff0000;}
@@ -15,7 +16,6 @@ div#noscript{padding:5px;text-align:center;color:white;background-color:black;}
 #content{margin:1em 1em 1em 1em;}
 .size{color:rgba(255, 255, 255, 0.6);border-radius:.3em;background-color:#1e283c;width:40px;height:40px;display:inline-block;margin-right:5px;text-align:center;border:1px solid #1e283c;}
 div#title{text-align:center;margin-top:30px;}
-h2{font-size:1.4em ;margin:0;padding:0;}
 .size.selected{border:1px solid #ffffff;}
 #sizes{padding-top:20px;}
 #sizes ul{width:100%;display:block;margin:0 auto ;text-align:center;}
@@ -28,7 +28,7 @@ div.frame{margin:0 auto;}
 img.spotmap{margin-right:2em;}
 img.spotmap{cursor:pointer;}
 img.spotmap{box-shadow:0px 0px 20px 20px rgba(200, 200, 200, 0.1);}
-p.year.value a:hover,p.writer.value a:hover,p.director.value a:hover{cursor:pointer;text-shadow:0px 0px 10px #ffffff;}
+span.year.value a:hover,span.genre.value a:hover,p.year.value a:hover,p.genre.value a:hover,p.writer.value a:hover,p.director.value a:hover{cursor:pointer;text-shadow:0px 0px 10px #ffffff;}
 img.spotmap:hover{box-shadow:0px 0px 20px 20px rgba(200, 200, 255, 0.2);}
 div.wrap{width:80%;margin:0 auto;}
 div.group{margin:0 auto;text-align:center;}
@@ -44,7 +44,7 @@ hr{margin:0.4em ;color:rgba(10, 20, 40, 0.4);}
 .wrap p a:hover{color:rgba(150, 160, 180, 0.8);}
 .label,.value{text-align:left;font-size:0.7em;}
 img.spotmap,div.notes{float:left;}
-div.notes{width:200px;}
+div.notes{width:300px;}
 .clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0;}
 .clearfix:after{clear:both;content:'-';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0;}
 @media only screen and (min-width:20em){body{font-size:100%;} img.spotmap{width:150px;} div.spotmap .notes{font-size:0.7em;} .filmtitle{color:#ffffff;font-size:1.2em;}}@media only screen and (min-width:30em){body{font-size:120%;} header#banner h1{margin-right:1em;} header#banner{-moz-box-shadow:0 0 130px 130px rgba(255, 255, 255, 0.07);-webkit-box-shadow:0 0 130px 130px rgba(255, 255, 255, 0.07);box-shadow:0 0 130px 130px rgba(255, 255, 255, 0.07);} header#banner h1,header#banner nav{display:inline-block;} img.spotmap{width:200px;}}@media only screen and (min-width:37.5em){}@media only screen and (min-width:48em){body{font-size:140%;} img.spotmap{width:300px;} div.spotmap .notes{font-size:1em;}}@media only screen and (min-width:56.25em){body{font-size:180%;}}@media only screen and (min-width:68.75em){}@media only screen and (min-width:81.25em){}@media only screen and (-webkit-min-device-pixel-ratio:1.5),only screen and (min-device-pixel-ratio:1.5){}nav ul li:hover>ul{display:block;}

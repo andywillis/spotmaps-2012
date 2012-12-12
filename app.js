@@ -7,7 +7,6 @@ var fs = require('fs')
   , core = require('./lib/core/core')
   , http = require('http')
   , path = require('path')
-  , staticAsset = require('static-asset')
 
 // Vars
 
@@ -35,8 +34,8 @@ app.configure(function () {
   }));
   app.use(app.router);
   app.use(express.compress());
-  app.use(staticAsset(__dirname + 'public') );
-  app.use(express.static(path.join(__dirname, 'public'), { maxAge: 2592000000 }));
+  app.use(require('static-asset')(__dirname + 'public') );
+  app.use(express.static(path.join(__dirname, 'public'), { maxAge: 360000 }));
 });
 
 app.configure('development', function(){

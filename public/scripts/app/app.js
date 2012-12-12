@@ -66,45 +66,48 @@ $(document).ready(function () {
      * and loops over it building a canvas which is then returned.
      */
 
-    function createSpotmap(size) {
+    function createSpotmap(size, callback) {
+      if (imageData) {
+        var spot = { size: size, border: 'rgba(0,0,0,1)', borderWidth: 0.2 }
+          , xpos = 0, ypos = 0
+          , data = imageData
+          , len = data.length
+          , cwidth = spot.size*60
+          , cheight = (spot.size*len/6)/60
+          , canvas = core.create({ el: 'canvas', width: cwidth, height: cheight })
+          , context = canvas.getContext('2d')
+          , entry
+          , count = 0
 
-      var spot = { size: size, border: 'rgba(0,0,0,1)', borderWidth: 0.2 }
-        , xpos = 0, ypos = 0
-        , data = imageData
-        , len = data.length
-        , cwidth = spot.size*60
-        , cheight = (spot.size*len/6)/60
-        , canvas = core.create({ el: 'canvas', width: cwidth, height: cheight })
-        , context = canvas.getContext('2d')
-        , entry
-        , count = 0
+        for (var i = 0; i < len; i+=6) {
 
-      for (var i = 0; i < len; i+=6) {
+          var r = parseInt(data.slice(i, i+2), 16)
+            , g = parseInt(data.slice(i+2, i+4), 16)
+            , b = parseInt(data.slice(i+4, i+6), 16)
 
-        var r = parseInt(data.slice(i, i+2), 16)
-          , g = parseInt(data.slice(i+2, i+4), 16)
-          , b = parseInt(data.slice(i+4, i+6), 16)
+          entry = [r, g, b]
 
-        entry = [r, g, b]
-
-        if (count % 60 === 0 && count !== 0) {
-          ypos = ypos + spot.size
-          xpos = 0
-          count = 0
+          if (count % 60 === 0 && count !== 0) {
+            ypos = ypos + spot.size
+            xpos = 0
+            count = 0
+          }
+          
+          context.beginPath();
+          context.rect(xpos,ypos,spot.size,spot.size)
+          context.fillStyle = 'rgba(' + entry + ', 255)'
+          context.fill()
+          context.lineWidth = spot.borderWidth
+          context.strokeStyle = spot.border
+          context.stroke()
+          xpos = xpos + spot.size
+          count++
         }
-        
-        context.beginPath();
-        context.rect(xpos,ypos,spot.size,spot.size)
-        context.fillStyle = 'rgba(' + entry + ', 255)'
-        context.fill()
-        context.lineWidth = spot.borderWidth
-        context.strokeStyle = spot.border
-        context.stroke()
-        xpos = xpos + spot.size
-        count++
+        callback(null, {data: canvas, size: [cwidth, cheight]})
+      } else {
+        callback('Error: image hex data not found - possible filename mismatch. Please contact the site administrator.')
       }
 
-      return obj = {data: canvas, size: [cwidth, cheight]}
     }
 
     /*
@@ -161,15 +164,20 @@ $(document).ready(function () {
       */
 
     function convertAndDisplay(size) {
-      canvas = createSpotmap(size)
-      img = core.create({
-        el:'img',
-        class: 'canvas',
-        src: canvas.data.toDataURL(),
-        width: canvas.size[0],
-        height: canvas.size[1]
+      createSpotmap(size, function(err, canvas) {
+        if (err) {
+          console.log(err);
+        } else {
+          img = core.create({
+            el:'img',
+            class: 'canvas',
+            src: canvas.data.toDataURL(),
+            width: canvas.size[0],
+            height: canvas.size[1]
+          })
+          $content.empty().append(img)          
+        }
       })
-      $content.empty().append(img)
      }
 
     /*

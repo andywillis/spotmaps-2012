@@ -21,8 +21,10 @@ function bin(app) {
       res.send(foundHexFile)
     } else {
       fs.readFile('./public/maps/' + data.title + '.hex', 'utf-8', function(err, data) {
-        if (err) console.log(err)
-        else {
+        if (err) {
+          console.log(err)
+          res.send(404)
+        } else {
           app.static.hex[data.title] = data
           res.send(data)
         }
