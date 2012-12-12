@@ -7,7 +7,7 @@ Express application to display my film blueprints.
 * Paging
 * Redis deployment
 * Image holders
-* Immproved error checking
+* Improved error checking
 
 ## License
 spotmaps &copy; 2012 Andy Willis  
