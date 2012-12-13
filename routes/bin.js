@@ -20,6 +20,25 @@ function bin(app) {
     if (foundHexFile) {
       res.send(foundHexFile)
     } else {
+      /* 
+       * This will have to wait until the ajax routine is rewritten in the client
+       * and there's probably no need for it 
+       */
+      /*
+      var chunk = ''
+      fs.createReadStream('./public/maps/' + data.title + '.hex')
+        .on('data',function(chunk) {
+          chunk += chunk
+        })
+        .on('error', function(err) {
+          res.send(404)
+        })
+        .on('end', function () {
+          app.static.hex[data.title] = chunk
+        })
+        .pipe(res)
+      */
+      
       fs.readFile('./public/maps/' + data.title + '.hex', 'utf-8', function(err, data) {
         if (err) {
           console.log(err)
@@ -29,6 +48,7 @@ function bin(app) {
           res.send(data)
         }
       });
+      
     }
 
   }  
