@@ -7,6 +7,7 @@ $(document).ready(function () {
     var $content = $('#content')
       , $genre = $('#genre .menuItem')
       , $genreList = $('nav ul ul')
+      , $loader = $('div#loader')
       , spotmapTemplate = _.template($('#spotmapTemplate').html())
       , pathname = window.location.pathname
       , pathRegex = /(^\/$)|(^\/(home|genre|year|director|writer)+)/
@@ -18,6 +19,8 @@ $(document).ready(function () {
       , type = route === '/' ? 'all' : pathname.replace(route + '/','')
       , getQuery = route === '/' ? 'genre=all' : [route.slice(1) + '=', type].join('')
       , imageData = undefined
+      , slice = Array.prototype.slice
+      , chock
 
     /*
      * For each film in the film list create a spotmap div, image and notes
@@ -178,7 +181,7 @@ $(document).ready(function () {
           $content.empty().append(img)          
         }
       })
-     }
+   }
 
     /*
      * If the showRoute is true load the spotmap hex data and
@@ -201,7 +204,23 @@ $(document).ready(function () {
         else {
           var group = processData(JSON.parse(data))
           $content.empty()
-          $content.append(group)          
+          $content.append(group)
+          var $images = slice.call($('img.spotmap'))
+          $loader.css({'visibility': 'visible'})
+          chock = setInterval(function(){ checkImages($images) }, 500)
+        }
+      })
+    }
+
+    function checkImages(imageList) {
+      var count = imageList.length;
+      imageList.forEach(function(image){
+        if (image.naturalHeight !== 0) {
+          count--
+          if (count === 0) {
+            $loader.css({'visibility': 'hidden'})
+            clearInterval(chock)
+          }
         }
       })
     }

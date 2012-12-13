@@ -17,7 +17,6 @@ var app, dbox, dbApp, libraryLocation
 core.clear()
 console.log((config.name + ' v' + config.version).appName);
 app = express();
-
 app.configure(function () {
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
@@ -34,8 +33,7 @@ app.configure(function () {
   }));
   app.use(app.router);
   app.use(express.compress());
-  app.use(require('static-asset')(__dirname + 'public') );
-  app.use(express.static(path.join(__dirname, 'public'), { maxAge: 360000 }));
+  app.use(express.static(path.join(__dirname, "public"), { maxAge: 360000 }));
 });
 
 app.configure('development', function(){

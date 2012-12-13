@@ -1,5 +1,3 @@
-var core = require('core')
-
 // Category page
 
 exports = module.exports = category;
