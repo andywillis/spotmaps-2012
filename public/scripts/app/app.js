@@ -167,6 +167,7 @@ $(document).ready(function () {
       */
 
     function convertAndDisplay(size) {
+      console.log('d');
       createSpotmap(size, function(err, canvas) {
         if (err) {
           console.log(err);
@@ -178,7 +179,7 @@ $(document).ready(function () {
             width: canvas.size[0],
             height: canvas.size[1]
           })
-          $content.empty().append(img)          
+          $content.empty().append(img)
         }
       })
    }

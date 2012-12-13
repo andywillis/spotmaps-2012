@@ -1,7 +1,7 @@
 {
   "name": "spotmaps",
   "preferGlobal": "false",
-  "version": "0.0.1-48",
+  "version": "0.0.1-49",
   "scripts": {
     "start": "app.js"
   },
