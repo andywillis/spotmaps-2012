@@ -13,6 +13,7 @@ $(document).ready(function () {
       , $genre = $('#menu-genre .menuItem')
       , $genreList = $('nav ul ul')
       , $loader = $('div#loader')
+      , $alphabet = $('.alphabet')
 
       // Regex
       , staticRegex = /(^\/(list|search|about)+$)/
@@ -36,8 +37,7 @@ $(document).ready(function () {
       // Other
       , imageData = undefined
       , slice = Array.prototype.slice
-      , imagesLoadedCheck, listCategory = 'director'
-      , searchCategory = 'director', searchInputText, list
+      , imagesLoadedCheck, listCategory = 'genre', list
       , page = 0, pageRange = 10, pageStart = page * pageRange, pageEnd = (page + 1) * pageRange
       , categories = ['genres', 'directors', 'writers', 'years']
 
@@ -219,9 +219,9 @@ $(document).ready(function () {
           category = categories[i]
           list[category] = JSON.parse($('#' + category).html())
         }
-        listCategory = 'director'
+        listCategory = 'genre'
         $('.alphabetItem[data-letter="a"]').addClass('selected')
-        $('#list').html(listTemplate({type: listCategory, obj: list.directors, letter: 'a'}))
+        $('#list').html(listTemplate({type: listCategory, obj: list.genres, letter: 'a'}))
       }
     }
 
@@ -303,7 +303,7 @@ $(document).ready(function () {
     })
 
     /*
-     * Get list of spotmaps according to type
+     * Redirect if user clicks on a spotmap category
      */
 
     $(document).on('click', '.value a', function () { 
@@ -311,9 +311,17 @@ $(document).ready(function () {
       window.location = labelType + this.innerHTML
     })
 
+    /*
+     * Display the spotmap canvas
+     */
+
     $(document).on('click', '.spotmap', function () {
       window.location = '/show/?id=' + this.id
     })
+
+    /*
+     * Update canvas when size is changed.
+     */
 
     $(document).on('click', '.size', function () {
       $('.size').removeClass('selected')
@@ -327,9 +335,9 @@ $(document).ready(function () {
       $(this).addClass('selected')
       listCategory = this.innerHTML;
       if (listCategory === 'genre' || listCategory === 'year') {
-        $('.alphabet').hide()
+        $alphabet.hide()
       } else {
-        $('.alphabet').show()
+        $alphabet.show()
       }
       $('#list').html(listTemplate({type: listCategory, obj: list[listCategory + 's'], letter: 'a'}))
     })

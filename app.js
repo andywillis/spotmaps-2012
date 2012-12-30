@@ -32,7 +32,6 @@ app.configure(function () {
   app.use(require('less-middleware')({ 
     compress:true, 
     debug: false, 
-    force: true,
     once: true,
     prefix: '/stylesheets',
     src: __dirname + '/less', 
@@ -57,7 +56,7 @@ dbox  = require("dbox")
 dbApp   = dbox.app({ "app_key": config.dropbox.key, "app_secret": config.dropbox.secret })
 app.dbox = dbApp.client(config.dropbox.access_token)
 app.dbox.account(function(status, reply) {
-  if (reply && reply.uid === 80737100) console.log('Dropbox account found'.ok);
+  if (reply && reply.uid == config.dropbox.access_token.uid) console.log('Dropbox account found'.ok);
   else console.log('Error locating Dropbox account.'.ok);
 })
 
@@ -95,7 +94,7 @@ app.get(/^(\/|\/home)$/, require('./routes/index')(app));
 app.get(/^\/(genre|year|director|writer)\/*/, require('./routes/category')(app));
 app.get('/list', require('./routes/list')(app))
 app.get('/search', require('./routes/search')(app))
-app.get(/^\/admin\/*/, require('./routes/admin')(app));
+//app.get('/api', require('./routes/api')(app));
 app.get('/about', require('./routes/about')(app));
 app.get('/show/*', require('./routes/show')(app));
 app.get('/json/*', require('./routes/json')(app));

@@ -14,6 +14,12 @@ function get(app) {
     , library = app.library
     , films = library.films
     , limit = 5
+    , byTitle = function(a, b) {
+        var nameA = a.title.toLowerCase(), nameB = b.title.toLowerCase()
+        if (nameA < nameB) return -1
+        if (nameA > nameB) return 1
+        return 0
+      }
 
   /**
    * Pull all films from the film list that match the genre using jsonPath
@@ -29,11 +35,9 @@ function get(app) {
       ;
 
     if (val === 'All') {
-      callback(films.sort(function(a, b) {
-        return b['id'] - a['id']
-      }))
+      sortedData = films.sort(function(a, b) { return b['id'] - a['id'] })
+      callback(sortedData)
     } else {
-      // Check for numeric or string
       if (key === 'year') {
         data = core.jsonPath(library, '$..films[?(@.' + key + '===' + val + ')]')
       } else {
@@ -44,12 +48,8 @@ function get(app) {
         }
       }
       if (data) {
-        if (data.length > limit) {
-          callback(data)
-          //callback(data.slice(0, limit))
-        } else {
-          callback(data)
-        }
+        sortedData = data.sort(byTitle)
+        callback(sortedData)
       } else {
         callback(false)
       }
@@ -70,7 +70,13 @@ function get(app) {
     if (url.query.director !== undefined) obj.director = url.query.director
     extractData(obj, function(data) {
       if (data) {
-        res.send(JSON.stringify(data))
+        if (url.query.api) {
+          var obj = {}
+          obj.films = data
+          res.send(JSON.stringify(obj))
+        } else {
+          res.send(JSON.stringify(data))
+        }
       } else {
         res.send(data)
       }

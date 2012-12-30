@@ -56,7 +56,7 @@ function serveData(app) {
           entry.metadata = metadata
           serve(entry)
         } else {
-          console.log('File not found');
+          console.log('File not found', pathname);
           res.send(404)
         }
       })

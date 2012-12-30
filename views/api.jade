@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  div(id="content")
+    div(class="wrap")
+      ul
+        - for(var p in genres) {
+          li(class="listItem")
+            a(href="/json/?api=true&genre=#{p}") #{p} films
+        - }
