@@ -23,6 +23,7 @@ var app, dbox, dbApp, libraryLocation
 core.clear()
 console.log((config.name + ' v' + config.version).appName);
 app = express();
+app.ROOT = __dirname
 app.configure(function () {
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
@@ -37,7 +38,7 @@ app.configure(function () {
     src: __dirname + '/less', 
     dest: __dirname + '/public/stylesheets/'
   }));
-//  app.use(require('./lib/metric.js')());
+  app.use(require('./lib/metric.js')());
   app.use(app.router);
   app.use(express.compress());
   app.use(express.static(path.join(__dirname, "public"), { maxAge: 360000 }));
@@ -94,7 +95,7 @@ app.get(/^(\/|\/home)$/, require('./routes/index')(app));
 app.get(/^\/(genre|year|director|writer)\/*/, require('./routes/category')(app));
 app.get('/list', require('./routes/list')(app))
 app.get('/search', require('./routes/search')(app))
-//app.get('/api', require('./routes/api')(app));
+app.get(/\/8dm1n(\/[a-zA-Z0-9]*)?/, require('./routes/admin')(app));
 app.get('/about', require('./routes/about')(app));
 app.get('/show/*', require('./routes/show')(app));
 app.get('/json/*', require('./routes/json')(app));
