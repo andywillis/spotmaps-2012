@@ -236,10 +236,16 @@ $(document).ready(function () {
     }
 
     /*
-     * If the route is anything other than Show load the data.
+     * If the route is a json match run the buildGroup function.
      */
 
     if (jsonMatch) buildGroup();
+
+    /*
+     * Get the data and pin it to the group div.
+     * Attach the group div to the content div.
+     * While the images are loading, display the loader.
+     */
 
     function buildGroup() {
       var url = '/json/?' + getQuery
@@ -263,6 +269,10 @@ $(document).ready(function () {
       })      
     }
 
+    /*
+     * If the images are still loading, display the loader
+     */
+
     function checkImages(imageList) {
       var count = imageList.length;
       imageList.forEach(function(image){
@@ -276,10 +286,18 @@ $(document).ready(function () {
       })
     }
 
+    /*
+     * Next page
+     */
+
     $document.on('click', '#right', function () {
       page++, pageStart = page * pageRange, pageEnd = (page + 1) * pageRange
       buildGroup();
     })
+
+    /*
+     * Previous page
+     */
 
     $document.on('click', '#left', function () {
       page--, pageStart = page * pageRange, pageEnd = (page + 1) * pageRange
@@ -330,6 +348,10 @@ $(document).ready(function () {
       convertAndDisplay(parseInt(size))
     })
 
+    /*
+     * Updates the list screen when a category is selected
+     */
+
     $(document).on('click', '.listLabel .formSpan', function () {
       $('.listLabel .formSpan').removeClass('selected')
       $(this).addClass('selected')
@@ -342,18 +364,9 @@ $(document).ready(function () {
       $('#list').html(listTemplate({type: listCategory, obj: list[listCategory + 's'], letter: 'a'}))
     })
 
-    $(document).on('click', '.searchLabel .formSpan', function () {
-      $('.searchLabel .formSpan').removeClass('selected')
-      $(this).addClass('selected')
-      searchCategory = this.innerHTML;
-      searchInputText = 'Search for ' + searchCategory
-      $('.searchInput').attr('placeholder', searchInputText)
-    })
-
-    $(document).on('click', '.formSubmit', function(event) {
-      event.preventDefault()
-      var searchValue = $('.searchInput').val()
-    })
+    /*
+     * Update the list screen when a letter of the alphabet is chosen.
+     */
 
     $(document).on('click', '.alphabetItem', function () {
       var letter = $(this).html().toLowerCase()
@@ -361,6 +374,10 @@ $(document).ready(function () {
       $(this).addClass('selected')
       $('#list').html(listTemplate({type: listCategory, obj: list[listCategory + 's'], letter: letter}))
     })
+
+    /*
+     * Redirect when a list item is selected.
+     */
 
     $(document).on('click', '.listItem', function () {
       var labelType = ['/', listCategory, '/'].join('')
