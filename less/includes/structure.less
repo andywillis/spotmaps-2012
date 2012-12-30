@@ -1,3 +1,110 @@
+#left:hover,
+#right:hover {
+  background-color: @offwhite3;   
+}
+
+#left,
+#right {
+  padding: 10px; z-index: 1000; 
+  color: @offwhite;
+  background-color: @offwhite4; 
+  position: absolute; position: fixed; 
+  right: 15%; 
+  font-weight: bold;
+  width: 35px; 
+  height: 35px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+#left {
+  width: 35px; 
+  top: 40%;
+  visibility: hidden;
+}
+
+#right {
+  width: 35px; 
+  top: 50%;
+  visibility: hidden;
+}
+
+#info {
+  position: absolute; position: fixed; 
+  right: 15%; 
+  font-weight: bold;
+  padding: 10px; z-index: 1000; 
+  color: @offwhite;
+  top: 60%;
+  visibility: visible;
+}
+
+.alphabet {
+  margin-bottom: 20px
+}
+
+.alphabetItem {
+  font-size: 0.8em; 
+  display: inline-block; 
+  padding: 1px 5px 1px 5px; 
+  margin-right: 1px
+}
+
+.listItem {
+  display: inline-block; 
+  padding: 6px; 
+  border-radius: 6px; 
+  margin: 2px; 
+  font-size: 0.9em; 
+  background-color: @offwhite4 
+}
+
+.listItem:hover {
+  background-color: @offwhite4hover; 
+  color: white; 
+  cursor: pointer
+}
+
+.formBreak {
+  margin: 10px 0px 10px 0px
+}
+
+.hidden {
+  display: none
+}
+
+.formLabel {
+ margin-left: 5px 
+}
+
+.selected,
+.alphabetItem:hover,
+.formSpan:hover { 
+  padding: 6px; 
+  border-radius: 6px; 
+  background-color: #4b545f; 
+  cursor: pointer; 
+  color: white 
+}
+
+.formSpan { 
+  margin: 0px 10px 0px 0px; 
+  padding: 5px 5px 5px 5px 
+}
+
+.searchInput { 
+  font-size: 1em;
+  margin: 15px 0px 15px 0px; 
+  font-weight: normal; 
+  padding: 10px;
+  background-color: #cfcfcf;
+  color: black;
+  width: 60%; 
+}
+
+.formSubmit { background-color: #99cc99; color: black; cursor: pointer;}
+.formSubmit:hover {background-color: #558855}
+
 header#banner { text-align: center }
 header#banner { background-color: @darkblue2 }
 
@@ -9,7 +116,8 @@ div#noscript {
 }
 
 #content { margin: 1em 1em 1em 1em }
-#loader { z-index: 1000; position: absolute; right: 0; top: 0; background-color: @offred; color: white; padding: 10px; visibility: hidden}
+
+#loader { z-index: 1000; position: fixed; right: 0; top: 0; background-color: @offred; color: white; padding: 10px; visibility: hidden}
 
 .size {
   color: @offwhite;
@@ -30,6 +138,9 @@ div#title { text-align: center; margin-top: 30px }
 .size:hover { cursor: pointer; text-shadow: 0px 0px 10px rgba(255,255,255,1) }
 
 img.canvas {display: block;margin: 0 auto }
+
+li.menuItem.viewAll a { color: @offwhite }
+li.menuItem.viewAll { background-color: @offdarkyellow }
 
 div.frame { padding: 1em; display: inline-block }
 img.spotmap { border: 12px solid @offblue }
@@ -56,7 +167,7 @@ div.frame .value { margin-bottom: 1em}
 
 .super { font-size: 0.5em; vertical-align: super }
 
-hr { margin: 0.4em ; color: @darkblue3 }
+hr { color: @darkblue3 }
 .wrap { padding: 1em }
 .wrap { background-color: @darkblue1}
 .wrap p { margin-bottom: 1em ; font-size: 0.9em }

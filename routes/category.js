@@ -16,7 +16,7 @@ function category(app) {
       , value = url.pathname.split('/')[2]
       , label = capitalise(category) + ': ' + capitalise(value)
 
-    res.render('category', { filmCount: app.library.count, label: label });
+    res.render('category', { menu: app.library.menu, label: label });
   
   }
 

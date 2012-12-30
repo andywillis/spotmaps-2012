@@ -4,11 +4,8 @@ block content
   div(id="content")
     div(class="wrap")
       p Spotmaps is an on-going project to map the colour footprints of different films.
-      p Films are analysed with a Python script which takes the median colour of each frame and produces a spot of average colour spot from the combination of 24<span class="super">1</span> consecutive frames.
+      p Films are analysed with a Python script and each frame's colour sampled. A spot of average colour is produced from the combination of one second's frames.
       p Spots are laid out 60 per line to represent one minute of film time. The length of the image represents the number of minutes in the film.
-      p In addition to the image file a JSON file is compiled containing information about the film, and a two separate colour data files are produced - one for the whole image, and one swatch file that can be used in Adobe products.
-      p No additional processing is performed.
+      p No additional image processing is performed.
       p This project is based on Brendan Dawes' <a href="http://brendandawes.com/projects/cinemaredux">Cinema Redux</a>.
-      p Still to implement: image paging, redis (records are currently all held in memory, drilldown to the resizable image canvas, export to adobe swatch file.)
-      hr
-      p <span class="super">1</span> Or the framerate of the processed film.
+      p &copy 2012 Andy Willis

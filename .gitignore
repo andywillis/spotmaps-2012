@@ -1,6 +1,5 @@
 *sublime*
 config.js
-/public/images/spotmaps/*.png
-/public/maps/*.map
-/public/rgb/*.sma
+/public/maps
 /public/fonts
+/data

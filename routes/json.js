@@ -29,13 +29,15 @@ function get(app) {
       ;
 
     if (val === 'All') {
-      callback(films.slice(0, limit))
+      callback(films.sort(function(a, b) {
+        return b['id'] - a['id']
+      }))
     } else {
       // Check for numeric or string
       if (key === 'year') {
         data = core.jsonPath(library, '$..films[?(@.' + key + '===' + val + ')]')
       } else {
-        if (key === 'director' || key === 'writer') {
+        if (key === 'director' || key === 'writer' || 'genre') {
           data = core.jsonPath(library, '$..films[?(@.' + key + '.indexOf("'+ val +'") > -1)]')
         } else {
           data = core.jsonPath(library, '$..films[?(@.' + key + '==="' + val + '")]')

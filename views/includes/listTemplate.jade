@@ -1,0 +1,17 @@
+| <script type="text/template" id="listTemplate">
+|   <ul>
+|<%
+|for (var prop in obj) {
+|if (type === 'year' || type === 'genre') {
+|%>
+|<li class="listItem"><%= prop %></li>
+|<% } else { 
+|var first = prop[0].toLowerCase()
+|if (first === letter) {
+|%>
+|<li class="listItem"><%= prop %></li>
+|<% } %>
+|<% } %>
+|<% } %>
+|   </ul>
+| </script>

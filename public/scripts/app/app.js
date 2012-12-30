@@ -2,25 +2,44 @@ $(document).ready(function () {
 
   (function () {
 
-    // Set variables
-
-    var $content = $('#content')
-      , $genre = $('#genre .menuItem')
+    var 
+        // jQuery
+        $win = $(window)
+      , $document = $(document)
+      , $left = $('#left')
+      , $right = $('#right')
+      , $info = $('#info')
+      , $content = $('#content')
+      , $genre = $('#menu-genre .menuItem')
       , $genreList = $('nav ul ul')
       , $loader = $('div#loader')
-      , spotmapTemplate = _.template($('#spotmapTemplate').html())
-      , pathname = window.location.pathname
-      , pathRegex = /(^\/$)|(^\/(home|genre|year|director|writer)+)/
+
+      // Regex
+      , staticRegex = /(^\/(list|search|about)+$)/
+      , jsonRegex = /(^\/$)|(^\/(home|genre|year|director|writer)+)/
       , showRegex = /(^\/show)/
-      , root = '/' + pathname.split('/')[1]
-      , route = root.match(pathRegex) ? root.match(pathRegex)[0] : '/'
-      , routeMatch = pathRegex.test(pathname)
+
+      // Template
+      , spotmapTemplate = _.template($('#spotmapTemplate').html())
+      , listTemplate = _.template($('#listTemplate').html())
+
+      // Routing
+      , pathname = window.location.pathname
+      , route = '/' + pathname.split('/')[1]
+      , menu = pathname.split('/')[1]
+      , staticMatch = staticRegex.test(pathname)
+      , jsonMatch = jsonRegex.test(pathname)
       , showMatch = showRegex.test(pathname)
-      , type = route === '/' ? 'all' : pathname.replace(route + '/','')
-      , getQuery = route === '/' ? 'genre=all' : [route.slice(1) + '=', type].join('')
+      , type = (route === '/') ? 'all' : pathname.replace(route + '/','')
+      , getQuery = (route === '/') ? 'genre=all' : [route.slice(1) + '=', type].join('')
+
+      // Other
       , imageData = undefined
       , slice = Array.prototype.slice
-      , chock
+      , imagesLoadedCheck, listCategory = 'director'
+      , searchCategory = 'director', searchInputText, list
+      , page = 0, pageRange = 10, pageStart = page * pageRange, pageEnd = (page + 1) * pageRange
+      , categories = ['genres', 'directors', 'writers', 'years']
 
     /*
      * For each film in the film list create a spotmap div, image and notes
@@ -40,23 +59,27 @@ $(document).ready(function () {
 
       spotmapList.forEach(function(map) {
 
-        // Create new elements
-        var frame = core.create({ el: 'div', class: 'frame clearfix' })
-          , br = core.create({type: 'el', el: 'br'})
+        if (map.display) {
+          // Create new elements
+          var frame = core.create({ el: 'div', class: 'frame clearfix' })
+            , br = core.create({type: 'el', el: 'br'})
 
-        // Format the map information labels and data.
-        map.directorLabel = map.director.length > 1 ? 'Directors' : 'Director'
-        map.writerLabel = map.writer.length > 1 ? 'Writers' : 'Writer'
-        map.director = map.director.join('</a><br/><a>')
-        map.writer = map.writer.join('</a><br/><a>')
-        map.minutes = map.numberOfSpots/60
-        map.src = '/static/images/' + map.filename
+          // Format the map information labels and data.
+          map.directorLabel = map.director.length > 1 ? 'Directors' : 'Director'
+          map.writerLabel = map.writer.length > 1 ? 'Writers' : 'Writer'
+          map.genreLabel = map.genre.length > 1 ? 'Genres' : 'Genre'
+          map.director = map.director.join('</a><br/><a>')
+          map.writer = map.writer.join('</a><br/><a>')
+          map.genre = map.genre.join('</a><br/><a>')
+          map.minutes = map.numberOfSpots/60
+          map.src = '/static/images/' + map.filename
 
-        // Push the data into the template and render it.
-        frame.innerHTML = spotmapTemplate({map: map})
-        frag.appendChild(frame)
-        frag.appendChild(br)
-        group.appendChild(frag)
+          // Push the data into the template and render it.
+          frame.innerHTML = spotmapTemplate({map: map})
+          frag.appendChild(frame)
+          frag.appendChild(br)
+          group.appendChild(frag)          
+        }
 
       })
   
@@ -133,7 +156,7 @@ $(document).ready(function () {
         error: function(err) {
           console.log(err);
         }
-      })      
+      })
     }
 
     /*
@@ -146,16 +169,18 @@ $(document).ready(function () {
       var href = window.location.href.split('?')[1]
         , id = href.split('=')[1]
         , url = '/bin/?id=' + id
-        , size = size || 4
+        , size = size || 8
 
       if (imageData) {
         convertAndDisplay(size)
       } else {
+        $loader.css({'visibility': 'visible'})
         getData(url, function(err, data) {
           imageData = data
           if (err) console.log(err)
           else {
             convertAndDisplay(size)
+            $loader.css({'visibility': 'hidden'})
           }
         })
       }
@@ -167,7 +192,6 @@ $(document).ready(function () {
       */
 
     function convertAndDisplay(size) {
-      console.log('d');
       createSpotmap(size, function(err, canvas) {
         if (err) {
           console.log(err);
@@ -182,7 +206,24 @@ $(document).ready(function () {
           $content.empty().append(img)
         }
       })
-   }
+    }
+
+    /*
+     * If the staticMatch.
+     */
+
+    if (staticMatch) {
+      if (menu === 'list') {
+        var list = {}, category
+        for (var i = 0, len = categories.length; i < len; i++) {
+          category = categories[i]
+          list[category] = JSON.parse($('#' + category).html())
+        }
+        listCategory = 'director'
+        $('.alphabetItem[data-letter="a"]').addClass('selected')
+        $('#list').html(listTemplate({type: listCategory, obj: list.directors, letter: 'a'}))
+      }
+    }
 
     /*
      * If the showRoute is true load the spotmap hex data and
@@ -190,27 +231,36 @@ $(document).ready(function () {
      */
 
     if (showMatch) {
+      $('.size').filter(function(){ return $(this).text() === '8' }).addClass('selected')
       getCanvasData();
-      $('.size').filter(function(){ return $(this).text() === '4' }).addClass('selected')
     }
 
     /*
      * If the route is anything other than Show load the data.
      */
 
-    if (routeMatch) {
+    if (jsonMatch) buildGroup();
+
+    function buildGroup() {
       var url = '/json/?' + getQuery
       getData(url, function(err, data) {
         if (err) console.log(err)
         else {
-          var group = processData(JSON.parse(data))
+          parsedJson = JSON.parse(data);
+          var len = parsedJson.length, pageStop = pageEnd < len ? (pageRange*(page+1)) : len
+          $info.html(pageStart+1 + ' to ' + pageStop + ' of ' + (len))
+          if (pageStart >= pageRange) $left.css({'visibility': 'visible'});
+          if (pageStart <= 0) $left.css({'visibility': 'hidden'});
+          if (pageEnd <= len && len > pageRange) $right.css({'visibility': 'visible'});
+          if (pageEnd >= len) $right.css({'visibility': 'hidden'});
+          var group = processData(parsedJson.slice(pageStart, pageEnd))
           $content.empty()
           $content.append(group)
           var $images = slice.call($('img.spotmap'))
           $loader.css({'visibility': 'visible'})
-          chock = setInterval(function(){ checkImages($images) }, 500)
+          imagesLoadedCheck = setInterval(function(){ checkImages($images) }, 500)
         }
-      })
+      })      
     }
 
     function checkImages(imageList) {
@@ -220,38 +270,93 @@ $(document).ready(function () {
           count--
           if (count === 0) {
             $loader.css({'visibility': 'hidden'})
-            clearInterval(chock)
+            clearInterval(imagesLoadedCheck)
           }
         }
       })
     }
+
+    $document.on('click', '#right', function () {
+      page++, pageStart = page * pageRange, pageEnd = (page + 1) * pageRange
+      buildGroup();
+    })
+
+    $document.on('click', '#left', function () {
+      page--, pageStart = page * pageRange, pageEnd = (page + 1) * pageRange
+      buildGroup();
+    })
+
+    /*
+     * Highlight correct menu item
+     */
+
+    $('#menu li.menu-selected').removeClass('menu-selected')
+    $('#menu li#menu-' + menu).addClass('menu-selected')
 
     /*
      * Hide the menu on item.onClick. This doesn't happen 
      * automatically as it's a CSS-only menu.
      */
 
-    $genre.live('click', function () { $genreList.css({'display': 'none'}) })
+    $document.on('click', '#menu-genre .menuItem', function () { 
+      $genreList.css({'display': 'none'}) 
+    })
 
     /*
      * Get list of spotmaps according to type
      */
 
-    $('.value a').live('click', function () { 
+    $(document).on('click', '.value a', function () { 
       var labelType = ['/', this.parentNode.className.split(' ')[0], '/'].join('')
       window.location = labelType + this.innerHTML
     })
 
-    $('.spotmap').live('click', function () {
-      console.log(this);
+    $(document).on('click', '.spotmap', function () {
       window.location = '/show/?id=' + this.id
     })
 
-    $('.size').live('click', function () {
+    $(document).on('click', '.size', function () {
       $('.size').removeClass('selected')
       var size = this.innerHTML;
       $(this).addClass('selected')
       convertAndDisplay(parseInt(size))
+    })
+
+    $(document).on('click', '.listLabel .formSpan', function () {
+      $('.listLabel .formSpan').removeClass('selected')
+      $(this).addClass('selected')
+      listCategory = this.innerHTML;
+      if (listCategory === 'genre' || listCategory === 'year') {
+        $('.alphabet').hide()
+      } else {
+        $('.alphabet').show()
+      }
+      $('#list').html(listTemplate({type: listCategory, obj: list[listCategory + 's'], letter: 'a'}))
+    })
+
+    $(document).on('click', '.searchLabel .formSpan', function () {
+      $('.searchLabel .formSpan').removeClass('selected')
+      $(this).addClass('selected')
+      searchCategory = this.innerHTML;
+      searchInputText = 'Search for ' + searchCategory
+      $('.searchInput').attr('placeholder', searchInputText)
+    })
+
+    $(document).on('click', '.formSubmit', function(event) {
+      event.preventDefault()
+      var searchValue = $('.searchInput').val()
+    })
+
+    $(document).on('click', '.alphabetItem', function () {
+      var letter = $(this).html().toLowerCase()
+      $('.alphabetItem').removeClass('selected')
+      $(this).addClass('selected')
+      $('#list').html(listTemplate({type: listCategory, obj: list[listCategory + 's'], letter: letter}))
+    })
+
+    $(document).on('click', '.listItem', function () {
+      var labelType = ['/', listCategory, '/'].join('')
+      window.location = labelType + this.innerHTML
     })
 
   }())

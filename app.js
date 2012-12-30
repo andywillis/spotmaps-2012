@@ -1,4 +1,6 @@
-// Module dependencies.
+/*
+ * Dependancies
+ */
 
 var fs = require('fs')
   , express = require('express')
@@ -8,11 +10,15 @@ var fs = require('fs')
   , http = require('http')
   , path = require('path')
 
-// Vars
+/*
+ * Variables
+ */
 
 var app, dbox, dbApp, libraryLocation
 
-// Blank the console and configure express
+/*
+ * Blank the console and configure express
+ */
 
 core.clear()
 console.log((config.name + ' v' + config.version).appName);
@@ -26,17 +32,19 @@ app.configure(function () {
   app.use(require('less-middleware')({ 
     compress:true, 
     debug: false, 
+    force: true,
     once: true,
     prefix: '/stylesheets',
     src: __dirname + '/less', 
     dest: __dirname + '/public/stylesheets/'
   }));
+//  app.use(require('./lib/metric.js')());
   app.use(app.router);
   app.use(express.compress());
   app.use(express.static(path.join(__dirname, "public"), { maxAge: 360000 }));
 });
 
-app.configure('development', function(){
+app.configure('development', function () {
   app.use(express.errorHandler());
 });
 
@@ -72,7 +80,11 @@ app.static = staticObj = {
 
 libraryLocation = './data/library.json'
 app.library = JSON.parse(fs.readFileSync(libraryLocation, 'utf-8'))
-app.library.count = require('./lib/count')()
+app.library.menu = require('./lib/count')(app.library.films, 'genre', 'value', 12)
+app.library.genres = require('./lib/count')(app.library.films, 'genre', 'key', null)
+app.library.directors = require('./lib/count')(app.library.films, 'director', 'key', null)
+app.library.writers = require('./lib/count')(app.library.films, 'writer', 'key', null)
+app.library.years = require('./lib/count')(app.library.films, 'year', 'key', null)
 
 /*
  * Describe the site routes, passing app as a parameter.
@@ -81,7 +93,9 @@ app.library.count = require('./lib/count')()
 
 app.get(/^(\/|\/home)$/, require('./routes/index')(app));
 app.get(/^\/(genre|year|director|writer)\/*/, require('./routes/category')(app));
+app.get('/list', require('./routes/list')(app))
 app.get('/search', require('./routes/search')(app))
+app.get(/^\/admin\/*/, require('./routes/admin')(app));
 app.get('/about', require('./routes/about')(app));
 app.get('/show/*', require('./routes/show')(app));
 app.get('/json/*', require('./routes/json')(app));
@@ -89,7 +103,9 @@ app.get('/bin/*', require('./routes/bin')(app));
 app.get('/static/*', require('./routes/static')(app))
 app.use(require('./routes/fourohfour')(app));
 
-// Run the server
+/*
+ * Run the server
+ */
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log(('Express server listening on port ' + app.get('port')).server);

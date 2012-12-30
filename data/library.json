@@ -1,894 +1,2919 @@
 {
 	"films": [
 		{
+			"display": true,
+			"title": "12 Disasters of Christmas, The",
+			"numberOfSpots": 5460,
+			"filename": "12 Disasters of Christmas, The.jpg",
+			"id": 1,
+			"director": ["Monroe, Steven R."],
+			"genre": ["Science Fiction"],
+			"writer": ["Thauberger, Rudy"],
+			"year": 2012
+		},
+		{
+			"display": false,
 			"title": "13 Tzameti",
 			"numberOfSpots": 5400,
 			"filename": "13 Tzameti.jpg",
-			"director": [
-				"Babluani, Géla"
-			],
-			"genre": "Thriller",
-			"writer": [
-				"Babluani, Géla"
-			],
+			"director": ["Babluani, Géla"],
+			"genre": ["Crime", "Drama", "Thriller"],
+			"writer": ["Babluani, Géla"],
 			"year": 2005,
-			"id": 1
-		},
-		{
-			"title": "96 Minutes",
-			"numberOfSpots": 5700,
-			"filename": "96 Minutes.jpg",
-			"director": [
-				"Lagos, Aimee"
-			],
-			"genre": "Thriller",
-			"writer": [
-				"Lagos, Aimee"
-			],
-			"year": 2011,
 			"id": 2
 		},
 		{
-			"title": "Albert Nobbs",
-			"numberOfSpots": 6540,
-			"filename": "Albert Nobbs.jpg",
-			"director": [
-				"García, Rodrigo"
-			],
-			"genre": "Drama",
-			"writer": [
-				"Close, Glenn",
-				"Banville, John"
-			],
-			"year": 2011,
-			"id": 3
+			"display": true,
+			"title": "36 Hours",
+			"numberOfSpots": 6600,
+			"filename": "36 Hours.jpg",
+			"id": 3,
+			"director": ["Seaton, George"],
+			"genre": ["Thriller", "War"],
+			"writer": ["Seaton, George"],
+			"year": 1965
 		},
 		{
-			"title": "Alucarda",
-			"numberOfSpots": 4500,
-			"filename": "Alucarda.jpg",
-			"director": [
-				"López Moctezuma, Juan"
-			],
-			"genre": "Horror",
-			"writer": [
-				"Arroyo, Alexis",
-				"López Moctezuma, Juan"
-			],
-			"year": 1977,
+			"display": true,
+			"title": "96 Minutes",
+			"numberOfSpots": 5700,
+			"filename": "96 Minutes.jpg",
+			"director": ["Lagos, Aimee"],
+			"genre": ["Drama", "Thriller"],
+			"writer": ["Lagos, Aimee"],
+			"year": 2011,
 			"id": 4
 		},
 		{
-			"title": "Atlantis - End Of A World Birth Of A Legend",
+			"display": true,
+			"title": "A Cat in Paris",
+			"numberOfSpots": 4080,
+			"filename": "A Cat in Paris.jpg",
+			"id": 5,
+			"director": ["Felicioli, Jean-Loup", "Gagnol, Alain"],
+			"genre": ["Animation", "Adventure", "Family"],
+			"writer": ["Gagnol, Alain", "Girerd, Jacques-Rémy"],
+			"year": 2010
+		},
+		{
+			"display": true,
+			"title": "Acacias, Las",
 			"numberOfSpots": 5340,
-			"filename": "Atlantis - End Of A World Birth Of A Legend.jpg",
-			"director": [
-				"Mitchell, Tony"
-			],
-			"genre": "Drama",
-			"writer": [
-				"Brook, Rhidian"
-			],
+			"filename": "Acacias, Las.jpg",
+			"id": 6,
+			"director": ["Giorgelli, Pablo"],
+			"genre": ["Drama"],
+			"writer": ["Giorgelli, Pablo", "Roselli, Salvador"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Albert Nobbs",
+			"numberOfSpots": 6540,
+			"filename": "Albert Nobbs.jpg",
+			"director": ["García, Rodrigo"],
+			"genre": ["Drama"],
+			"writer": ["Close, Glenn", "Banville, John"],
 			"year": 2011,
-			"id": 5
-		},
-		{
-			"title": "ATM",
-			"numberOfSpots": 5700,
-			"filename": "ATM.jpg",
-			"director": [
-				"Brooks, David"
-			],
-			"genre": "Thriller",
-			"writer": [
-				"Sparling, Chris"
-			],
-			"year": 2012,
-			"id": 6
-		},
-		{
-			"title": "Bad Lieutenant",
-			"numberOfSpots": 7020,
-			"filename": "Bad Lieutenant.jpg",
-			"director": [
-				"Herzog, Werner"
-			],
-			"genre": "Crime",
-			"writer": [
-				"Finkelstein, William"
-			],
-			"year": 2009,
 			"id": 7
 		},
 		{
-			"title": "Bad Ass",
-			"numberOfSpots": 5640,
-			"filename": "Bad Ass.jpg",
-			"director": [
-				"Moss, Craig"
-			],
-			"genre": "Action and adventure",
-			"writer": [
-				"Moss, Craig",
-				"Tishman, Elliot"
-			],
-			"year": 2012,
+			"display": true,
+			"title": "Alucarda",
+			"numberOfSpots": 4500,
+			"filename": "Alucarda.jpg",
+			"director": ["López Moctezuma, Juan"],
+			"genre": ["Thriller", "Horror"],
+			"writer": ["Arroyo, Alexis", "López Moctezuma, Juan"],
+			"year": 1977,
 			"id": 8
 		},
 		{
-			"title": "Beautiful Lies",
-			"numberOfSpots": 6060,
-			"filename": "Beautiful Lies.jpg",
-			"director": [
-				"Salvadori, Pierre"
-			],
-			"genre": "Comedy",
-			"writer": [
-				"Salvadori, Pierre",
-				"Graffin, Benoit"
-			],
-			"year": 2010,
-			"id": 9
+			"display": true,
+			"title": "Amer",
+			"numberOfSpots": 5700,
+			"filename": "Amer.jpg",
+			"id": 9,
+			"director": ["Cattet, Hélène", "Forzani, Bruno"],
+			"genre": ["Thriller", "Horror"],
+			"writer": ["Cattet, Hélène", "Forzani, Bruno"],
+			"year": 2009
 		},
 		{
-			"title": "Beguiled, The",
-			"numberOfSpots": 6600,
-			"filename": "Beguiled, The.jpg",
-			"director": [
-				"Siegel, Don"
-			],
-			"genre": "Drama",
-			"writer": [
-				"Maltz, Albert",
-				"Kamp, Irene"
-			],
-			"year": 1971,
-			"id": 10
+			"display": true,
+			"title": "Android",
+			"numberOfSpots": 5040,
+			"filename": "Android.jpg",
+			"id": 10,
+			"director": ["Lipstadt, Aaron"],
+			"genre": ["Science Fiction"],
+			"writer": ["Reigle, James", "Opper, Don Keith"],
+			"year": 1982
 		},
 		{
-			"title": "Being Flynn",
-			"numberOfSpots": 6420,
-			"filename": "Being Flynn.jpg",
-			"director": [
-				"Weitz, Paul"
-			],
-			"genre": "Drama",
-			"writer": [
-				"Weitz, Paul"
-			],
-			"year": 2012,
-			"id": 11
+			"display": true,
+			"title": "Angel Heart",
+			"numberOfSpots": 7080,
+			"filename": "Angel Heart.jpg",
+			"id": 11,
+			"director": ["Parker, Alan"],
+			"genre": ["Mystery", "Thriller"],
+			"writer": ["Parker, Alan"],
+			"year": 1987
 		},
 		{
-			"title": "Bigfoot",
+			"display": true,
+			"title": "Angel's Share, The",
+			"numberOfSpots": 6360,
+			"filename": "Angel's Share, The.jpg",
+			"id": 12,
+			"director": ["Loach, Ken"],
+			"genre": ["Comedy", "Drama"],
+			"writer": ["Laverty, Paul"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Apartment, The",
+			"numberOfSpots": 7860,
+			"filename": "Apartment, The.jpg",
+			"id": 13,
+			"director": ["Wilder, Billy"],
+			"genre": ["Comedy", "Romance"],
+			"writer": ["Wilder, Billy", "Diamond, I.A.L."],
+			"year": 1960
+		},
+		{
+			"display": true,
+			"title": "Arbitrage",
+			"numberOfSpots": 6780,
+			"filename": "Arbitrage.jpg",
+			"id": 14,
+			"director": ["Jarecki, Nicholas"],
+			"genre": ["Drama", "Thriller"],
+			"writer": ["Jarecki, Nicholas"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Atlantis - End Of A World Birth Of A Legend",
 			"numberOfSpots": 5340,
-			"filename": "Bigfoot.jpg",
-			"director": [
-				"Davison, Bruce"
-			],
-			"genre": "Action and adventure",
-			"writer": [
-				"Brinkman, Brian",
-				"Rutare, Micho"
-			],
-			"year": 2012,
-			"id": 12
-		},
-		{
-			"title": "Bird Of The Air",
-			"numberOfSpots": 6180,
-			"filename": "Bird Of The Air.jpg",
-			"director": [
-				"Whitton, Margaret"
-			],
-			"genre": "Drama",
-			"writer": [
-				"Towne, Roger"
-			],
+			"filename": "Atlantis - End Of A World Birth Of A Legend.jpg",
+			"director": ["Mitchell, Tony"],
+			"genre": ["Drama"],
+			"writer": ["Brook, Rhidian"],
 			"year": 2011,
-			"id": 13
-		},
-		{
-			"title": "Blow Out",
-			"numberOfSpots": 6540,
-			"filename": "Blow Out.jpg",
-			"director": [
-				"De Palma, Brian"
-			],
-			"genre": "Thriller",
-			"writer": [
-				"De Palma, Brian"
-			],
-			"year": 1981,
-			"id": 14
-		},
-		{
-			"title": "Bronson",
-			"numberOfSpots": 5340,
-			"filename": "Bronson.jpg",
-			"director": [
-				"Refn, Nicolas Winding"
-			],
-			"genre": "Crime",
-			"writer": [
-				"Refn, Nicolas Winding",
-				"Norman Brock, Brock"
-			],
-			"year": 2008,
 			"id": 15
 		},
 		{
-			"title": "Bull Durham",
-			"numberOfSpots": 6780,
-			"filename": "Bull Durham.jpg",
-			"director": [
-				"Shelton, Ron"
-			],
-			"genre": "Comedy",
-			"writer": [
-				"Shelton, Ron"
-			],
-			"year": 1988,
+			"display": true,
+			"title": "ATM",
+			"numberOfSpots": 5700,
+			"filename": "ATM.jpg",
+			"director": ["Brooks, David"],
+			"genre": ["Thriller", "Horror"],
+			"writer": ["Sparling, Chris"],
+			"year": 2012,
 			"id": 16
 		},
 		{
-			"title": "Cercle Rouge, Le",
-			"numberOfSpots": 8100,
-			"filename": "Cercle Rouge, Le.jpg",
-			"director": [
-				"Melville, Jean-Pierre"
-			],
-			"genre": "Crime",
-			"writer": [
-				"Melville, Jean-Pierre"
-			],
-			"year": 1970,
-			"id": 17
+			"display": true,
+			"title": "Attack Of The Herbals",
+			"numberOfSpots": 4920,
+			"filename": "Attack Of The Herbals.jpg",
+			"id": 17,
+			"director": ["Keith, David Ryan"],
+			"genre": ["Comedy", "Horror"],
+			"writer": ["Keith, David Ryan", "Cook, Alisdair", "Matheson, Liam"],
+			"year": 2011
 		},
 		{
-			"title": "Collaborator",
-			"numberOfSpots": 5040,
-			"filename": "Collaborator.jpg",
-			"director": [
-				"Donovan, Martin"
-			],
-			"genre": "Drama",
-			"writer": [
-				"Donovan, Martin"
-			],
-			"year": 2011,
-			"id": 18
+			"display": true,
+			"title": "Avalon",
+			"numberOfSpots": 6720,
+			"filename": "Avalon.jpg",
+			"id": 18,
+			"director": ["Oshii, Mamoru"],
+			"genre": ["Action", "Fantasy", "Drama"],
+			"writer": ["Itô, Kazunori"],
+			"year": 2001
 		},
 		{
-			"title": "Control",
+			"display": true,
+			"title": "Bad Ass",
+			"numberOfSpots": 5640,
+			"filename": "Bad Ass.jpg",
+			"id": 19,
+			"director": ["Moss, Craig"],
+			"genre": ["Action", "Drama"],
+			"writer": ["Moss, Craig", "Tishman, Elliot"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Bad Lieutenant",
 			"numberOfSpots": 7020,
-			"filename": "Control.jpg",
-			"director": [
-				"Corbijn, Anton"
-			],
-			"genre": "Drama",
-			"writer": [
-				"Greenhalgh, Matt"
-			],
-			"year": 2007,
-			"id": 19
-		},
-		{
-			"title": "Death of a Superhero",
-			"numberOfSpots": 5580,
-			"filename": "Death of a Superhero.jpg",
-			"director": [
-				"Fitzgibbon, Ian"
-			],
-			"genre": "Drama",
-			"writer": [
-				"McCarten, Anthony"
-			],
-			"year": 2011,
+			"filename": "Bad Lieutenant.jpg",
+			"director": ["Herzog, Werner"],
+			"genre": ["Drama", "Crime"],
+			"writer": ["Finkelstein, William"],
+			"year": 2009,
 			"id": 20
 		},
 		{
-			"title": "Detachment",
-			"numberOfSpots": 6180,
-			"filename": "Detachment.jpg",
-			"director": [
-				"Kaye, Tony"
-			],
-			"genre": "Drama",
-			"writer": [
-				"Lund, Carl"
-			],
-			"year": 2011,
-			"id": 21
+			"display": true,
+			"title": "Bay, The",
+			"numberOfSpots": 5340,
+			"filename": "Bay, The.jpg",
+			"id": 21,
+			"director": ["Levinson, Barry"],
+			"genre": ["Horror", "Science Fiction", "Thriller"],
+			"writer": ["Wallach, Michael"],
+			"year": 2012
 		},
 		{
-			"title": "Dressed to Kill",
-			"numberOfSpots": 6600,
-			"filename": "Dressed to Kill.jpg",
-			"director": [
-				"De Palma, Brian"
-			],
-			"genre": "Thriller",
-			"writer": [
-				"De Palma, Brian"
-			],
-			"year": 1974,
-			"id": 22
+			"display": true,
+			"title": "Beasts Of The Southern Wild",
+			"numberOfSpots": 5880,
+			"filename": "Beasts Of The Southern Wild.jpg",
+			"id": 22,
+			"director": ["Zeitlin, Benh"],
+			"genre": ["Drama", "Fantasy"],
+			"writer": ["Zeitlin, Benh", "Alibar, Lucy"],
+			"year": 2012
 		},
 		{
-			"title": "Elevator",
-			"numberOfSpots": 4860,
-			"filename": "Elevator.jpg",
-			"director": [
-				"Svendsen, Stig"
-			],
-			"genre": "Thriller",
-			"writer": [
-				"Rosenberg, Marc"
-			],
-			"year": 2011,
+			"display": true,
+			"title": "Beautiful Lies",
+			"numberOfSpots": 6060,
+			"filename": "Beautiful Lies.jpg",
+			"director": ["Salvadori, Pierre"],
+			"genre": ["Comedy", "Romance"],
+			"writer": ["Salvadori, Pierre",	"Graffin, Benoit"],
+			"year": 2010,
 			"id": 23
 		},
 		{
-			"title": "Enter Nowhere",
-			"numberOfSpots": 5640,
-			"filename": "Enter Nowhere.jpg",
-			"director": [
-				"Heller, Jack"
-			],
-			"genre": "Thriller",
-			"writer": [
-				"Christensen, Shawn",
-				"Dolan, Jason"
-			],
-			"year": 2011,
-			"id": 24
+			"display": true,
+			"title": "Beginner's Guide To Endings, A",
+			"numberOfSpots": 5820,
+			"filename": "Beginner's Guide To Endings, A.jpg",
+			"id": 24,
+			"director": ["Sobol, Jonathan"],
+			"genre": ["Comedy", "Drama"],
+			"writer": ["Sobol, Jonathan"],
+			"year": 2010
 		},
 		{
-			"title": "Entrance",
-			"numberOfSpots": 5820,
-			"filename": "Entrance.jpg",
-			"director": [
-				"Hallam, Dallas Richard",
-				"Horvath, Patrick"
-			],
-			"genre": "Horror",
-			"writer": [
-				"Hallam, Dallas Richard",
-				"Horvath, Patrick",
-				"Gorham, Karen",
-				"Margolis, Michelle"
-			],
-			"year": 2012,
+			"display": true,
+			"title": "Beguiled, The",
+			"numberOfSpots": 6600,
+			"filename": "Beguiled, The.jpg",
+			"director": ["Siegel, Don"],
+			"genre": ["Drama", "Romance", "War"],
+			"writer": ["Maltz, Albert",	"Kamp, Irene"],
+			"year": 1971,
 			"id": 25
 		},
 		{
-			"title": "Eva",
-			"numberOfSpots": 5460,
-			"filename": "Eva.jpg",
-			"director": [
-				"Maíllo, Kike"
-			],
-			"genre": "Science fiction and fantasy",
-			"writer": [
-				"Belbel, Sergi",
-				"Clemente, Cristina",
-				"Roca, Martí",
-				"Serra, Aintza"
-			],
-			"year": 2011,
+			"display": true,
+			"title": "Being Flynn",
+			"numberOfSpots": 6420,
+			"filename": "Being Flynn.jpg",
+			"director": ["Weitz, Paul"],
+			"genre": ["Drama"],
+			"writer": ["Weitz, Paul"],
+			"year": 2012,
 			"id": 26
 		},
 		{
-			"title": "Femme Fatale",
-			"numberOfSpots": 6600,
-			"filename": "Femme Fatale.jpg",
-			"director": [
-				"De Palma, Brian"
-			],
-			"genre": "Thriller",
-			"writer": [
-				"De Palma, Brian"
-			],
-			"year": 2002,
+			"display": true,
+			"title": "Bigfoot",
+			"numberOfSpots": 5340,
+			"filename": "Bigfoot.jpg",
+			"director": ["Davison, Bruce"],
+			"genre": ["Action", "Fantasy", "Science Fiction"],
+			"writer": ["Brinkman, Brian",	"Rutare, Micho"],
+			"year": 2012,
 			"id": 27
 		},
 		{
-			"title": "Four",
-			"numberOfSpots": 5100,
-			"filename": "Four.jpg",
-			"director": [
-				"Langridge, John"
-			],
-			"genre": "Thriller",
-			"writer": [
-				"Chronell, Paul"
-			],
+			"display": true,
+			"title": "Bird Of The Air",
+			"numberOfSpots": 6180,
+			"filename": "Bird Of The Air.jpg",
+			"director": ["Whitton, Margaret"],
+			"genre": ["Drama", "Romance"],
+			"writer": ["Towne, Roger"],
 			"year": 2011,
 			"id": 28
 		},
 		{
-			"title": "Funeral in Berlin",
-			"numberOfSpots": 5880,
-			"filename": "Funeral in Berlin.jpg",
-			"director": [
-				"Hamilton, Guy"
-			],
-			"genre": "Thriller",
-			"writer": [
-				"Jones, Evan"
-			],
-			"year": 1966,
-			"id": 29
+			"display": true,
+			"title": "Blast From The Past",
+			"numberOfSpots": 5940,
+			"filename": "Blast From The Past.jpg",
+			"id": 29,
+			"director": ["Wilson, Hugh"],
+			"genre": ["Drama", "Comedy", "Romance"],
+			"writer": ["Wilson, Hugh", "Kelly, Bill"],
+			"year": 1999
 		},
 		{
-			"title": "Great Silence, The",
-			"numberOfSpots": 6120,
-			"filename": "Great Silence, The.jpg",
-			"director": [
-				"Corbucci, Sergio"
-			],
-			"genre": "Western",
-			"writer": [
-				"Amendola, Mario",
-				"Corbucci, Bruno",
-				"Corbucci, Sergio",
-				"Petrilli, Vittoriano"
-			],
-			"year": 1968,
+			"display": true,
+			"title": "Blow Out",
+			"numberOfSpots": 6540,
+			"filename": "Blow Out.jpg",
+			"director": ["De Palma, Brian"],
+			"genre": ["Thriller"],
+			"writer": ["De Palma, Brian"],
+			"year": 1981,
 			"id": 30
 		},
 		{
-			"title": "Haywire",
-			"numberOfSpots": 5820,
-			"filename": "Haywire.jpg",
-			"director": [
-				"Soderbergh, Steven"
-			],
-			"genre": "Thriller",
-			"writer": [
-				"Dobbs, Lem"
-			],
-			"year": 2011,
-			"id": 31
+			"display": true,
+			"title": "Blue Thunder",
+			"numberOfSpots": 6300,
+			"filename": "Blue Thunder.jpg",
+			"id": 31,
+			"director": ["Badham, John"],
+			"genre": ["Action", "Crime", "Drama"],
+			"writer": ["O'Bannon, Dan", "Don Jakoby", "Riesner, Dean"],
+			"year": 1983
 		},
 		{
-			"title": "He's Just Not That Into You",
-			"numberOfSpots": 8160,
-			"filename": "He's Just Not That Into You.jpg",
-			"director": [
-				"Kwapis, Ken"
-			],
-			"genre": "Comedy",
-			"writer": [
-				"Kohn, Abby",
-				"Silverstein, Marc"
-			],
-			"year": 2009,
-			"id": 32
+			"display": true,
+			"title": "Booster",
+			"numberOfSpots": 4560,
+			"filename": "Booster.jpg",
+			"id": 32,
+			"director": ["Ruskin, Matt"],
+			"genre": ["Crime", "Drama"],
+			"writer": ["Ruskin, Matt"],
+			"year": 2012
 		},
 		{
-			"title": "Hick",
-			"numberOfSpots": 6240,
-			"filename": "Hick.jpg",
-			"director": [
-				"Martini, Derick"
-			],
-			"genre": "Comedy",
-			"writer": [
-				"Portes, Andrea"
-			],
-			"year": 2011,
-			"id": 33
+			"display": true,
+			"title": "Boot Tracks",
+			"numberOfSpots": 5760,
+			"filename": "Boot Tracks.jpg",
+			"id": 33,
+			"director": ["Jacobson, David"],
+			"genre": ["Crime", "Drama", "Thriller"],
+			"writer": ["Jones, Matthew F."],
+			"year": 2012
 		},
 		{
-			"title": "High Art",
-			"numberOfSpots": 6420,
-			"filename": "High Art.jpg",
-			"director": [
-				"Cholodenko, Lisa"
-			],
-			"genre": "Drama",
-			"writer": [
-				"Cholodenko, Lisa"
-			],
-			"year": 1998,
-			"id": 34
-		},
-		{
-			"title": "I Sell The Dead",
-			"numberOfSpots": 4920,
-			"filename": "I Sell The Dead.jpg",
-			"director": [
-				"McQuaid, Glenn"
-			],
-			"genre": "Horror",
-			"writer": [
-				"McQuaid, Glenn"
-			],
-			"year": 2008,
-			"id": 35
-		},
-		{
-			"title": "Inseparable",
+			"display": true,
+			"title": "Brave",
 			"numberOfSpots": 5880,
-			"filename": "Inseparable.jpg",
-			"director": [
-				"Eng, Dayyan"
-			],
-			"genre": "Thriller",
-			"writer": [
-				"Eng, Dayyan"
-			],
-			"year": 2011,
-			"id": 36
+			"filename": "Brave.jpg",
+			"id": 34,
+			"director": ["Andrews, Mark","Chapman, Brenda", "Purcell, Steve"],
+			"genre": ["Animation", "Action", "Adventure"],
+			"writer": ["Andrews, Mark","Chapman, Brenda", "Purcell, Steve", "Mecchi, Irene"],
+			"year": 2012
 		},
 		{
-			"title": "It! The Terror From Beyond Space",
-			"numberOfSpots": 4380,
-			"filename": "It! The Terror From Beyond Space.jpg",
-			"director": [
-				"Cahn, Edward L."
-			],
-			"genre": "Science fiction and fantasy",
-			"writer": [
-				"Bixby, Jerome"
-			],
-			"year": 1958,
+			"display": true,
+			"title": "Breakfast On Pluto",
+			"numberOfSpots": 7020,
+			"filename": "Breakfast On Pluto.jpg",
+			"id": 35,
+			"director": ["Jordan, Neil"],
+			"genre": ["Comedy", "Drama"],
+			"writer": ["Jordan, Neil", "McCabe, Pat"],
+			"year": 2005
+		},
+		{
+			"display": true,
+			"title": "Breaking the Waves",
+			"numberOfSpots": 9180,
+			"filename": "Breaking the Waves.jpg",
+			"id": 36,
+			"director": ["von Trier, Lars"],
+			"genre": ["Drama", "Romance"],
+			"writer": ["von Trier, Lars", "Asmussen, Peter", "Pirie, David"],
+			"year": 1996
+		},
+		{
+			"display": true,
+			"title": "Bronson",
+			"numberOfSpots": 5340,
+			"filename": "Bronson.jpg",
+			"director": ["Refn, Nicolas Winding"],
+			"genre": ["Crime", "Biography", "Action"],
+			"writer": ["Refn, Nicolas Winding",	"Norman Brock, Brock"],
+			"year": 2008,
 			"id": 37
 		},
 		{
-			"title": "Jesus Henry Christ",
-			"numberOfSpots": 5460,
-			"filename": "Jesus Henry Christ.jpg",
-			"director": [
-				"Lee, Dennis"
-			],
-			"genre": "Comedy",
-			"writer": [
-				"Lee, Dennis"
-			],
-			"year": 2012,
-			"id": 38
+			"display": true,
+			"title": "Bug",
+			"numberOfSpots": 6420,
+			"filename": "Bug.jpg",
+			"id": 38,
+			"director": ["Friedkin, William"],
+			"genre": ["Thriller"],
+			"writer": ["Letts, Tracy"],
+			"year": 2006
 		},
 		{
-			"title": "Kill List",
-			"numberOfSpots": 5520,
-			"filename": "Kill List.jpg",
-			"director": [
-				"Wheatley, Ben"
-			],
-			"genre": "Horror",
-			"writer": [
-				"Wheatley, Ben",
-				"Jump, Amy"
-			],
-			"year": 2011,
+			"display": true,
+			"title": "Bull Durham",
+			"numberOfSpots": 6780,
+			"filename": "Bull Durham.jpg",
+			"director": ["Shelton, Ron"],
+			"genre": ["Comedy", "Romance", "Sport"],
+			"writer": ["Shelton, Ron"],
+			"year": 1988,
 			"id": 39
 		},
 		{
-			"title": "Kill Your Idols",
-			"numberOfSpots": 4440,
-			"filename": "Kill Your Idols.jpg",
-			"director": [
-				"Crary, Scott"
-			],
-			"genre": "Documentary",
-			"writer": [
-				"Crary, Scott"
-			],
-			"year": 2004,
-			"id": 40
+			"display": true,
+			"title": "Butter",
+			"numberOfSpots": 5700,
+			"filename": "Butter.jpg",
+			"id": 40,
+			"director": ["Smith, Jim Field"],
+			"genre": ["Comedy"],
+			"writer": ["Micallef, Jason A."],
+			"year": 2011
 		},
 		{
-			"title": "Killer Shrews, The",
-			"numberOfSpots": 4320,
-			"filename": "Killer Shrews, The.jpg",
-			"director": [
-				"Kellogg, Ray"
-			],
-			"genre": "Science Fiction and fantasy",
-			"writer": [
-				"Simms, Jay"
-			],
-			"year": 1959,
-			"id": 41
+			"display": true,
+			"title": "Cell, The",
+			"numberOfSpots": 6300,
+			"filename": "Cell, The.jpg",
+			"id": 41,
+			"director": ["Singh, Tarsem"],
+			"genre": ["Science Fiction", "Thriller"],
+			"writer": ["Protosevich, Mark"],
+			"year": 2000
 		},
 		{
-			"title": "Klown",
-			"numberOfSpots": 5460,
-			"filename": "Klovn.jpg",
-			"director": [
-				"Nørgaard, Mikkel"
-			],
-			"genre": "Comedy",
-			"writer": [
-				"Christensen, Casper"
-			],
-			"year": 2010,
+			"display": true,
+			"title": "Cercle Rouge, Le",
+			"numberOfSpots": 8100,
+			"filename": "Cercle Rouge, Le.jpg",
+			"director": ["Melville, Jean-Pierre"],
+			"genre": ["Crime", "Drama", "Thriller"],
+			"writer": ["Melville, Jean-Pierre"],
+			"year": 1970,
 			"id": 42
 		},
 		{
-			"title": "La Delicatesse",
-			"numberOfSpots": 6300,
-			"filename": "La Delicatesse.jpg",
-			"director": [
-				"Foenkinos, David",
-				"Foenkinos, Stéphane"
-			],
-			"genre": "Comedy",
-			"writer": [
-				"Foenkinos, David"
-			],
-			"year": 2011,
-			"id": 43
+			"display": true,
+			"title": "Chained",
+			"numberOfSpots": 5940,
+			"filename": "Chained.jpg",
+			"id": 43,
+			"director": ["Lynch, Jennifer Chambers"],
+			"genre": ["Horror", "Thriller"],
+			"writer": ["Lynch, Jennifer Chambers", "O'Donnell, Damian"],
+			"year": 2012
 		},
 		{
-			"title": "Last Broadcast, The",
-			"numberOfSpots": 5220,
-			"filename": "Last Broadcast, The.jpg",
-			"director": [
-				"Avalos, Stefan",
-				"Weiler, Lance"
-			],
-			"genre": "Horror",
-			"writer": [
-				"Avalos, Stefan",
-				"Weiler, Lance"
-			],
-			"year": 1998,
-			"id": 44
+			"display": true,
+			"title": "Chalet Girl",
+			"numberOfSpots": 5580,
+			"filename": "Chalet Girl.jpg",
+			"id": 44,
+			"director": ["Traill, Phil"],
+			"genre": ["Comedy", "Romance"],
+			"writer": ["Williams, Tom"],
+			"year": 2011
 		},
 		{
-			"title": "Last Castle, The",
-			"numberOfSpots": 8220,
-			"filename": "Last Castle, The.jpg",
-			"director": [
-				"Lurie, Rod"
-			],
-			"genre": "Drama",
-			"writer": [
-				"Scarpa, David"
-			],
-			"year": 2001,
-			"id": 45
+			"display": true,
+			"title": "Chaser, The",
+			"numberOfSpots": 7860,
+			"filename": "Chaser, The.jpg",
+			"id": 45,
+			"director": ["Na, Hong-jin"],
+			"genre": ["Crime", "Drama", "Thriller"],
+			"writer": ["Na, Hong-jin", "Hong, Won-Chan", "Lee, Shinho"],
+			"year": 2008
 		},
 		{
-			"title": "Lockout",
-			"numberOfSpots": 6000,
-			"filename": "Lockout.jpg",
-			"director": [
-				"Mather, James",
-				"St. Leger, Stephen"
-			],
-			"genre": "Action and adventure",
-			"writer": [
-				"Besson, Luc",
-				"Mather, James",
-				"St. Leger, Stephen"
-			],
-			"year": 2012,
-			"id": 46
+			"display": true,
+			"title": "Citadel",
+			"numberOfSpots": 5340,
+			"filename": "Citadel.jpg",
+			"id": 46,
+			"director": ["Foy, Ciaran"],
+			"genre": ["Drama", "Horror", "Thriller"],
+			"writer": ["Foy, Ciaran"],
+			"year": 2012
 		},
 		{
-			"title": "Miss Bala",
-			"numberOfSpots": 7080,
-			"filename": "Miss Bala.jpg",
-			"director": [
-				"Naranjo, Gerardo"
-			],
-			"genre": "Drama",
-			"writer": [
-				"Sigman, Stephanie",
-				"Azuela, Irene",
-				"Yenque, Jose"
-			],
-			"year": 2011,
-			"id": 47
+			"display": true,
+			"title": "Cockneys vs Zombies",
+			"numberOfSpots": 5100,
+			"filename": "Cockneys vs Zombies.jpg",
+			"id": 47,
+			"director": ["Hoene, Matthias"],
+			"genre": ["Comedy", "Drama"],
+			"writer": ["Moran, James", "Roche, Lucas"],
+			"year": 2012
 		},
 		{
-			"title": "Mission Impossible Ghost Protocol",
-			"numberOfSpots": 8340,
-			"filename": "Mission Impossible Ghost Protocol.jpg",
-			"director": [
-				"Bird, Brad"
-			],
-			"genre": "Action and adventure",
-			"writer": [
-				"Appelbaum, Josh",
-				"Nemec, André"
-			],
-			"year": 2011,
-			"id": 48
+			"display": true,
+			"title": "Cold Weather",
+			"numberOfSpots": 5820,
+			"filename": "Cold Weather.jpg",
+			"id": 48,
+			"director": ["Katz, Aaron"],
+			"genre": ["Comedy", "Drama", "Mystery"],
+			"writer": ["Katz, Aaron"],
+			"year": 2010
 		},
 		{
-			"title": "On The Ice",
-			"numberOfSpots": 6060,
-			"filename": "On The Ice.jpg",
-			"director": [
-				"MacLean, Andrew Okpeaha"
-			],
-			"genre": "Thriller",
-			"writer": [
-				"MacLean, Andrew Okpeaha"
-			],
+			"display": true,
+			"title": "Collaborator",
+			"numberOfSpots": 5040,
+			"filename": "Collaborator.jpg",
+			"director": ["Donovan, Martin"],
+			"genre": ["Drama", "Comedy"],
+			"writer": ["Donovan, Martin"],
 			"year": 2011,
 			"id": 49
 		},
 		{
-			"title": "Parked",
-			"numberOfSpots": 5460,
-			"filename": "Parked.jpg",
-			"director": [
-				"Byrne, Darragh"
-			],
-			"genre": "Drama",
-			"writer": [
-				"Creagh, Ciaran"
-			],
-			"year": 2010,
-			"id": 50
+			"display": true,
+			"title": "Collision Course",
+			"numberOfSpots": 5100,
+			"filename": "Collision Course.jpg",
+			"id": 50,
+			"director": ["Ray, Fred Olen"],
+			"genre": ["Action", "Adventure", "Drama"],
+			"writer": ["Ray, Fred Olen", "Bourque, Jaon"],
+			"year": 2012
 		},
 		{
-			"title": "Piggy",
-			"numberOfSpots": 6120,
-			"filename": "Piggy.jpg",
-			"director": [
-				"Hawkes, Kieron"
-			],
-			"genre": "Thriller",
-			"writer": [
-				"Hawkes, Kieron"
-			],
-			"year": 2012,
+			"display": true,
+			"title": "Control",
+			"numberOfSpots": 7020,
+			"filename": "Control.jpg",
+			"director": ["Corbijn, Anton"],
+			"genre": ["Biography", "Drama", "Music"],
+			"writer": ["Greenhalgh, Matt"],
+			"year": 2007,
 			"id": 51
 		},
 		{
-			"title": "Pusher",
-			"numberOfSpots": 6360,
-			"filename": "Pusher.jpg",
-			"director": [
-				"Refn, Nicolas Winding"
-			],
-			"genre": "Crime",
-			"writer": [
-				"Refn, Nicolas Winding",
-				"Dahl, Jens"
-			],
-			"year": 1996,
-			"id": 52
-		},
-		{
-			"title": "Radio On",
-			"numberOfSpots": 6060,
-			"filename": "Radio On.jpg",
-			"director": [
-				"Petit, Christopher"
-			],
-			"genre": "Drama",
-			"writer": [
-				"Adolph, Heidi",
-				"Petit, Christopher"
-			],
-			"year": 1979,
-			"id": 53
-		},
-		{
-			"title": "Raising Cain",
-			"numberOfSpots": 5280,
-			"filename": "Raising Cain.jpg",
-			"director": [
-				"De Palma, Brian"
-			],
-			"genre": "Thriller",
-			"writer": [
-				"De Palma, Brian"
-			],
-			"year": 1992,
-			"id": 54
-		},
-		{
-			"title": "Samaritan, The",
-			"numberOfSpots": 5400,
-			"filename": "Samaritan, The.jpg",
-			"director": [
-				"Weaver, David"
-			],
-			"genre": "Thriller",
-			"writer": [
-				"Mastai, Elan",
-				"Weaver, David"
-			],
-			"year": 2012,
-			"id": 55
-		},
-		{
-			"title": "School of the Holy Beast",
-			"numberOfSpots": 5700,
-			"filename": "School of the Holy Beast.jpg",
-			"director": [
-				"Suzuki, Noribumi"
-			],
-			"genre": "Thriller",
-			"writer": [
-				"Suzuki, Noribumi",
-				"Kakefuda, Masahiro"
-			],
-			"year": 1974,
-			"id": 56
-		},
-		{
-			"title": "Screamers",
+			"display": true,
+			"title": "Cosmopolis",
 			"numberOfSpots": 6300,
-			"filename": "Screamers.jpg",
-			"director": [
-				"Duguay, Christian"
-			],
-			"genre": "Science fiction and fantasy",
-			"writer": [
-				"O'Bannon, Dan"
-			],
-			"year": 1995,
+			"filename": "Cosmopolis.jpg",
+			"id": 52,
+			"director": ["Cronenberg, David"],
+			"genre": ["Drama"],
+			"writer": ["Cronenberg, David"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Crash",
+			"numberOfSpots": 6300,
+			"filename": "Crash.jpg",
+			"id": 53,
+			"director": ["Cronenberg, David"],
+			"genre": ["Drama"],
+			"writer": ["Cronenberg, David"],
+			"year": 1996
+		},
+		{
+			"display": true,
+			"title": "Crawl",
+			"numberOfSpots": 4740,
+			"filename": "Crawl.jpg",
+			"id": 54,
+			"director": ["China, Paul"],
+			"genre": ["Crime", "Thriller"],
+			"writer": ["China, Paul"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Day Of The Jackal, The",
+			"numberOfSpots": 8940,
+			"filename": "Day Of The Jackal, The.jpg",
+			"id": 55,
+			"director": ["Zinnemann, Fred"],
+			"genre": ["Thriller"],
+			"writer": ["Ross, Kenneth"],
+			"year": 1973
+		},
+		{
+			"display": true,
+			"title": "Deadfall",
+			"numberOfSpots": 5880,
+			"filename": "Deadfall.jpg",
+			"id": 56,
+			"director": ["Ruzowitzky, Stefan"],
+			"genre": ["Crime", "Drama", "Thriller"],
+			"writer": ["Dean, Zac"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Death of a Superhero",
+			"numberOfSpots": 5580,
+			"filename": "Death of a Superhero.jpg",
+			"director": ["Fitzgibbon, Ian"],
+			"genre": ["Animation", "Drama"],
+			"writer": ["McCarten, Anthony"],
+			"year": 2011,
 			"id": 57
 		},
 		{
-			"title": "Shame",
-			"numberOfSpots": 6480,
-			"filename": "Shame - Bergman.jpg",
-			"director": [
-				"Bergman, Ingmar"
-			],
-			"genre": "Drama",
-			"writer": [
-				"Bergman, Ingmar"
-			],
-			"year": 1968,
+			"display": true,
+			"title": "Detachment",
+			"numberOfSpots": 6180,
+			"filename": "Detachment.jpg",
+			"director": ["Kaye, Tony"],
+			"genre": ["Drama"],
+			"writer": ["Lund, Carl"],
+			"year": 2011,
 			"id": 58
 		},
 		{
+			"display": true,
+			"title": "Devils, The",
+			"numberOfSpots": 4380,
+			"filename": "Devils, The.jpg",
+			"id": 59,
+			"director": ["Russell, Ken"],
+			"genre": ["Biography", "Drama", "History"],
+			"writer": ["Russell, Ken"],
+			"year": 1971
+		},
+		{
+			"display": true,
+			"title": "Disappearance Of Alice Creed, The",
+			"numberOfSpots": 5820,
+			"filename": "Disappearance Of Alice Creed, The.jpg",
+			"id": 60,
+			"director": ["Blakeson, J"],
+			"genre": ["Crime", "Thriller"],
+			"writer": ["Blakeson, J"],
+			"year": 2009
+		},
+		{
+			"display": true,
+			"title": "Dish And The Spoon, The",
+			"numberOfSpots": 5700,
+			"filename": "Dish And The Spoon, The.jpg",
+			"id": 61,
+			"director": ["Bagnall, Alison"],
+			"genre": ["Comedy", "Drama", "Romance"],
+			"writer": ["Bagnall, Alison", "Lewis, Andrew"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Don't Look Now",
+			"numberOfSpots": 6360,
+			"filename": "Don't Look Now.jpg",
+			"id": 62,
+			"director": ["Roeg, Nicolas"],
+			"genre": ["Drama", "Horror", "Mystery"],
+			"writer": ["Scott, Allan"],
+			"year": 1973
+		},
+		{
+			"display": true,
+			"title": "Dredd",
+			"numberOfSpots": 5940,
+			"filename": "Dredd.jpg",
+			"id": 63,
+			"director": ["Travis, Pete"],
+			"genre": ["Action", "Crime", "Thriller"],
+			"writer": ["Garland, Alex"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Dressed to Kill",
+			"numberOfSpots": 6600,
+			"filename": "Dressed to Kill.jpg",
+			"director": ["De Palma, Brian"],
+			"genre": ["Drama", "Thriller", "Mystery"],
+			"writer": ["De Palma, Brian"],
+			"year": 1980,
+			"id": 64
+		},
+		{
+			"display": true,
+			"title": "Drive",
+			"numberOfSpots": 6180,
+			"filename": "Drive.jpg",
+			"id": 65,
+			"director": ["Refn, Nicolas Winding"],
+			"genre": ["Crime", "Drama"],
+			"writer": ["Amini, Hossein"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Eclipse, The",
+			"numberOfSpots": 5280,
+			"filename": "Eclipse, The.jpg",
+			"id": 66,
+			"director": ["McPherson, Conor"],
+			"genre": ["Drama", "Horror", "Romance"],
+			"writer": ["McPherson, Conor"],
+			"year": 2009
+		},
+		{
+			"display": true,
+			"title": "Eddie The Sleepwalking Cannibal",
+			"numberOfSpots": 4800,
+			"filename": "Eddie The Sleepwalking Cannibal.jpg",
+			"id": 67,
+			"director": ["Rodriguez, Boris"],
+			"genre": ["Comedy", "Drama"],
+			"writer": ["Rodriguez, Boris"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Electrick Children",
+			"numberOfSpots": 5520,
+			"filename": "Electrick Children.jpg",
+			"id": 68,
+			"director": ["Thomas, Rebecca"],
+			"genre": ["Drama"],
+			"writer": ["Thomas, Rebecca"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Elevator",
+			"numberOfSpots": 4860,
+			"filename": "Elevator.jpg",
+			"director": ["Svendsen, Stig"],
+			"genre": ["Thriller"],
+			"writer": ["Rosenberg, Marc"],
+			"year": 2011,
+			"id": 69
+		},
+		{
+			"display": true,
+			"title": "End Of Watch",
+			"numberOfSpots": 6300,
+			"filename": "End Of Watch.jpg",
+			"id": 70,
+			"director": ["Ayer, David"],
+			"genre": ["Crime", "Drama", "Thriller"],
+			"writer": ["Ayer, David"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Enjeru dasuto (Sogo Ishii)",
+			"numberOfSpots": 7320,
+			"filename": "Enjeru dasuto (Sogo Ishii).jpg",
+			"id": 71,
+			"director": ["Ishii, Gakuryu"],
+			"genre": ["Drama", "Horror", "Romance"],
+			"writer": ["Ishii, Gakuryu", "Ikuta, Yorozu"],
+			"year": 1994
+		},
+		{
+			"display": true,
+			"title": "Enter Nowhere",
+			"numberOfSpots": 5640,
+			"filename": "Enter Nowhere.jpg",
+			"director": ["Heller, Jack"],
+			"genre": ["Thriller", "Mystery"],
+			"writer": ["Christensen, Shawn", "Dolan, Jason"],
+			"year": 2011,
+			"id": 72
+		},
+		{
+			"display": true,
+			"title": "Entrance",
+			"numberOfSpots": 5820,
+			"filename": "Entrance.jpg",
+			"director": ["Hallam, Dallas Richard", "Horvath, Patrick"],
+			"genre": ["Horror", "Drama", "Horror"],
+			"writer": ["Hallam, Dallas Richard", "Horvath, Patrick", "Gorham, Karen", "Margolis, Michelle"],
+			"year": 2012,
+			"id": 73
+		},
+		{
+			"display": true,
+			"title": "Eva",
+			"numberOfSpots": 5460,
+			"filename": "Eva.jpg",
+			"director": ["Maíllo, Kike"],
+			"genre": ["Science Fiction", "Drama", "Fantasy"],
+			"writer": ["Belbel, Sergi", "Clemente, Cristina", "Roca, Martí", "Serra, Aintza"],
+			"year": 2011,
+			"id": 74
+		},
+		{
+			"display": true,
+			"title": "Excision",
+			"numberOfSpots": 5100,
+			"filename": "Excision.jpg",
+			"id": 75,
+			"director": ["Bates Jr., Richard"],
+			"genre": ["Comedy", "Drama", "Horror"],
+			"writer": ["Bates Jr., Richard"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "eXistenZ",
+			"numberOfSpots": 6120,
+			"filename": "eXistenZ.jpg",
+			"id": 76,
+			"director": ["Cronenberg, David"],
+			"genre": ["Science Fiction"],
+			"writer": ["Cronenberg, David"],
+			"year": 1999
+		},
+		{
+			"display": true,
+			"title": "Expendables, The",
+			"numberOfSpots": 7140,
+			"filename": "Expendables, The.jpg",
+			"id": 77,
+			"director": ["Stallone, Sylvester"],
+			"genre": ["Action", "Adventure", "Thriller"],
+			"writer": ["Stallone, Sylvester", "Callaham, David"],
+			"year": 2010
+		},
+		{
+			"display": true,
+			"title": "Femme Fatale",
+			"numberOfSpots": 6600,
+			"filename": "Femme Fatale.jpg",
+			"director": ["De Palma, Brian"],
+			"genre": ["Thriller"],
+			"writer": ["De Palma, Brian"],
+			"year": 2002,
+			"id": 78
+		},
+		{
+			"display": true,
+			"title": "Four",
+			"numberOfSpots": 5100,
+			"filename": "Four.jpg",
+			"director": ["Langridge, John"],
+			"genre": ["Thriller"],
+			"writer": ["Chronell, Paul"],
+			"year": 2011,
+			"id": 79
+		},
+		{
+			"display": true,
+			"title": "Frailty",
+			"numberOfSpots": 6240,
+			"filename": "Frailty.jpg",
+			"id": 80,
+			"director": ["Paxton, Bill"],
+			"genre": ["Crime", "Drama", "Thriller"],
+			"writer": ["Hanley, Brent"],
+			"year": 2001
+		},
+		{
+			"display": true,
+			"title": "Funeral in Berlin",
+			"numberOfSpots": 5880,
+			"filename": "Funeral in Berlin.jpg",
+			"director": ["Hamilton, Guy"],
+			"genre": ["Thriller", "Drama"],
+			"writer": ["Jones, Evan"],
+			"year": 1966,
+			"id": 81
+		},
+		{
+			"display": true,
+			"title": "Great Silence, The",
+			"numberOfSpots": 6120,
+			"filename": "Great Silence, The.jpg",
+			"director": ["Corbucci, Sergio"],
+			"genre": ["Western"],
+			"writer": ["Amendola, Mario", "Corbucci, Bruno", "Corbucci, Sergio", "Petrilli, Vittoriano"],
+			"year": 1968,
+			"id": 82
+		},
+		{
+			"display": true,
+			"title": "Grabbers",
+			"numberOfSpots": 5460,
+			"filename": "Grabbers.jpg",
+			"id": 83,
+			"director": ["Wright, Jon"],
+			"genre": ["Comedy", "Science Fiction", "Thriller"],
+			"writer": ["Lehane, Kevin"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Grind, The",
+			"numberOfSpots": 5400,
+			"filename": "Grind, The.jpg",
+			"id": 85,
+			"director": ["Opel, Rishi"],
+			"genre": ["Crime", "Thriller"],
+			"writer": ["Opel, Rishi"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Hannah Takes The Stairs",
+			"numberOfSpots": 5280,
+			"filename": "Hannah Takes The Stairs.jpg",
+			"id": 86,
+			"director": ["Swanberg, Joe"],
+			"genre": ["Comedy", "Drama", "Romance"],
+			"writer": ["Swanberg, Joe", "Gerwig, Greta", "Osborne, Kent"],
+			"year": 2007
+		},
+		{
+			"display": true,
+			"title": "Haywire",
+			"numberOfSpots": 5820,
+			"filename": "Haywire.jpg",
+			"director": ["Soderbergh, Steven"],
+			"genre": ["Thriller", "Action"],
+			"writer": ["Dobbs, Lem"],
+			"year": 2011,
+			"id": 87
+		},
+		{
+			"display": true,
+			"title": "He's Just Not That Into You",
+			"numberOfSpots": 8160,
+			"filename": "He's Just Not That Into You.jpg",
+			"director": ["Kwapis, Ken"],
+			"genre": ["Comedy", "Drama", "Romance"],
+			"writer": ["Kohn, Abby", "Silverstein, Marc"],
+			"year": 2009,
+			"id": 88
+		},
+		{
+			"display": true,
+			"title": "Headhunters",
+			"numberOfSpots": 4740,
+			"filename": "Headhunters.jpg",
+			"id": 89,
+			"director": ["Tyldum, Morten"],
+			"genre": ["Crime", "Thriller"],
+			"writer": ["Gudmestad, Lars", "Ryberg, Ulf"],
+			"year": 2011
+		},
+		{
+			"display": false,
+			"title": "Hell on Earth",
+			"numberOfSpots": 3120,
+			"filename": "Hell on Earth.jpg",
+			"id": 90,
+			"director": ["Joyce, Paul"],
+			"genre": ["Documentary"],
+			"writer": ["n/a"],
+			"year": 2002
+		},
+		{
+			"display": true,
+			"title": "Hellgate",
+			"numberOfSpots": 5880,
+			"filename": "Hellgate.jpg",
+			"id": 91,
+			"director": ["Penney, John"],
+			"genre": ["Thriller"],
+			"writer": ["Penney, John"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Hick",
+			"numberOfSpots": 6240,
+			"filename": "Hick.jpg",
+			"director": ["Martini, Derick"],
+			"genre": ["Comedy", "Drama"],
+			"writer": ["Portes, Andrea"],
+			"year": 2011,
+			"id": 92
+		},
+		{
+			"display": true,
+			"title": "High Art",
+			"numberOfSpots": 6420,
+			"filename": "High Art.jpg",
+			"director": ["Cholodenko, Lisa"],
+			"genre": ["Drama", "Romance"],
+			"writer": ["Cholodenko, Lisa"],
+			"year": 1998,
+			"id": 93
+		},
+		{
+			"display": true,
+			"title": "Holy Motors",
+			"numberOfSpots": 6960,
+			"filename": "Holy Motors.jpg",
+			"id": 94,
+			"director": ["Carax, Leos"],
+			"genre": ["Drama", "Fantasy", "Science Fiction"],
+			"writer": ["Carax, Leos"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Hunger Games, The",
+			"numberOfSpots": 9060,
+			"filename": "Hunger Games, The.jpg",
+			"id": 95,
+			"director": ["Ross, Gary"],
+			"genre": ["Action", "Adventure", "Science Fiction"],
+			"writer": ["Ross, Gary", "Ray, Billy", "Collins, Suzanne"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "I Sell The Dead",
+			"numberOfSpots": 4920,
+			"filename": "I Sell The Dead.jpg",
+			"director": ["McQuaid, Glenn"],
+			"genre": ["Horror", "Comedy"],
+			"writer": ["McQuaid, Glenn"],
+			"year": 2008,
+			"id": 97
+		},
+		{
+			"display": true,
+			"title": "In Broad Daylight",
+			"numberOfSpots": 5760,
+			"filename": "In Broad Daylight.jpg",
+			"id": 98,
+			"director": ["Sadwith, James Steven"],
+			"genre": ["Drama", "Thriller"],
+			"writer": ["Hanley, William"],
+			"year": 1991
+		},
+		{
+			"display": true,
+			"title": "Inbred",
+			"numberOfSpots": 6180,
+			"filename": "Inbred.jpg",
+			"id": 99,
+			"director": ["Chandon, Alex"],
+			"genre": ["Horror"],
+			"writer": ["Chandon, Alex", "Shrimpton, Paul"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Inseparable",
+			"numberOfSpots": 5880,
+			"filename": "Inseparable.jpg",
+			"director": ["Eng, Dayyan"],
+			"genre": ["Thriller", "Drama"],
+			"writer": ["Eng, Dayyan"],
+			"year": 2011,
+			"id": 100
+		},
+		{
+			"display": true,
+			"title": "Isle, The",
+			"numberOfSpots": 5340,
+			"filename": "Isle, The.jpg",
+			"id": 101,
+			"director": ["Kim, Ki-duk"],
+			"genre": ["Drama", "Thriller"],
+			"writer": ["Kim, Ki-duk"],
+			"year": 2000
+		},
+		{
+			"display": true,
+			"title": "It! The Terror From Beyond Space",
+			"numberOfSpots": 4380,
+			"filename": "It! The Terror From Beyond Space.jpg",
+			"director": ["Cahn, Edward L."],
+			"genre": ["Horror", "Science Fiction"],
+			"writer": ["Bixby, Jerome"],
+			"year": 1958,
+			"id": 102
+		},
+		{
+			"display": true,
+			"title": "Jesus Henry Christ",
+			"numberOfSpots": 5460,
+			"filename": "Jesus Henry Christ.jpg",
+			"director": ["Lee, Dennis"],
+			"genre": ["Comedy"],
+			"writer": ["Lee, Dennis"],
+			"year": 2012,
+			"id": 103
+		},
+		{
+			"display": true,
+			"title": "Jeux d'enfants",
+			"numberOfSpots": 5940,
+			"filename": "Jeux d'enfants.jpg",
+			"id": 104,
+			"director": ["Samuell, Yann"],
+			"genre": ["Comedy", "Drama", "Romance"],
+			"writer": ["Samuell, Yann"],
+			"year": 2003
+		},
+		{
+			"display": true,
+			"title": "Junkhearts",
+			"numberOfSpots": 6780,
+			"filename": "Junkhearts.jpg",
+			"id": 105,
+			"director": ["Krishnan, Tinge"],
+			"genre": ["Drama"],
+			"writer": ["Frank, Simon"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Katalin Varga",
+			"numberOfSpots": 4920,
+			"filename": "Katalin Varga.jpg",
+			"id": 106,
+			"director": ["Strickland, Peter"],
+			"genre": ["Crime", "Drama", "Thriller"],
+			"writer": ["Strickland, Peter"],
+			"year": 2009
+		},
+		{
+			"display": true,
+			"title": "Key Largo",
+			"numberOfSpots": 6060,
+			"filename": "Key Largo.jpg",
+			"id": 107,
+			"director": ["Huston, John"],
+			"genre": ["Crime", "Drama", "Noir"],	
+			"writer": ["Huston, John", "Brooks, Richard"],
+			"year": 1948
+		},
+		{
+			"display": true,
+			"title": "Kill Em All",
+			"numberOfSpots": 5400,
+			"filename": "Kill Em All.jpg",
+			"id": 108,
+			"director": ["Huber, Raitmund"],
+			"genre": ["Action"],
+			"writer": ["Miller, Ken"],
+			"year": 2013
+		},
+		{
+			"display": true,
+			"title": "Kill List",
+			"numberOfSpots": 5520,
+			"filename": "Kill List.jpg",
+			"director": ["Wheatley, Ben"],
+			"genre": ["Crime", "Horror", "Thriller"],
+			"writer": ["Wheatley, Ben",	"Jump, Amy"],
+			"year": 2011,
+			"id": 109
+		},
+		{
+			"display": true,
+			"title": "Kill Your Idols",
+			"numberOfSpots": 4440,
+			"filename": "Kill Your Idols.jpg",
+			"director": ["Crary, Scott"],
+			"genre": ["Documentary"],
+			"writer": ["Crary, Scott"],
+			"year": 2004,
+			"id": 110
+		},
+		{
+			"display": true,
+			"title": "Killer Joe",
+			"numberOfSpots": 6420,
+			"filename": "Killer Joe.jpg",
+			"id": 111,
+			"director": ["Friedkin, William"],
+			"genre": ["Crime", "Drama", "Thriller"],
+			"writer": ["Letts, Tracy"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Killer Shrews, The",
+			"numberOfSpots": 4320,
+			"filename": "Killer Shrews, The.jpg",
+			"director": ["Kellogg, Ray"],
+			"genre": ["Horror", "Science Fiction"],
+			"writer": ["Simms, Jay"],
+			"year": 1959,
+			"id": 112
+		},
+		{
+			"display": true,
+			"title": "King Is Dead, The",
+			"numberOfSpots": 6660,
+			"filename": "King Is Dead, The.jpg",
+			"id": 113,
+			"director": ["de Heer, Rolf"],
+			"genre": ["Comedy", "Mystery", "Western"],
+			"writer": ["de Heer, Rolf"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Klown",
+			"numberOfSpots": 5460,
+			"filename": "Klovn.jpg",
+			"director": ["Nørgaard, Mikkel"],
+			"genre": ["Comedy"],
+			"writer": ["Christensen, Casper"],
+			"year": 2010,
+			"id": 114
+		},
+		{
+			"display": true,
+			"title": "Kon Tiki",
+			"numberOfSpots": 6840,
+			"filename": "Kon Tiki.jpg",
+			"id": 115,
+			"director": ["Rønning, Joachim", "Sandberg, Espen"],
+			"genre": ["Action", "Adventure", "Biography"],
+			"writer": ["Skavlan, Petter"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "La Delicatesse",
+			"numberOfSpots": 6300,
+			"filename": "La Delicatesse.jpg",
+			"director": ["Foenkinos, David", "Foenkinos, Stéphane"],
+			"genre": ["Comedy", "Romance"],
+			"writer": ["Foenkinos, David"],
+			"year": 2011,
+			"id": 116
+		},
+		{
+			"display": false,
+			"title": "Labyrinth Part 1",
+			"numberOfSpots": 5520,
+			"filename": "Labyrinth Part 1.jpg",
+			"id": 117,
+			"director": ["Smith, Christopher"],
+			"genre": ["Drama"],
+			"writer": ["Hodges, Adrian"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Last Broadcast, The",
+			"numberOfSpots": 5220,
+			"filename": "Last Broadcast, The.jpg",
+			"director": ["Avalos, Stefan", "Weiler, Lance"],
+			"genre": ["Horror", "Mystery"],
+			"writer": ["Avalos, Stefan", "Weiler, Lance"],
+			"year": 1998,
+			"id": 118
+		},
+		{
+			"display": true,
+			"title": "Last Castle, The",
+			"numberOfSpots": 8220,
+			"filename": "Last Castle, The.jpg",
+			"director": ["Lurie, Rod"],
+			"genre": ["Drama", "Action", "Thriller"],
+			"writer": ["Scarpa, David"],
+			"year": 2001,
+			"id": 119
+		},
+		{
+			"display": true,
+			"title": "Last Days Of Disco, The",
+			"numberOfSpots": 7140,
+			"filename": "Last Days Of Disco, The.jpg",
+			"id": 120,
+			"director": ["Stillman, Whit"],
+			"genre": ["Comedy", "Drama", "Music"],
+			"writer": ["Stillman, Whit"],
+			"year": 1998
+		},
+		{
+			"display": true,
+			"title": "Last Seduction, The",
+			"numberOfSpots": 6360,
+			"filename": "Last Seduction, The.jpg",
+			"id": 121,
+			"director": ["Dahl, John"],
+			"genre": ["Crime", "Drama", "Thriller"],
+			"writer": ["Barancik, Steve"],
+			"year": 1994
+		},
+		{
+			"display": true,
+			"title": "Lawless",
+			"numberOfSpots": 7260,
+			"filename": "Lawless.jpg",
+			"id": 122,
+			"director": ["Hillcoat, John"],
+			"genre": ["Crime", "Drama"],
+			"writer": ["Cave, Nick"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Liberal Arts",
+			"numberOfSpots": 6120,
+			"filename": "Liberal Arts.jpg",
+			"id": 123,
+			"director": ["Radnor, Josh"],
+			"genre": ["Comedy", "Drama"],
+			"writer": ["Radnor, Josh"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Lifeforce",
+			"numberOfSpots": 7320,
+			"filename": "Lifeforce.jpg",
+			"id": 124,
+			"director": ["Hooper, Tobe"],
+			"genre": ["Horror", "Science Fiction", "Thriller"],
+			"writer": ["O'Bannon, Dan", "Jakoby, Don"],
+			"year": 1985
+		},
+		{
+			"display": true,
+			"title": "Limey, The",
+			"numberOfSpots": 5160,
+			"filename": "Limey, The.jpg",
+			"id": 125,
+			"director": ["Soderberg, Steven"],
+			"genre": ["Crime", "Drama", "Mystery"],
+			"writer": ["Dobbs, Lem"],
+			"year": 1999
+		},
+		{
+			"display": true,
+			"title": "Lines Of Wellington",
+			"numberOfSpots": 8760,
+			"filename": "Lines Of Wellington.jpg",
+			"id": 126,
+			"director": ["Sarmiento, Valeria"],
+			"genre": ["Drama", "History", "War"],
+			"writer": ["Saboga, Carlos"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Lockout",
+			"numberOfSpots": 6000,
+			"filename": "Lockout.jpg",
+			"director": ["Mather, James",	"St. Leger, Stephen"],
+			"genre": ["Action", "Thriller", "Science Fiction"],
+			"writer": ["Besson, Luc", "Mather, James", "St. Leger, Stephen"],
+			"year": 2012,
+			"id": 127
+		},
+		{
+			"display": true,
+			"title": "Looper",
+			"numberOfSpots": 6840,
+			"filename": "Looper.jpg",
+			"id": 128,
+			"director": ["Johnson, Rian"],
+			"genre": ["Action", "Drama", "Science Fiction"],
+			"writer": ["Johnson, Rian"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Love Crime",
+			"numberOfSpots": 6420,
+			"filename": "Love Crime.jpg",
+			"id": 129,
+			"director": ["Corneau, Alain"],
+			"genre": ["Crime", "Mystery", "Thriller"],
+			"writer": ["Corneau, Alain", "Carter, Natalie"],
+			"year": 2010
+		},
+		{
+			"display": true,
+			"title": "Malcolm",
+			"numberOfSpots": 5160,
+			"filename": "Malcolm.jpg",
+			"id": 130,
+			"director": ["Tass, Nadia"],
+			"genre": ["Comedy", "Drama"],
+			"writer": ["Parker, David"],
+			"year": 1986
+		},
+		{
+			"display": true,
+			"title": "Man On Fire",
+			"numberOfSpots": 8460,
+			"filename": "Man On Fire.jpg",
+			"id": 131,
+			"director": ["Scott, Tony"],
+			"genre": ["Action", "Crime", "Drama"],
+			"writer": ["Helgeland, Brian"],
+			"year": 2004
+		},
+		{
+			"display": true,
+			"title": "Margaret",
+			"numberOfSpots": 9420,
+			"filename": "Margaret.jpg",
+			"id": 132,
+			"director": ["Lonergan, Kenneth"],
+			"genre": ["Drama"],
+			"writer": ["Lonergan, Kenneth"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "May",
+			"numberOfSpots": 5400,
+			"filename": "May.jpg",
+			"id": 133,
+			"director": ["McKee, Lucky"],
+			"genre": ["Drama", "Horror", "Thriller"],
+			"writer": ["McKee, Lucky"],
+			"year": 2002
+		},
+		{
+			"display": true,
+			"title": "Miss Bala",
+			"numberOfSpots": 7080,
+			"filename": "Miss Bala.jpg",
+			"director": ["Naranjo, Gerardo"],
+			"genre": ["Drama", "Crime", "Thriller"],
+			"writer": ["Sigman, Stephanie",	"Azuela, Irene", "Yenque, Jose"],
+			"year": 2011,
+			"id": 134
+		},
+		{
+			"display": true,
+			"title": "Mission Impossible Ghost Protocol",
+			"numberOfSpots": 8340,
+			"filename": "Mission Impossible Ghost Protocol.jpg",
+			"director": ["Bird, Brad"],
+			"genre": ["Action", "Thriller"],
+			"writer": ["Appelbaum, Josh",	"Nemec, André"],
+			"year": 2011,
+			"id": 135
+		},
+		{
+			"display": true,
+			"title": "Moonrise Kingdom",
+			"numberOfSpots": 5640,
+			"filename": "Moonrise Kingdom.jpg",
+			"id": 136,
+			"director": ["Anderson, Wes"],
+			"genre": ["Comedy", "Drama", "Romance"],
+			"writer": ["Anderson, Wes", "Coppola, Roman"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Moth Diaries, The",
+			"numberOfSpots": 5160,
+			"filename": "Moth Diaries, The.jpg",
+			"id": 137,
+			"director": ["Harron, Mary"],
+			"genre": ["Horror"],
+			"writer": ["Harron, Mary"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Munger Road",
+			"numberOfSpots": 5340,
+			"filename": "Munger Road.jpg",
+			"id": 138,
+			"director": ["Smith, Nicolas"],
+			"genre": ["Mystery", "Thriller"],
+			"writer": ["Smith, Nicolas"],
+			"year": 2011
+		},
+		{
+			"display": false,
+			"title": "Murder Joint Enterprise",
+			"numberOfSpots": 3540,
+			"filename": "Murder Joint Enterprise.jpg",
+			"id": 139,
+			"director": ["Larsen, Birger"],
+			"genre": ["Crime", "Thriller", "Drama"],
+			"writer": ["Jones, Robert"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Muzi v Nadeji",
+			"numberOfSpots": 6660,
+			"filename": "Muzi v Nadeji.jpg",
+			"id": 140,
+			"director": ["Vejdelek, Jirí"],
+			"genre": ["Comedy", "Drama", "Romance"],
+			"writer": ["Machácek, Jirí", "Polívka, Bolek", "Hrebícková, Petra"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Nameless Gangster",
+			"numberOfSpots": 8400,
+			"filename": "Nameless Gangster.jpg",
+			"id": 141,
+			"director": ["Yun, Jong-bin"],
+			"genre": ["Crime", "Thriller"],
+			"writer": ["Yun, Jong-bin"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "On The Ice",
+			"numberOfSpots": 6060,
+			"filename": "On The Ice.jpg",
+			"director": ["MacLean, Andrew Okpeaha"],
+			"genre": ["Drama", "Thriller"],
+			"writer": ["MacLean, Andrew Okpeaha"],
+			"year": 2011,
+			"id": 142
+		},
+		{
+			"display": true,
+			"title": "Oppai Volleyball",
+			"numberOfSpots": 6420,
+			"filename": "Oppai Volleyball.jpg",
+			"id": 143,
+			"director": ["Hasumi, Eiichiro"],
+			"genre": ["Comedy"],
+			"writer": ["Okada, Yoshikazu"],
+			"year": 2009
+		},
+		{
+			"display": true,
+			"title": "Oslo 31 August",
+			"numberOfSpots": 5460,
+			"filename": "Oslo 31 August.jpg",
+			"id": 144,
+			"director": ["Trier, Joachim"],
+			"genre": ["Drama"],
+			"writer": ["Trier, Joachim", "Vogt, Eskil"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "ParaNorman",
+			"numberOfSpots": 5580,
+			"filename": "Paranorman.jpg",
+			"id": 145,
+			"director": ["Butler, Chris", "Fell, Sam"],
+			"genre": ["Animation", "Adventure", "Comedy"],
+			"writer": ["Butler, Chris"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Parked",
+			"numberOfSpots": 5460,
+			"filename": "Parked.jpg",
+			"director": ["Byrne, Darragh"],
+			"genre": ["Drama"],
+			"writer": ["Creagh, Ciaran"],
+			"year": 2010,
+			"id": 146
+		},
+		{
+			"display": true,
+			"title": "Peeping Tom",
+			"numberOfSpots": 6360,
+			"filename": "Peeping Tom.jpg",
+			"id": 147,
+			"director": ["Powell, Michael"],
+			"genre": ["Horror", "Thriller"],
+			"writer": ["Marks, Leo"],
+			"year": 1960
+		},
+		{
+			"display": true,
+			"title": "Penelope",
+			"numberOfSpots": 6540,
+			"filename": "Penelope.jpg",
+			"id": 148,
+			"director": ["Palansky, Mark"],
+			"genre": ["Comedy", "Romance", "Fantasy"],
+			"writer": ["Caveny, Leslie"],
+			"year": 2006
+		},
+		{
+			"display": true,
+			"title": "Performance",
+			"numberOfSpots": 6660,
+			"filename": "Performance.jpg",
+			"id": 149,
+			"director": ["Cammell, Donald", "Roeg, Nicolas"],
+			"genre": ["Crime", "Drama", "Music"],
+			"writer": ["Cammell, Donald", "Pallenberg, Anita"],
+			"year": 1970
+		},
+		{
+			"display": true,
+			"title": "Perks Of Being A Wallflower, The",
+			"numberOfSpots": 6420,
+			"filename": "Perks Of Being A Wallflower, The.jpg",
+			"id": 150,
+			"director": ["Chbosky, Stephen"],
+			"genre": ["Drama", "Romance"],
+			"writer": ["Chbosky, Stephen"],
+			"year": 2012
+		},
+		{
+			"display": false,
+			"title": "Pervert's Guide To Cinema, The",
+			"numberOfSpots": 9360,
+			"filename": "Pervert's Guide To Cinema, The.jpg",
+			"id": 151,
+			"director": ["Fiennes, Sophie"],
+			"genre": ["Documentary"],
+			"writer": ["Zizek, Slavoj"],
+			"year": 2006
+		},
+		{
+			"display": true,
+			"title": "Piggy",
+			"numberOfSpots": 6120,
+			"filename": "Piggy.jpg",
+			"director": ["Hawkes, Kieron"],
+			"genre": ["Thriller"],
+			"writer": ["Hawkes, Kieron"],
+			"year": 2012,
+			"id": 152
+		},
+		{
+			"display": true,
+			"title": "Pitch Perfect",
+			"numberOfSpots": 7020,
+			"filename": "Pitch Perfect.jpg",
+			"id": 153,
+			"director": ["Moore, Jason"],
+			"genre": ["Comedy", "Music", "Romance"],
+			"writer": ["Cannon, Kay"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Point Blank",
+			"numberOfSpots": 5760,
+			"filename": "Point Blank.jpg",
+			"id": 154,
+			"director": ["Boorman, John"],
+			"genre": ["Crime", "Drama", "Thriller"],
+			"writer": ["Jacobs, Alexander", "Newhouse, David", "Newhouse, Rafe"],
+			"year": 1967
+		},
+		{
+			"display": true,
+			"title": "Possible Worlds",
+			"numberOfSpots": 5760,
+			"filename": "Possible Worlds.jpg",
+			"id": 155,
+			"director": ["Lepage, Robert"],
+			"genre": ["Crime", "Mystery", "Science Fiction"],
+			"writer": ["Mighton, John", "Lepage, Robert"],
+			"year": 2000
+		},
+		{
+			"display": true,
+			"title": "Predator",
+			"numberOfSpots": 6180,
+			"filename": "Predator.jpg",
+			"id": 156,
+			"director": ["McTiernan, John"],
+			"genre": ["Action", "Adventure", "Science Fiction"],
+			"writer": ["Thomas, Jim", "Thomas, John"],
+			"year": 1987
+		},
+		{
+			"display": true,
+			"title": "Premium Rush",
+			"numberOfSpots": 5280,
+			"filename": "Premium Rush.jpg",
+			"id": 157,
+			"director": ["Koepp, David"],
+			"genre": ["Action", "Thriller"],
+			"writer": ["Koepp, David", "Kamps, John"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Prometheus",
+			"numberOfSpots": 7140,
+			"filename": "Prometheus.jpg",
+			"id": 158,
+			"director": ["Scott, Ridley"],
+			"genre": ["Science Fiction"],
+			"writer": ["Spaihts, John", "Lindelof, Damon"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Pusher",
+			"numberOfSpots": 6360,
+			"filename": "Pusher.jpg",
+			"director": ["Refn, Nicolas Winding"],
+			"genre": ["Crime", "Thriller"],
+			"writer": ["Refn, Nicolas Winding",	"Dahl, Jens"],
+			"year": 1996,
+			"id": 159
+		},
+		{
+			"display": true,
+			"title": "Radio On",
+			"numberOfSpots": 6060,
+			"filename": "Radio On.jpg",
+			"director": ["Petit, Christopher"],
+			"genre": ["Drama", "Music", "Mystery"],
+			"writer": ["Adolph, Heidi", "Petit, Christopher"],
+			"year": 1979,
+			"id": 160
+		},
+		{
+			"display": true,
+			"title": "Raising Cain",
+			"numberOfSpots": 5280,
+			"filename": "Raising Cain.jpg",
+			"director": ["De Palma, Brian"],
+			"genre": ["Thriller", "Crime", "Horror"],
+			"writer": ["De Palma, Brian"],
+			"year": 1992,
+			"id": 161
+		},
+		{
+			"display": true,
+			"title": "Red Rock West",
+			"numberOfSpots": 6180,
+			"filename": "Red Rock West.jpg",
+			"id": 162,
+			"director": ["Dahl, John"],
+			"genre": ["Crime", "Drama", "Thriller"],
+			"writer": ["Dahl, John", "Dahl, Rick"],
+			"year": 1993
+		},
+		{
+			"display": false,
+			"title": "Rise Of The Animals",
+			"numberOfSpots": 4440,
+			"filename": "Rise Of The Animals.jpg",
+			"id": 163,
+			"director": ["Wojcik, Chris"],
+			"genre": ["Adventure", "Comedy", "Horror"],
+			"writer": ["Wojcik, Chris"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Rocky Balboa",
+			"numberOfSpots": 6360,
+			"filename": "Rocky Balboa.jpg",
+			"id": 164,
+			"director": ["Stallone, Sylvester"],
+			"genre": ["Drama", "Sport"],
+			"writer": ["Stallone, Sylvester"],
+			"year": 2006
+		},
+		{
+			"display": true,
+			"title": "Ronal the Barbarian",
+			"numberOfSpots": 5160,
+			"filename": "Ronal the Barbarian.jpg",
+			"id": 165,
+			"director": ["Andersen, Kresten Vestbjerg", "Christoffersen, Thorbjørn", "Lipski, Philip Einstein"],
+			"genre": ["Animation", "Adventure", "Comedy"],
+			"writer": ["Christoffersen, Thorbjørn"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Rubber",
+			"numberOfSpots": 5160,
+			"filename": "Rubber.jpg",
+			"id": 166,
+			"director": ["Dupieux, Quentin"],
+			"genre": ["Comedy", "Drama", "Horror"],
+			"writer": ["Dupieux, Quentin"],
+			"year": 2010
+		},
+		{
+			"display": true,
+			"title": "Ruby Sparks",
+			"numberOfSpots": 6540,
+			"filename": "Ruby Sparks.jpg",
+			"id": 167,
+			"director": ["Dayton, Jonathan", "Faris, Valerie"],
+			"genre": ["Comedy", "Fantasy", "Romance"],
+			"writer": ["Kazan, Zoe"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Safety Last!",
+			"numberOfSpots": 4620,
+			"filename": "Safety Last.jpg",
+			"id": 168,
+			"director": ["Newmeyer, Fred C.", "Taylor, Sam"],
+			"genre": ["Comedy", "Romance", "Thriller"],
+			"writer": ["Roach, Hal", "Taylor, Sam", "Whelan, Tim", "Havez, Jean C.", "Lloyd, Harold"],
+			"year": 1923
+		},
+		{
+			"display": true,
+			"title": "Safety not Guarunteed",
+			"numberOfSpots": 5400,
+			"filename": "Safety not Guarunteed.jpg",
+			"id": 169,
+			"director": ["Trevorrow, Colin"],
+			"genre": ["Comedy", "Romance", "Science Fiction"],
+			"writer": ["Connolly, Derek"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Samaritan, The",
+			"numberOfSpots": 5400,
+			"filename": "Samaritan, The.jpg",
+			"director": ["Weaver, David"],
+			"genre": ["Drama", "Thriller"],
+			"writer": ["Mastai, Elan", "Weaver, David"],
+			"year": 2012,
+			"id": 170
+		},
+		{
+			"display": true,
+			"title": "School of the Holy Beast",
+			"numberOfSpots": 5700,
+			"filename": "School of the Holy Beast.jpg",
+			"director": ["Suzuki, Noribumi"],
+			"genre": ["Drama", "Thriller"],
+			"writer": ["Suzuki, Noribumi", "Kakefuda, Masahiro"],
+			"year": 1974,
+			"id": 171
+		},
+		{
+			"display": true,
+			"title": "Screamers",
+			"numberOfSpots": 6300,
+			"filename": "Screamers.jpg",
+			"director": ["Duguay, Christian"],
+			"genre": ["Action", "Adventure", "Horror"],
+			"writer": ["O'Bannon, Dan"],
+			"year": 1995,
+			"id": 172
+		},
+		{
+			"display": true,
+			"title": "Secret In Their Eyes, The",
+			"numberOfSpots": 8160,
+			"filename": "Secret In Their Eyes, The.jpg",
+			"id": 174,
+			"director": ["Campanella, Juan José"],
+			"genre": ["Drama", "Mystery", "Thriller"],
+			"writer": ["Sacheri, Eduardo", "Campanella, Juan José"],
+			"year": 2009
+		},
+		{
+			"display": true,
+			"title": "Seeking a Friend For The End Of The World",
+			"numberOfSpots": 6360,
+			"filename": "Seeking a Friend For The End Of The World.jpg",
+			"id": 175,
+			"director": ["Scafaria, Lorene"],
+			"genre": ["Drama", "Romance", "Science Fiction"],
+			"writer": ["Scafaria, Lorene"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Shame",
+			"numberOfSpots": 6480,
+			"filename": "Shame - Bergman.jpg",
+			"director": ["Bergman, Ingmar"],
+			"genre": ["Drama"],
+			"writer": ["Bergman, Ingmar"],
+			"year": 1968,
+			"id": 176
+		},
+		{
+			"display": true,
 			"title": "Shame",
 			"numberOfSpots": 6360,
 			"filename": "Shame.jpg",
-			"director": [
-				"McQueen, Steve"
-			],
-			"genre": "Drama",
-			"writer": [
-				"Morgan, Abi",
-				"McQueen, Steve"
-			],
+			"director": ["McQueen, Steve"],
+			"genre": ["Drama"],
+			"writer": ["Morgan, Abi", "McQueen, Steve"],
 			"year": 2011,
-			"id": 59
+			"id": 177
 		},
 		{
+			"display": true,
 			"title": "Shock Corridor",
 			"numberOfSpots": 6300,
 			"filename": "Shock Corridor.jpg",
-			"director": [
-				"Fuller, Samuel"
-			],
-			"genre": "Drama",
-			"writer": [
-				"Fuller, Samuel"
-			],
+			"director": ["Fuller, Samuel"],
+			"genre": ["Drama", "Mystery"],
+			"writer": ["Fuller, Samuel"],
 			"year": 1963,
-			"id": 60
+			"id": 178
 		},
 		{
+			"display": true,
 			"title": "Silent Running",
 			"numberOfSpots": 5640,
 			"filename": "Silent Running.jpg",
-			"director": [
-				"Trumball, Douglas"
-			],
-			"genre": "Science fiction and fantasy",
-			"writer": [
-				"Deric Washburn",
-				"Michael Cimino",
-				"Steven Bochco"
-			],
+			"director": ["Trumball, Douglas"],
+			"genre": ["Science Fiction", "Adventure", "Drama"],
+			"writer": ["Deric Washburn", "Michael Cimino", "Steven Bochco"],
 			"year": 1972,
-			"id": 61
+			"id": 179
+		},
+		{
+			"display": true,
+			"title": "Sinister",
+			"numberOfSpots": 6360,
+			"filename": "Sinister.jpg",
+			"id": 180,
+			"director": ["Derrickson, Scott"],
+			"genre": ["Horror", "Mystery", "Thriller"],
+			"writer": ["Derrickson, Scott", "Cargill, C. Robert"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Sleepwalk With Me",
+			"numberOfSpots": 5100,
+			"filename": "Sleepwalk With Me.jpg",
+			"id": 182,
+			"director": ["Birbiglia, Mike", "Barrish, Seth"],
+			"genre": ["Comedy"],
+			"writer": ["Birbiglia, Mike", "Birbiglia, Joe", "Glass, Ira", "Barrish, Seth"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Sneakers",
+			"numberOfSpots": 7860,
+			"filename": "Sneakers.jpg",
+			"id": 183,
+			"director": ["Robinson, Phil Alden"],
+			"genre": ["Comedy", "Crime", "Drama"],
+			"writer": ["Robinson, Phil Alden", "Lasker, Lawrence", "Parkes, Walter F."],
+			"year": 1992
+		},
+		{
+			"display": true,
+			"title": "So I Married an Axe Murderer",
+			"numberOfSpots": 5880,
+			"filename": "So I Married an Axe Murderer.jpg",
+			"id": 184,
+			"director": ["Schlamme, Thomas"],
+			"genre": ["Comedy", "Crime", "Romance"],
+			"writer": ["Fox, Robbie"],
+			"year": 1993
+		},
+		{
+			"display": false,
+			"title": "Something From Nothing - The Art Of Rap",
+			"numberOfSpots": 7020,
+			"filename": "Something From Nothing - The Art Of Rap.jpg",
+			"id": 185,
+			"director": ["Ice-T", "Baybutt, Andy"],
+			"genre": ["Documentary"],
+			"writer": ["n/a"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Sorcerer",
+			"numberOfSpots": 7620,
+			"filename": "Sorcerer.jpg",
+			"id": 186,
+			"director": ["Friedkin, William"],
+			"genre": ["Action", "Adventure", "Thriller"],
+			"writer": ["Green, Walon"],
+			"year": 1977
+		},
+		{
+			"display": true,
+			"title": "Sound of my Voice",
+			"numberOfSpots": 5340,
+			"filename": "Sound of my Voice.jpg",
+			"id": 187,
+			"director": ["Batmanglij, Zal"],
+			"genre": ["Drama", "Thriller"],
+			"writer": ["Marling, Brit", "Batmanglij, Zal"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Stalker",
+			"numberOfSpots": 9300,
+			"filename": "Stalker.jpg",
+			"id": 188,
+			"director": ["Tarkovskiy, Andrey"],
+			"genre": ["Adventure", "Drama", "Fantasy"],
+			"writer": ["Strugatskiy, Arkadiy", "Strugatskiy, Boris", "Tarkovskiy, Andrey"],
+			"year": 1979
+		},
+		{
+			"display": true,
+			"title": "Strippers Vs Werewolves",
+			"numberOfSpots": 5580,
+			"filename": "Strippers Vs Werewolves.jpg",
+			"id": 189,
+			"director": ["Glendening, Jonathan"],
+			"genre": ["Comedy", "Horror"],
+			"writer": ["Higgins, Pat", "Barron, Phil"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Take Me Home",
+			"numberOfSpots": 6120,
+			"filename": "Take Me Home.jpg",
+			"id": 190,
+			"director": ["Jaeger, Sam"],
+			"genre": ["Comedy", "Romance"],
+			"writer": ["Jaeger, Sam"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Take Shelter",
+			"numberOfSpots": 7560,
+			"filename": "Take Shelter.jpg",
+			"id": 191,
+			"director": ["Nichols, Jeff"],
+			"genre": ["Drama", "Thriller"],
+			"writer": ["Nichols, Jeff"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Take this Waltz",
+			"numberOfSpots": 7320,
+			"filename": "Take this Waltz.jpg",
+			"id": 192,
+			"director": ["Polley, Sarah"],
+			"genre": ["Comedy", "Drama"],
+			"writer": ["Polley, Sarah"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Tales From Earthsea",
+			"numberOfSpots": 7260,
+			"filename": "Tales From Earthsea.jpg",
+			"id": 193,
+			"director": ["Miyazaki, Goro"],
+			"genre": ["Animation", "Adventure", "Fantasy"],
+			"writer": ["Miyazaki, Goro", "Niwa, Keiko"],
+			"year": 2006
+		},
+		{
+			"display": true,
+			"title": "Teen Wolf",
+			"numberOfSpots": 5760,
+			"filename": "Teen Wolf.jpg",
+			"id": 194,
+			"director": ["Daniel, Rod"],
+			"genre": ["Comedy", "Fantasy", "Romance"],
+			"writer": ["Loeb, Jeph", "Weisman, Matthew"],
+			"year": 1985
+		},
+		{
+			"display": true,
+			"title": "Terminal Man, The",
+			"numberOfSpots": 6480,
+			"filename": "Terminal Man, The.jpg",
+			"id": 195,
+			"director": ["Hodges, Mike"],
+			"genre": ["Science Fiction", "Thriller"],
+			"writer": ["Hodges, Mike"],
+			"year": 1974
+		},
+		{
+			"display": false,
+			"title": "Ticket of No Return",
+			"numberOfSpots": 6900,
+			"filename": "Ticket of No Return.jpg",
+			"id": 196,
+			"director": ["Ottinger, Ulrike"],
+			"genre": ["Drama"],
+			"writer": ["Ottinger, Ulrike"],
+			"year": 1979
+		},
+		{
+			"display": true,
+			"title": "Tiptoes",
+			"numberOfSpots": 5640,
+			"filename": "Tiptoes.jpg",
+			"id": 197,
+			"director": ["Bright, Matthew"],
+			"genre": ["Comedy", "Drama", "Romance"],
+			"writer": ["Weiner, Bill"],
+			"year": 2003
+		},
+		{
+			"display": true,
+			"title": "Tokyo Story",
+			"numberOfSpots": 8520,
+			"filename": "Tokyo Story.jpg",
+			"id": 198,
+			"director": ["Ozu, Yasujirô"],
+			"genre": ["Drama"],
+			"writer": ["Ozu, Yasujirô", "Noda, Kôgo"],
+			"year": 1953
+		},
+		{
+			"display": true,
+			"title": "Trick R Treat",
+			"numberOfSpots": 5160,
+			"filename": "Trick R Treat.jpg",
+			"id": 199,
+			"director": ["Dougherty, Michael"],
+			"genre": ["Comedy", "Horror", "Thriller"],
+			"writer": ["Dougherty, Michael"],
+			"year": 2007
+		},
+		{
+			"display": true,
+			"title": "Trouble With The Curve",
+			"numberOfSpots": 7380,
+			"filename": "Trouble With The Curve.jpg",
+			"id": 200,
+			"director": ["Lorenz, Robert"],
+			"genre": ["Drama"],
+			"writer": ["Brown, Randy"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "Twixt",
+			"numberOfSpots": 5100,
+			"filename": "Twixt.jpg",
+			"id": 201,
+			"director": ["Coppola, Francis Ford"],
+			"genre": ["Horror", "Thriller"],
+			"writer": ["Coppola, Francis Ford"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Union Square",
+			"numberOfSpots": 5040,
+			"filename": "Union Square.jpg",
+			"id": 202,
+			"director": ["Savoca, Nancy"],
+			"genre": ["Drama"],
+			"writer": ["Savoca, Nancy", "Tobler, Mary"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Valhalla Rising",
+			"numberOfSpots": 5400,
+			"filename": "Valhalla Rising.jpg",
+			"id": 203,
+			"director": ["Refn, Nicolas Winding"],
+			"genre": ["Action", "Adventure", "Drama"],
+			"writer": ["Refn, Nicolas Winding", "Jacobson, Roy"],
+			"year": 2009
+		},
+		{
+			"display": true,
+			"title": "Vanishing Point",
+			"numberOfSpots": 6660,
+			"filename": "Vanishing Point.jpg",
+			"id": 204,
+			"director": ["Sarafian, Richard C."],
+			"genre": ["Action", "Drama"],
+			"writer": ["Infante, Guillermo Cabrera"],
+			"year": 1971
+		},
+		{
+			"display": true,
+			"title": "Verdict, The",
+			"numberOfSpots": 7440,
+			"filename": "Verdict, The.jpg",
+			"id": 205,
+			"director": ["Lumet, Sidney"],
+			"genre": ["Drama"],
+			"writer": ["Mamet, David"],
+			"year": 1982
+		},
+		{
+			"display": true,
+			"title": "Victim, The",
+			"numberOfSpots": 5220,
+			"filename": "Victim, The.jpg",
+			"id": 206,
+			"director": ["Biehn, Michael"],
+			"genre": ["Thriller"],
+			"writer": ["Biehn, Michael"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Walkabout",
+			"numberOfSpots": 6300,
+			"filename": "Walkabout.jpg",
+			"id": 207,
+			"director": ["Roeg, Nicolas"],
+			"genre": ["Adventure", "Drama"],
+			"writer": ["Bond, Edward"],
+			"year": 1971
+		},
+		{
+			"display": true,
+			"title": "Wild Bill",
+			"numberOfSpots": 5700,
+			"filename": "Wild Bill.jpg",
+			"id": 208,
+			"director": ["Fletcher, Dexter"],
+			"genre": ["Drama"],
+			"writer": ["Fletcher, Dexter", "King, Danny"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Witchfinder General",
+			"numberOfSpots": 4980,
+			"filename": "Witchfinder General.jpg",
+			"id": 209,
+			"director": ["Reeves, Michael"],
+			"genre": ["Drama", "Horror"],
+			"writer": ["Baker, Tom", "Reeves, Michael"],
+			"year": 1968
+		},
+		{
+			"display": true,
+			"title": "Woman, The",
+			"numberOfSpots": 6240,
+			"filename": "Woman, The.jpg",
+			"id": 210,
+			"director": ["McKee Lucky"],
+			"genre": ["Crime", "Horror", "Drama"],
+			"writer": ["McKee Lucky"],
+			"year": 2011
+		},
+		{
+			"display": true,
+			"title": "Yellow Wallpaper, The",
+			"numberOfSpots": 6240,
+			"filename": "Yellow Wallpaper, The.jpg",
+			"id": 211,
+			"director": ["Thomas, Logan"],
+			"genre": ["Thriller"],
+			"writer": ["Cushing, Aric", "Thomas, Logan"],
+			"year": 2012
+		},
+		{
+			"display": true,
+			"title": "You Kill Me",
+			"numberOfSpots": 5880,
+			"filename": "You Kill Me.jpg",
+			"id": 212,
+			"director": ["Dahl, John"],
+			"genre": ["Comedy", "Crime", "Romance"],
+			"writer": ["Markus, Christopher", "McFeely, Stephen"],
+			"year": 2007
+		},
+		{
+			"display": true,
+			"title": "Your Sister's Sister",
+			"numberOfSpots": 5700,
+			"filename": "Your Sister's Sister.jpg",
+			"id": 213,
+			"director": ["Shelton, Lynn"],
+			"genre": ["Comedy", "Drama"],
+			"writer": ["Shelton, Lynn"],
+			"year": 2011
+		},
+				{
+			"title": "24hr Party People",
+			"numberOfSpots": 6780,
+			"filename": "24hr Party People.jpg",
+			"id": 214,
+			"display": true,
+			"director": ["Winterbottom, Michael"],
+			"genre": ["Biography", "Comedy", "Drama"],
+			"writer": ["Boyce, Frank Cottrell"],
+			"year": 2002
+		},
+		{
+			"title": "A Scanner Darkly",
+			"numberOfSpots": 6300,
+			"filename": "A Scanner Darkly.jpg",
+			"id": 215,
+			"display": true,
+			"director": ["Linklater, Richard"],
+			"genre": ["Animation", "Crime", "Drama"],
+			"writer": ["Linklater, Richard"],
+			"year": 2006
+		},
+		{
+			"title": "Adventures of Buckaroo Banzai Across the 8th Dimension, The",
+			"numberOfSpots": 6360,
+			"filename": "Adventures of Buckaroo Banzai Across the 8th Dimension, The.jpg",
+			"id": 216,
+			"display": true,
+			"director": ["Richter, W.D."],
+			"genre": ["Adventure", "Comedy", "Romance"],
+			"writer": ["Rauch, Earl Mac"],
+			"year": 1984
+		},
+		{
+			"title": "Andromeda Strain, The",
+			"numberOfSpots": 8220,
+			"filename": "Andromeda Strain, The.jpg",
+			"id": 217,
+			"display": true,
+			"director": ["Wise, Robert"],
+			"genre": ["Science Fiction", "Thriller"],
+			"writer": ["Gidding, Nelson"],
+			"year": 1971
+		},
+		{
+			"title": "Avatar",
+			"numberOfSpots": 9360,
+			"filename": "Avatar.jpg",
+			"id": 218,
+			"display": true,
+			"director": ["Cameron, James"],
+			"genre": ["Action", "Adventure", "Fantasy"],
+			"writer": ["Cameron, James"],
+			"year": 2009
+		},
+		{
+			"title": "Avengers, The",
+			"numberOfSpots": 8940,
+			"filename": "Avengers, The.jpg",
+			"id": 219,
+			"display": true,
+			"director": ["Whedon, Joss"],
+			"genre": ["Action", "Adventure", "Fantasy"],
+			"writer": ["Whedon, Joss"],
+			"year": 2012
+		},
+		{
+			"title": "Big Easy, The",
+			"numberOfSpots": 6300,
+			"filename": "Big Easy, The.jpg",
+			"id": 220,
+			"display": true,
+			"director": ["McBride, Jim"],
+			"genre": ["Thriller", "Crime", "Romance"],
+			"writer": ["Petrie Jr., Daniel"],
+			"year": 1986
+		},
+		{
+			"title": "Black Hole, The",
+			"numberOfSpots": 5520,
+			"filename": "Black Hole, The.jpg",
+			"id": 221,
+			"display": true,
+			"director": ["Nelson, Gary"],
+			"genre": ["Action", "Adventure", "Science Fiction", "Family"],
+			"writer": ["Rosebrook, Jeb", "Day, Gerry"],
+			"year": 1979
+		},
+		{
+			"title": "Brick",
+			"numberOfSpots": 6900,
+			"filename": "Brick.jpg",
+			"id": 222,
+			"display": true,
+			"director": ["Johnson, Rian"],
+			"genre": ["Crime", "Mystery", "Drama"],
+			"writer": ["Johnson, Rian"],
+			"year": 2005
+		},
+		{
+			"title": "Butch Cassidy and the Sundance Kid",
+			"numberOfSpots": 6360,
+			"filename": "Butch Cassidy and the Sundance Kid.jpg",
+			"id": 223,
+			"display": true,
+			"director": ["Hill, George Roy"],
+			"genre": [" Adventure", "Biography", "Crime", "Western"],
+			"writer": ["Goldman, William"],
+			"year": 1969
+		},
+		{
+			"title": "Cabin In The Woods, The",
+			"numberOfSpots": 6000,
+			"filename": "Cabin In The Woods, The.jpg",
+			"id": 224,
+			"display": true,
+			"director": ["Goddard, Drew"],
+			"genre": ["Horror", "Mystery", "Thriller"],
+			"writer": ["Goddard, Drew", "Whedon, Joss"],
+			"year": 2011
+		},
+		{
+			"title": "Children of Men",
+			"numberOfSpots": 6300,
+			"filename": "Children of Men.jpg",
+			"id": 225,
+			"display": true,
+			"director": ["Cuarón, Alfonso"],
+			"genre": ["Adventure", "Drama", "Science Fiction", "Thriller"],
+			"writer": ["Cuarón, Alfonso", "Sexton, Timothy J.", "Arata, David", "Fergus, Mark", "Ostby, Hawk"],
+			"year": 2006
+		},
+		{
+			"title": "Code 46",
+			"numberOfSpots": 5340,
+			"filename": "Code 46.jpg",
+			"id": 226,
+			"display": true,
+			"director": ["Winterbottom, Michael"],
+			"genre": [" Drama", "Romance", "Science Fiction", "Thriller"],
+			"writer": ["Boyce, Cottrell Frank"],
+			"year": 2003
+		},
+		{
+			"title": "Dead Man's Shoes",
+			"numberOfSpots": 5220,
+			"filename": "Dead Man's Shoes.jpg",
+			"id": 227,
+			"display": true,
+			"director": ["Meadows, Shane"],
+			"genre": ["Crime", "Drama", "Thriller"],
+			"writer": ["Meadows, Shane", "Considine, Paddy"],
+			"year": 2004
+		},
+		{
+			"title": "Dirty Pretty Things",
+			"numberOfSpots": 5640,
+			"filename": "Dirty Pretty Things.jpg",
+			"id": 228,
+			"display": true,
+			"director": ["Frears, Stephen"],
+			"genre": ["Crime", "Drama", "Thriller"],
+			"writer": ["Knight, Steven"],
+			"year": 2002
+		},
+		{
+			"title": "Driver, The",
+			"numberOfSpots": 5280,
+			"filename": "Driver, The.jpg",
+			"id": 229,
+			"display": true,
+			"director": ["Hill, Walter"],
+			"genre": ["Action", "Crime", "Drama"],
+			"writer": ["Hill, Walter"],
+			"year": 1978
+		},
+		{
+			"title": "Easy A",
+			"numberOfSpots": 5760,
+			"filename": "Easy A.jpg",
+			"id": 230,
+			"display": true,
+			"director": ["Gluck, Will"],
+			"genre": ["Comedy", "Romance"],
+			"writer": ["Royal, Bert. V"],
+			"year": 2010
+		},
+		{
+			"title": "El Aura",
+			"numberOfSpots": 7620,
+			"filename": "El Aura.jpg",
+			"id": 231,
+			"display": true,
+			"director": ["Bielinsky, Fabián"],
+			"genre": ["Crime", "Drama", "Thriller"],
+			"writer": ["Bielinsky, Fabián"],
+			"year": 2005
+		},
+		{
+			"title": "Erin Brockovich",
+			"numberOfSpots": 7440,
+			"filename": "Erin Brockovich.jpg",
+			"id": 232,
+			"display": true,
+			"director": ["Soderberg, Steven"],
+			"genre": ["Biography", "Drama"],
+			"writer": ["Grant, Susannah"],
+			"year": 2000
+		},
+		{
+			"title": "Eternal Sunshine Of The Spotless Mind",
+			"numberOfSpots": 6780,
+			"filename": "Eternal Sunshine Of The Spotless Mind.jpg",
+			"id": 233,
+			"display": true,
+			"director": ["Gondy, Michel"],
+			"genre": ["Drama", "Romance", "Science Fiction"],
+			"writer": ["Kaufman, Charlie"],
+			"year": 2004
+		},
+		{
+			"title": "Event Horizon",
+			"numberOfSpots": 5520,
+			"filename": "Event Horizon.jpg",
+			"id": 234,
+			"display": true,
+			"director": ["Anderson, Paul W.S."],
+			"genre": ["Action", "Adventure", "Horror", "Science Fiction"],
+			"writer": ["Eisner, Philip"],
+			"year": 1997
+		},
+		{
+			"title": "Faster Pussycat! Kill! Kill!",
+			"numberOfSpots": 5040,
+			"filename": "Faster Pussycat! Kill! Kill!.jpg",
+			"id": 235,
+			"display": true,
+			"director": ["Meyer, Russ"],
+			"genre": ["Action", "Comedy"],
+			"writer": ["Moran, Jack"],
+			"year": 1965
+		},
+		{
+			"title": "Freddy Got Fingered",
+			"numberOfSpots": 5460,
+			"filename": "Freddy Got Fingered.jpg",
+			"id": 236,
+			"display": true,
+			"director": ["Green, Tom"],
+			"genre": ["Comedy"],
+			"writer": ["Green, Tom", "Harvie, Derek"],
+			"year": 2001
+		},
+		{
+			"title": "Gone Baby Gone",
+			"numberOfSpots": 7140,
+			"filename": "Gone Baby Gone.jpg",
+			"id": 237,
+			"display": true,
+			"director": ["Affleck, Ben"],
+			"genre": ["Crime", "Drama", "Mystery", "Thriller"],
+			"writer": ["Affleck, Ben", "Stockard, Aaron"],
+			"year": 2007
+		},
+		{
+			"title": "Harry Brown",
+			"numberOfSpots": 5940,
+			"filename": "Harry Brown.jpg",
+			"id": 238,
+			"display": true,
+			"director": ["Barber, Daniel"],
+			"genre": ["Crime", "Drama", "Thriller"],
+			"writer": ["Young, Gary"],
+			"year": 2009
+		},
+		{
+			"title": "Kick-Ass",
+			"numberOfSpots": 6840,
+			"filename": "Kick-Ass.jpg",
+			"id": 239,
+			"display": true,
+			"director": ["Vaughn, Matthew"],
+			"genre": ["Action", "Fantasy", "Adventure"],
+			"writer": ["Vaughn, Matthew", "Goldman, Jane"],
+			"year": 2010
+		},
+		{
+			"title": "Lone Star",
+			"numberOfSpots": 7800,
+			"filename": "Lone Star.jpg",
+			"id": 240,
+			"display": true,
+			"director": ["Sayles, John"],
+			"genre": ["Drama", "Crime", "Thriller"],
+			"writer": ["Sayles, John"],
+			"year": 1996
+		},
+		{
+			"title": "Marathon Man",
+			"numberOfSpots": 7260,
+			"filename": "Marathon Man.jpg",
+			"id": 241,
+			"display": true,
+			"director": ["Schlesinger John"],
+			"genre": ["Thriller"],
+			"writer": ["Goldman, William"],
+			"year": 1976
+		},
+		{
+			"title": "Michael Clayton",
+			"numberOfSpots": 7500,
+			"filename": "Michael Clayton.jpg",
+			"id": 242,
+			"display": true,
+			"director": ["Gilroy, Tony"],
+			"genre": ["Crime", "Drama", "Mystery"],
+			"writer": ["Gilroy, Tony"],
+			"year": 2007
+		},
+		{
+			"title": "Midnight Cowboy",
+			"numberOfSpots": 6540,
+			"filename": "Midnight Cowboy.jpg",
+			"id": 243,
+			"display": true,
+			"director": ["Schlesinger, John"],
+			"genre": ["Drama"],
+			"writer": ["Salt, Waldo"],
+			"year": 1969
+		},
+		{
+			"title": "Pi",
+			"numberOfSpots": 4860,
+			"filename": "Pi.jpg",
+			"id": 244,
+			"display": true,
+			"director": ["Aronofsky, Darren"],
+			"genre": ["Drama", "Thriller"],
+			"writer": ["Aronofsky, Darren"],
+			"year": 1998
+		},
+		{
+			"title": "Primer",
+			"numberOfSpots": 4860,
+			"filename": "Primer.jpg",
+			"id": 245,
+			"display": true,
+			"director": ["Carruth, Shane"],
+			"genre": ["Drama", "Thriller", "Science Fiction"],
+			"writer": ["Carruth, Shane"],
+			"year": 2004
+		},
+		{
+			"title": "Scanners",
+			"numberOfSpots": 6480,
+			"filename": "Scanners.jpg",
+			"id": 246,
+			"display": true,
+			"director": ["Cronenberg, David"],
+			"genre": ["Thriller", "Horror", "Science Fiction"],
+			"writer": ["Cronenberg, David"],
+			"year": 1981
+		},
+		{
+			"title": "Secretary",
+			"numberOfSpots": 6900,
+			"filename": "Secretary.jpg",
+			"id": 247,
+			"display": true,
+			"director": ["Shainberg, Steven"],
+			"genre": ["Comedy", "Drama", "Romance"],
+			"writer": ["Wilson, Erin Cressida"],
+			"year": 2002
+		},
+		{
+			"title": "Solaris",
+			"numberOfSpots": 6060,
+			"filename": "Solaris.jpg",
+			"id": 248,
+			"display": true,
+			"director": ["Soderberg, Steven"],
+			"genre": ["Drama", "Thriller", "Science Fiction"],
+			"writer": ["Soderberg, Steven"],
+			"year": 2002
+		},
+		{
+			"title": "Soylent Green",
+			"numberOfSpots": 6060,
+			"filename": "Soylent Green.jpg",
+			"id": 249,
+			"display": true,
+			"director": ["Fleischer, Richard"],
+			"genre": ["Drama", "Horror", "Mystery", "Sci-Fi", "Thriller"],
+			"writer": ["Greenberg, Stanley R."],
+			"year": 1973
+		},
+		{
+			"title": "Spider",
+			"numberOfSpots": 6180,
+			"filename": "Spider.jpg",
+			"id": 250,
+			"display": true,
+			"director": ["Cronenberg, David"],
+			"genre": ["Drama"],
+			"writer": ["McGrath, Patrick"],
+			"year": 2002
+		},
+		{
+			"title": "Star Trek The Motion Picture",
+			"numberOfSpots": 7860,
+			"filename": "Star Trek The Motion Picture.jpg",
+			"id": 251,
+			"display": true,
+			"director": ["Wise, Robert"],
+			"genre": ["Science Fiction", "Mystery", "Adventure"],
+			"writer": ["Livingston, Harold"],
+			"year": 1979
+		},
+		{
+			"title": "Station Agent, The",
+			"numberOfSpots": 5220,
+			"filename": "Station Agent, The.jpg",
+			"id": 252,
+			"display": true,
+			"director": ["McCarthy, Thomas"],
+			"genre": ["Drama"],
+			"writer": ["McCarthy, Thomas"],
+			"year": 2003
+		},
+		{
+			"title": "Taking Of Pelham One Two Three, The",
+			"numberOfSpots": 6060,
+			"filename": "Taking Of Pelham One Two Three, The.jpg",
+			"id": 253,
+			"display": true,
+			"director": ["Sargent, John"],
+			"genre": ["Crime", "Drama", "Thriller"],
+			"writer": ["Stone, Peter"],
+			"year": 1974
+		},
+		{
+			"title": "Tangled",
+			"numberOfSpots": 6240,
+			"filename": "Tangled.jpg",
+			"id": 254,
+			"display": true,
+			"director": ["Greno,  Nathan", "Howard, Byron"],
+			"genre": ["Animation", "Comedy", "Family"],
+			"writer": ["Fogelman, Dan"],
+			"year": 2010
+		},
+		{
+			"title": "Terminator, The",
+			"numberOfSpots": 6180,
+			"filename": "Terminator, The.jpg",
+			"id": 255,
+			"display": true,
+			"director": ["Cameron, James"],
+			"genre": ["Thriller", "Science Fiction"],
+			"writer": ["Cameron, James"],
+			"year": 1984
+		},
+		{
+			"title": "There Will be Blood",
+			"numberOfSpots": 9960,
+			"filename": "There Will be Blood.jpg",
+			"id": 256,
+			"display": true,
+			"director": ["Anderson, Paul Thomas"],
+			"genre": ["Drama"],
+			"writer": ["Anderson, Paul Thomas"],
+			"year": 2007
+		},
+		{
+			"title": "Tootsie",
+			"numberOfSpots": 7320,
+			"filename": "Tootsie.jpg",
+			"id": 257,
+			"display": true,
+			"director": ["Pollack, Sydney"],
+			"genre": ["Comedy", "Drama", "Romance"],
+			"writer": ["Gelbart, Larry", "Schisgal, Murray"],
+			"year": 1982
+		},
+		{
+			"title": "Tron Legacy",
+			"numberOfSpots": 7860,
+			"filename": "Tron Legacy.jpg",
+			"id": 258,
+			"display": true,
+			"director": ["Kosinski, Joseph"],
+			"genre": ["Action", "Adventure", "Science Fiction"],
+			"writer": ["Horowitz, Adam", "Kosinski, Joseph"],
+			"year": 2010
+		},
+		{
+			"title": "Trucker",
+			"numberOfSpots": 5820,
+			"filename": "Trucker.jpg",
+			"id": 259,
+			"display": true,
+			"director": ["Mottern, James"],
+			"genre": ["Drama"],
+			"writer": ["Mottern, James"],
+			"year": 2008
+		},
+		{
+			"title": "True Grit",
+			"numberOfSpots": 6900,
+			"filename": "True Grit.jpg",
+			"id": 260,
+			"display": true,
+			"director": ["Coen, Ethan", "Coen, Joel"],
+			"genre": ["Adventure", "Drama", "Western"],
+			"writer": ["Coen, Ethan", "Coen, Joel"],
+			"year": 2010
+		},
+		{
+			"title": "Two Mules For Sister Sara",
+			"numberOfSpots": 6600,
+			"filename": "Two Mules For Sister Sara.jpg",
+			"id": 261,
+			"display": true,
+			"director": ["Siegel, Don"],
+			"genre": ["Action", "Adventure", "Comedy", "Western"],
+			"writer": ["Maltz, Albert"],
+			"year": 1970
+		},
+		{
+			"title": "Two-Lane Blacktop",
+			"numberOfSpots": 6420,
+			"filename": "Two-Lane Blacktop.jpg",
+			"id": 262,
+			"display": true,
+			"director": ["Hellman, Monte"],
+			"genre": ["Drama"],
+			"writer": ["Corry, Will", "Wurlitzer, Rudy"],
+			"year": 1971
+		},
+		{
+			"title": "Untouchables, The",
+			"numberOfSpots": 7500,
+			"filename": "Untouchables, The.jpg",
+			"id": 263,
+			"display": true,
+			"director": ["De Palma, Brian"],
+			"genre": ["Crime", "Drama", "Thriller", "History"],
+			"writer": ["Mamet, David"],
+			"year": 1987
+		},
+		{
+			"title": "Videodrome",
+			"numberOfSpots": 5580,
+			"filename": "Videodrome.jpg",
+			"id": 264,
+			"display": true,
+			"director": ["Cronenberg, David"],
+			"genre": ["Horror", "Thriller", "Science Fiction"],
+			"writer": ["Cronenberg, David"],
+			"year": 1974
+		},
+		{
+			"title": "WALL-E",
+			"numberOfSpots": 6180,
+			"filename": "WALL-E.jpg",
+			"id": 265,
+			"display": true,
+			"director": ["Stanton, Andrew"],
+			"genre": ["Animation", "Adventure", "Science Fiction", "Family"],
+			"writer": ["Stanton, Andrew", "Reardon, Jim"],
+			"year": 2008
+		},
+		{
+			"title": "What's Up, Doc",
+			"numberOfSpots": 5880,
+			"filename": "What's Up, Doc.jpg",
+			"id": 266,
+			"display": true,
+			"director": ["Bogdanovich, Peter"],
+			"genre": ["Comedy", "Romance", "Adventure"],
+			"writer": ["Henry, Buck", "Benton, Robert", "Newman, David"],
+			"year": 1972
+		},
+		{
+			"title": "Wonderful Days",
+			"numberOfSpots": 5400,
+			"filename": "Wonderful Days.jpg",
+			"id": 267,
+			"display": true,
+			"director": ["Kim, Moon-saeng"],
+			"genre": ["Action", "Adventure", "Animation", "Fantasy"],
+			"writer": ["Keyes, Michael", "Kim, Moon-saeng", "Lender, Jay", "Park, Jun-Young", "Park, Yong-jun", "Wright, Micah"],
+			"year": 2003
+		},
+		{
+			"title": "Zardoz",
+			"numberOfSpots": 6120,
+			"filename": "Zardoz.jpg",
+			"id": 268,
+			"display": true,
+			"director": ["Boorman, John"],
+			"genre": ["Fantasy", "Science Fiction"],
+			"writer": ["Boorman, John"],
+			"year": 1974
+		},
+		{
+			"title": "Zodiac",
+			"numberOfSpots": 9900,
+			"filename": "Zodiac.jpg",
+			"id": 269,
+			"display": true,
+			"director": ["Fincher, David"],
+			"genre": ["Crime", "Drama", "Mystery"],
+			"writer": ["Vanderbilt, James"],
+			"year": 2007
 		}
 	]
 }

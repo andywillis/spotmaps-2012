@@ -1,9 +1,10 @@
 nav ul li:hover > ul { display: block }
-nav ul li { float: left }
-nav ul ul li a:hover { background: #4b545f }
+nav ul li { float: left ; margin-right: 5px}
+.menu-selected a,
+nav ul ul li a:hover { background: #4b545fl; color: white; }
 nav ul li:hover a { color: #fff ;cursor: pointer}
 nav ul ul li a { font-size: 0.7em }
-
+ 
 nav ul ul { 
   display: none;
   text-align: left
@@ -31,7 +32,7 @@ nav ul:after {
   display: block; 
 }
 
-
+.menu-selected,
 nav ul li:hover {
   background: #4b545f;
   background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
@@ -62,7 +63,7 @@ nav ul ul li {
 }
 
 nav ul ul li a {
-  padding: 5px 10px 5px 10px;
+  padding: 2px 10px 2px 10px;
 /*  padding: 15px 40px;*/
   color: #fff;
 }

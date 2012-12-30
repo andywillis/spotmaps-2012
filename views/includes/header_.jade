@@ -1,0 +1,39 @@
+noscript
+  link(rel="stylesheet", href="/stylesheets/less/style.css")
+  div(id='noscript') Javascript required
+header(role="banner", id="banner")
+  h1
+    a(href="/") Spotmaps
+  nav(id="nav")
+    ul(role="navigation", id="menu")
+      li(id='genre')
+        a Genre
+        ul
+          li(class="menuItem")
+            | <a href="/genre/action and adventure">Action and adventure <span class="filmCount">(#{filmCount['Action and adventure']})</span></a>
+          li(class="menuItem")
+            | <a href="/genre/animation">Animation <span class="filmCount">(#{filmCount['Animation']})</span></a>
+          li(class="menuItem")
+            | <a href="/genre/comedy">Comedy <span class="filmCount">(#{filmCount['Comedy']})</span></a>
+          li(class="menuItem")
+            | <a href="/genre/crime">Crime <span class="filmCount">(#{filmCount['Crime']})</span></a>
+          li(class="menuItem")
+            | <a href="/genre/documentary">Documentary <span class="filmCount">(#{filmCount['Documentary']})</span></a>
+          li(class="menuItem")
+            | <a href="/genre/drama">Drama <span class="filmCount">(#{filmCount['Drama']})</span></a>
+          li(class="menuItem")
+            | <a href="/genre/family">Family <span class="filmCount">(#{filmCount['Family']})</span></a>
+          li(class="menuItem")
+            | <a href="/genre/horror">Horror <span class="filmCount">(#{filmCount['Horror']})</span></a>
+          li(class="menuItem")
+            | <a href="/genre/period and historical">Period and historical <span class="filmCount">(#{filmCount['Period and historical']})
+          li(class="menuItem")
+            | <a href="/genre/science fiction and fantasy">Science fiction and fantasy <span class="filmCount">(#{filmCount['Science fiction and fantasy']})</span></a>
+          li(class="menuItem")
+            | <a href="/genre/thriller">Thriller <span class="filmCount">(#{filmCount['Thriller']})</span></a>
+          li(class="menuItem")
+            | <a href="/genre/western">Western <span class="filmCount">(#{filmCount['Western']})</span></a>
+      li
+        a(href="/search", id="menu-search") Search
+      li
+        a(href="/about", id="menu-about") About

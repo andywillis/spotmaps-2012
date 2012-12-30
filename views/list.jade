@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  div(id="content")
+    div(class="wrap")
+      form
+        label(class="listLabel")
+          span(class="formSpan selected", id="formDirector") director
+          span(class="formSpan", id="formGenre") genre
+          span(class="formSpan", id="formWriter") writer
+          span(class="formSpan", id="formYear") year
+        br(class="formBreak")
+        hr
+        div(id="alphabet")
+          ul(class="alphabet")
+            - var a = 'a'.charCodeAt()
+            - var z = 'z'.charCodeAt()
+            - for (var i = a, len = z; i < len; i++) {
+            - var ucLetter = String.fromCharCode(i).toUpperCase()
+            - var lcLetter = String.fromCharCode(i)
+              |<li class="alphabetItem" data-letter="#{lcLetter}">#{ucLetter}</li>
+            - }
+        div(id="list")
+        div(class="hidden", id="genres")= genres
+        div(class="hidden", id="directors")= directors
+        div(class="hidden", id="writers")= writers
+        div(class="hidden", id="years")= years
