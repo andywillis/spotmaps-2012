@@ -1,6 +1,14 @@
+/*
+ * Dependancies
+ */
+
 var fs = require('fs')
 
 exports = module.exports = bin;
+
+/*
+ * Returns the bin function
+ */
 
 function bin(app) {
 
@@ -31,16 +39,6 @@ function bin(app) {
           console.log(status,'Error loading hex file:', fileLocation);
         }
       })
-/*      fs.readFile('./public/maps/' + data.title + '.hex', 'utf-8', function(err, data) {
-        if (err) {
-          console.log(err)
-          res.send(404)
-        } else {
-          app.static.hex[data.title] = data
-          res.send(data)
-        }
-      });
-*/      
     }
 
   }  

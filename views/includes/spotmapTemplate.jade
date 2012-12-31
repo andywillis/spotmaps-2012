@@ -1,7 +1,9 @@
 | <script type="text/template" id="spotmapTemplate">
 |   <img class="spotmap box-shadow" id="<%= map.id %>" src="<%= map.src %>" />
 |   <div class="notes">
-|     <p class="filmtitle value"><%= map.title %></p>
+|     <p class="filmtitle value"><%= map.title %><br/>
+|     <a href="<%= map.ase %>"><img title="Download 24-colour ASE file" class="siteicon" src="/images/ase.png" /></a><a href="<%= map.map %>"><img title="Download hex RGB colour file" class="siteicon" src="/images/map.png" /></a>
+|     </p>
 |     <p class="label">Year</p>
 |     <p class="year value"><a><%= map.year %></a></p>
 |     <p class="label"><%= map.genreLabel %></p>

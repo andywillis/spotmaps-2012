@@ -22,7 +22,9 @@ function serveData(app) {
       , pathname = reqObj.pathname.replace('/static/','')
       , contentType = reqObj.contentType
       , foundStaticFile = app.static.spotmaps[pathname]
-    
+      , extension = pathname.split('.')[1]
+      ;
+
     function serve(entry) {
       var metadata = entry.metadata
         , modified = metadata.modified

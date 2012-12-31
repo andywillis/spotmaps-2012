@@ -5,14 +5,7 @@ block content
     h2 #{title} (#{year})
   div(id="sizes")
     ul
-      li(class="size") 2
-      li(class="size") 4
-      li(class="size") 6
-      li(class="size") 8
-      li(class="size") 10
-      li(class="size") 12
-      li(class="size") 14
-      li(class="size") 16
-      li(class="size") 18
-      li(class="size") 20
+      - for(var i = 2, len = 20; i < len; i+=2) {
+        li(class="size")= i
+      - }
   div(id="content")

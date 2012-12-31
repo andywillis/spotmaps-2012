@@ -73,6 +73,8 @@ $(document).ready(function () {
           map.genre = map.genre.join('</a><br/><a>')
           map.minutes = map.numberOfSpots/60
           map.src = '/static/images/' + map.filename
+          map.ase = '/static/ase/' + map.title + '.ase'
+          map.map = '/static/maps/' + map.title + '.hex'
 
           // Push the data into the template and render it.
           frame.innerHTML = spotmapTemplate({map: map})

@@ -46,9 +46,9 @@
 		},
 		{
 			"display": true,
-			"title": "A Cat in Paris",
+			"title": "Cat in Paris, A",
 			"numberOfSpots": 4080,
-			"filename": "A Cat in Paris.jpg",
+			"filename": "Cat in Paris, A.jpg",
 			"id": 5,
 			"director": ["Felicioli, Jean-Loup", "Gagnol, Alain"],
 			"genre": ["Animation", "Adventure", "Family"],
@@ -2311,9 +2311,9 @@
 			"year": 2002
 		},
 		{
-			"title": "A Scanner Darkly",
+			"title": "Scanner Darkly, A",
 			"numberOfSpots": 6300,
-			"filename": "A Scanner Darkly.jpg",
+			"filename": "Scanner Darkly, A.jpg",
 			"id": 215,
 			"display": true,
 			"director": ["Linklater, Richard"],
