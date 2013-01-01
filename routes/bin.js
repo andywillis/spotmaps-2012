@@ -25,7 +25,7 @@ function bin(app) {
       , data = core.jsonPath(library, '$..films[?(@.id===' + url.query.id + ')]')[0]
       , filename = data.title
       , foundHexFile = app.static.hex[data.title]
-      , fileLocation = 'maps/' + filename + '.hex'
+      , fileLocation = 'hex/' + filename + '.hex'
 
     if (foundHexFile) {
       console.log('From cache.');

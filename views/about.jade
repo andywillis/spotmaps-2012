@@ -3,10 +3,13 @@ extends layout
 block content
   div(id="content")
     div(class="wrap")
-      p Spotmaps is an on-going project to map the colour footprints of different films.
-      p Films are processed through a Python/OpenCV pipeline: each frame's colour sampled, and  spot of average colour is produced from the combination of one second's frames.
+      h2 Project
+      p Spotmaps, based on Brendan Dawes' <a href="http://brendandawes.com/projects/cinemaredux">Cinema Redux</a>, is an on-going project to map the colour footprints of different films.
+      p Films are processed through a Python/OpenCV pipeline: each frame's colour is sampled, and  a spot of average colour is produced from the combination of one second's frames.
       p Spots are laid out 60 per line to represent one minute of film time. The length of the image represents the number of minutes in the film.
-      p No additional image processing is performed.
       p A 24-colour Adobe swatch file in ASE format and a hex RGB colour file are available to download for each spotmap.
-      p This project is based on Brendan Dawes' <a href="http://brendandawes.com/projects/cinemaredux">Cinema Redux</a>.
-      p All code and design &copy 2012 Andy Willis
+      h2 Contribute
+      p If you would like to help and contribute to the library these are the requirements to run the pipeline on your machine: <a href="http://www.python.org/">Python 2.7</a> with <a href="http://www.numpy.org/">Numpy</a> and <a href="http://www.pythonware.com/products/pil/">PIL</a>, and <a href="http://opencv.willowgarage.com/">OpenCV</a>.
+      p Please <a class="contact">get in touch</a>.
+      hr
+      p All code and design &copy 2012 <a class="contact">Andy Willis</a>.

@@ -74,7 +74,7 @@ $(document).ready(function () {
           map.minutes = map.numberOfSpots/60
           map.src = '/static/images/' + map.filename
           map.ase = '/static/ase/' + map.title + '.ase'
-          map.map = '/static/maps/' + map.title + '.hex'
+          map.map = '/static/hex/' + map.title + '.hex'
 
           // Push the data into the template and render it.
           frame.innerHTML = spotmapTemplate({map: map})
@@ -312,6 +312,12 @@ $(document).ready(function () {
 
     $('#menu li.menu-selected').removeClass('menu-selected')
     $('#menu li#menu-' + menu).addClass('menu-selected')
+
+    /*
+     * Add email
+     */
+
+    if (menu === 'about') $('.contact').attr('href', 'mailto:awillis@lavabit.com')
 
     /*
      * Hide the menu on item.onClick. This doesn't happen 
