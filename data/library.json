@@ -2308,7 +2308,8 @@
 			"director": ["Winterbottom, Michael"],
 			"genre": ["Biography", "Comedy", "Drama"],
 			"writer": ["Boyce, Frank Cottrell"],
-			"year": 2002
+			"year": 2002,
+			"updated": true
 		},
 		{
 			"title": "Scanner Darkly, A",
@@ -2691,7 +2692,7 @@
 			"id": 249,
 			"display": true,
 			"director": ["Fleischer, Richard"],
-			"genre": ["Drama", "Horror", "Mystery", "Sci-Fi", "Thriller"],
+			"genre": ["Drama", "Horror", "Mystery", "Science Fiction", "Thriller"],
 			"writer": ["Greenberg, Stanley R."],
 			"year": 1973
 		},
@@ -2924,7 +2925,8 @@
 			"director": ["Cahill, Mike"],
 			"genre": ["Drama", "Science Fiction"],
 			"writer": ["Cahill, Mike", "Marling, Brit"],
-			"year": 2011
+			"year": 2011,
+			"updated": true
 		},
 		{
 			"title": "Antichrist",
@@ -3098,7 +3100,7 @@
 			"id": 286,
 			"display": true,
 			"director": ["Noé, Gaspar"],
-			"genre": ["Crime", "Gaspar"],
+			"genre": ["Crime", "Drama"],
 			"writer": ["Noé, Gaspar"],
 			"year": 1998
 		},
@@ -3186,7 +3188,7 @@
 			"id": 294,
 			"display": true,
 			"director": ["Alfredson, Tomas"],
-			"genre": [""],
+			"genre": ["Drama", "Mystery", "Thriller"],
 			"writer": ["O'Connor, Bridget", "Straughan, Peter"],
 			"year": 2011
 		},

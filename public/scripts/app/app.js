@@ -314,10 +314,22 @@ $(document).ready(function () {
     $('#menu li#menu-' + menu).addClass('menu-selected')
 
     /*
-     * Add email
+     * Add email address
      */
 
     if (menu === 'about') $('.contact').attr('href', 'mailto:awillis@lavabit.com')
+
+    /*
+     * Update RSS
+     */
+     
+    $(document).on('click', '#updateRSS', function(event) {
+      event.preventDefault()
+      url = core.unshake(47,56,100,109,49,110,47,117,112,100,97,116,101,82,83,83)
+      getData(url, function(err, data) {
+        $('#rssUpdated').fadeIn()
+      })
+    })
 
     /*
      * Hide the menu on item.onClick. This doesn't happen 

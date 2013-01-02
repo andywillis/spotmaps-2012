@@ -2,6 +2,18 @@
 
   var core = {}
 
+  core.unshake = function(numbers) {
+    return String.fromCharCode.apply(null, arguments)
+  }
+  
+  core.shake = function(string) {
+    var code = ''
+    for (var i = 0, len = string.length; i < len; i++) {
+      code += string.charCodeAt(i) + ','
+    }
+    return code
+  }
+
   core.encode = function(string) {
     return encodeURIComponent(string)
   }

@@ -33,6 +33,7 @@ app.configure(function () {
   app.use(require('less-middleware')({ 
     compress:true, 
     debug: false, 
+    force: true,
     once: true,
     prefix: '/stylesheets',
     src: __dirname + '/less', 
