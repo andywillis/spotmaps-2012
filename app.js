@@ -9,34 +9,35 @@ var fs = require('fs')
   , core = require('./lib/core/core')
   , http = require('http')
   , path = require('path')
+  ;
 
 /*
  * Variables
  */
 
-var app, dbox, dbApp, libraryLocation
+var app, dbox, dbApp, libraryLocation;
 
 /*
  * Blank the console and configure express
  */
 
-core.clear()
+core.clear();
 console.log((config.name + ' v' + config.version).appName);
 app = express();
-app.ROOT = __dirname
+app.ROOT = __dirname;
 app.configure(function () {
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view options', { layout: false });
   app.set('view engine', 'jade');
   app.use(express.favicon('public/favicon.ico'));
-  app.use(require('less-middleware')({ 
-    compress:true, 
-    debug: false, 
+  app.use(require('less-middleware')({
+    compress:true,
+    debug: false,
     force: true,
     once: true,
     prefix: '/stylesheets',
-    src: __dirname + '/less', 
+    src: __dirname + '/less',
     dest: __dirname + '/public/stylesheets/'
   }));
   app.use(require('./lib/metric.js')());
@@ -54,13 +55,13 @@ app.configure('development', function () {
  * in the config file.
  */
 
-dbox  = require("dbox")
-dbApp   = dbox.app({ "app_key": config.dropbox.key, "app_secret": config.dropbox.secret })
-app.dbox = dbApp.client(config.dropbox.access_token)
+dbox  = require("dbox");
+dbApp   = dbox.app({ "app_key": config.dropbox.key, "app_secret": config.dropbox.secret });
+app.dbox = dbApp.client(config.dropbox.access_token);
 app.dbox.account(function(status, reply) {
   if (reply && reply.uid == config.dropbox.access_token.uid) console.log('Dropbox account found'.ok);
   else console.log('Error locating Dropbox account.'.ok);
-})
+});
 
 /*
  * Set up the static store for the images,
@@ -73,19 +74,20 @@ app.static = staticObj = {
   hex: {},
   maps: {},
   rgb: {}
-}
+};
 
 /*
  * Load the film library
  */
 
-libraryLocation = './data/library.json'
-app.library = JSON.parse(fs.readFileSync(libraryLocation, 'utf-8'))
-app.library.menu = require('./lib/count')(app.library.films, 'genre', 'value', 12)
-app.library.genres = require('./lib/count')(app.library.films, 'genre', 'key', null)
-app.library.directors = require('./lib/count')(app.library.films, 'director', 'key', null)
-app.library.writers = require('./lib/count')(app.library.films, 'writer', 'key', null)
-app.library.years = require('./lib/count')(app.library.films, 'year', 'key', null)
+libraryLocation = './data/library.json';
+app.library = JSON.parse(fs.readFileSync(libraryLocation, 'utf-8'));
+app.library.menu = require('./lib/count')(app.library.films, 'genre', 'value', 12);
+app.library.genres = require('./lib/count')(app.library.films, 'genre', 'key', null);
+app.library.directors = require('./lib/count')(app.library.films, 'director', 'key', null);
+app.library.writers = require('./lib/count')(app.library.films, 'writer', 'key', null);
+app.library.years = require('./lib/count')(app.library.films, 'year', 'key', null);
+app.library.titles = require('./lib/count')(app.library.films, 'title', 'key', null);
 
 /*
  * Describe the site routes, passing app as a parameter.
@@ -94,14 +96,14 @@ app.library.years = require('./lib/count')(app.library.films, 'year', 'key', nul
 
 app.get(/^(\/|\/home)$/, require('./routes/index')(app));
 app.get(/^\/(genre|year|director|writer)\/*/, require('./routes/category')(app));
-app.get('/list', require('./routes/list')(app))
-app.get('/search', require('./routes/search')(app))
+app.get('/list', require('./routes/list')(app));
+app.get('/search', require('./routes/search')(app));
 app.get(/\/8dm1n(\/[a-zA-Z0-9]*)?/, require('./routes/admin')(app));
 app.get('/about', require('./routes/about')(app));
 app.get('/show/*', require('./routes/show')(app));
 app.get('/json/*', require('./routes/json')(app));
 app.get('/bin/*', require('./routes/bin')(app));
-app.get('/static/*', require('./routes/static')(app))
+app.get('/static/*', require('./routes/static')(app));
 app.use(require('./routes/fourohfour')(app));
 
 /*

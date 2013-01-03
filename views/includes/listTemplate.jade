@@ -8,8 +8,12 @@
 |     <% } else { 
 |         var first = prop[0].toLowerCase()
 |         if (first === letter) {
-|     %>
-|           <li class="listItem"><%= prop %></li>
+|           if (type === 'title') {
+|           %>
+|             <li class="listItem" id="<%= obj[prop] %>"><%= prop %></li>
+|           <% } else { %>
+|             <li class="listItem"><%= prop %></li>
+|           <% } %>  
 |         <% } %>
 |       <% } %>
 |     <% } %>

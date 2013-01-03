@@ -15,8 +15,9 @@ function show(app) {
       , core = require('../lib/core/core')
       , url = core.getUrlObj(req), obj = {}
       , data = core.jsonPath(library, '$..films[?(@.id===' + url.query.id + ')]')[0]
+      ;
 
     res.render('show', {menu: app.library.menu, title: data.title, year: data.year });
-  }
+  };
 
 }

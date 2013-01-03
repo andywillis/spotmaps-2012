@@ -6,6 +6,7 @@ block content
       form
         label(class="listLabel")
           span(class="formSpan selected", id="formGenre") genre
+          span(class="formSpan", id="formTitle") title
           span(class="formSpan", id="formDirector") director
           span(class="formSpan", id="formWriter") writer
           span(class="formSpan", id="formYear") year
@@ -22,6 +23,7 @@ block content
             - }
         div(id="list")
         div(class="hidden", id="genres")= genres
+        div(class="hidden", id="titles")= titles
         div(class="hidden", id="directors")= directors
         div(class="hidden", id="writers")= writers
         div(class="hidden", id="years")= years

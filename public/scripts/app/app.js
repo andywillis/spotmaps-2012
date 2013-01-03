@@ -37,9 +37,9 @@ $(document).ready(function () {
       // Other
       , imageData = undefined
       , slice = Array.prototype.slice
-      , imagesLoadedCheck, listCategory = 'genre', list, category
+      , imagesLoadedCheck, listCategory = 'genre', list, category, labelType
       , page = 0, pageRange = 10, pageStart = page * pageRange, pageEnd = (page + 1) * pageRange
-      , categories = ['genres', 'directors', 'writers', 'years']
+      , categories = ['genres', 'titles', 'directors', 'writers', 'years']
       ;
 
     /*
@@ -404,12 +404,20 @@ $(document).ready(function () {
     });
 
     /*
-     * Redirect when a list item is selected.
+     * Redirect when a list item is selected. There's a slight difference between how
+     * titles are processed because of the way that they are dealt with on the server
+     * to account for duplicates. Titles have ids. This change is reflected in
+     * listTemplate.jade, and also in count.js. Otherwise we could have had a decent route
+     * i.e. /title/[name] for that too.
      */
 
     $(document).on('click', '.listItem', function () {
-      var labelType = ['/', listCategory, '/'].join('');
-      window.location = labelType + this.innerHTML;
+      if (!this.id) {
+        labelType = ['/', listCategory, '/'].join('');
+        window.location = labelType + this.innerHTML;
+      } else {
+        window.location = '/show/?id=' + this.id;
+      }
     });
 
   }());
