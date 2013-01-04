@@ -15,7 +15,7 @@ var fs = require('fs')
  * Variables
  */
 
-var app, dbox, dbApp, libraryLocation;
+var app, dbox, dbApp, libraryLocation, film, i, len;
 
 /*
  * Blank the console and configure express
@@ -81,7 +81,20 @@ app.static = staticObj = {
  */
 
 libraryLocation = './data/library.json';
-app.library = JSON.parse(fs.readFileSync(libraryLocation, 'utf-8'));
+libraryImport = JSON.parse(fs.readFileSync(libraryLocation, 'utf-8'));
+
+app.library = {};
+app.library.films = [];
+
+/*
+ * Add the films to the library.
+ */
+
+for (i = 0, len = libraryImport.films.length; i < len; i++) {
+  film = libraryImport.films[i];
+  if (film.display === true) app.library.films.push(film);
+}
+
 app.library.menu = require('./lib/count')(app.library.films, 'genre', 'value', 12);
 app.library.genres = require('./lib/count')(app.library.films, 'genre', 'key', null);
 app.library.directors = require('./lib/count')(app.library.films, 'director', 'key', null);

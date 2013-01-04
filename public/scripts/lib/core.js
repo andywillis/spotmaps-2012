@@ -54,7 +54,11 @@
     if (args.type === 'text') return document.createTextNode(args.text);
     if (args.type === 'frag') return document.createDocumentFragment();
     el = document.createElement(args.el);
-    for (var p in args) { if (!~del.indexOf(p)) { el.setAttribute(p, args[p]); } }
+    for (var p in args) {
+      if (!~del.indexOf(p)) {
+        el.setAttribute(p === 'cls' ? 'class' : p, args[p]);
+      }
+    }
     return el;
   };
   

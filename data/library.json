@@ -144,7 +144,7 @@
 			"year": 1960
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Arbitrage",
 			"numberOfSpots": 6780,
 			"filename": "Arbitrage.jpg",
@@ -199,7 +199,7 @@
 			"year": 2001
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Bad Ass",
 			"numberOfSpots": 5640,
 			"filename": "Bad Ass.jpg",
@@ -221,7 +221,7 @@
 			"id": 20
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Bay, The",
 			"numberOfSpots": 5340,
 			"filename": "Bay, The.jpg",
@@ -232,7 +232,7 @@
 			"year": 2012
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Beasts Of The Southern Wild",
 			"numberOfSpots": 5880,
 			"filename": "Beasts Of The Southern Wild.jpg",
@@ -342,7 +342,7 @@
 			"year": 1983
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Booster",
 			"numberOfSpots": 4560,
 			"filename": "Booster.jpg",
@@ -353,7 +353,7 @@
 			"year": 2012
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Boot Tracks",
 			"numberOfSpots": 5760,
 			"filename": "Boot Tracks.jpg",
@@ -364,7 +364,7 @@
 			"year": 2012
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Brave",
 			"numberOfSpots": 5880,
 			"filename": "Brave.jpg",
@@ -463,7 +463,7 @@
 			"id": 42
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Chained",
 			"numberOfSpots": 5940,
 			"filename": "Chained.jpg",
@@ -496,7 +496,7 @@
 			"year": 2008
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Citadel",
 			"numberOfSpots": 5340,
 			"filename": "Citadel.jpg",
@@ -562,7 +562,7 @@
 			"id": 51
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Cosmopolis",
 			"numberOfSpots": 6300,
 			"filename": "Cosmopolis.jpg",
@@ -683,7 +683,7 @@
 			"year": 1973
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Dredd",
 			"numberOfSpots": 5940,
 			"filename": "Dredd.jpg",
@@ -760,7 +760,7 @@
 			"id": 69
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "End Of Watch",
 			"numberOfSpots": 6300,
 			"filename": "End Of Watch.jpg",
@@ -1013,7 +1013,7 @@
 			"id": 93
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Holy Motors",
 			"numberOfSpots": 6960,
 			"filename": "Holy Motors.jpg",
@@ -1233,7 +1233,7 @@
 			"id": 114
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Kon Tiki",
 			"numberOfSpots": 6840,
 			"filename": "Kon Tiki.jpg",
@@ -1310,7 +1310,7 @@
 			"year": 1994
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Lawless",
 			"numberOfSpots": 7260,
 			"filename": "Lawless.jpg",
@@ -1321,7 +1321,7 @@
 			"year": 2012
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Liberal Arts",
 			"numberOfSpots": 6120,
 			"filename": "Liberal Arts.jpg",
@@ -1376,7 +1376,7 @@
 			"id": 127
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Looper",
 			"numberOfSpots": 6840,
 			"filename": "Looper.jpg",
@@ -1563,7 +1563,7 @@
 			"year": 2011
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "ParaNorman",
 			"numberOfSpots": 5580,
 			"filename": "Paranorman.jpg",
@@ -1618,7 +1618,7 @@
 			"year": 1970
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Perks Of Being A Wallflower, The",
 			"numberOfSpots": 6420,
 			"filename": "Perks Of Being A Wallflower, The.jpg",
@@ -1651,7 +1651,7 @@
 			"id": 152
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Pitch Perfect",
 			"numberOfSpots": 7020,
 			"filename": "Pitch Perfect.jpg",
@@ -1695,7 +1695,7 @@
 			"year": 1987
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Premium Rush",
 			"numberOfSpots": 5280,
 			"filename": "Premium Rush.jpg",
@@ -1805,7 +1805,7 @@
 			"year": 2010
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Ruby Sparks",
 			"numberOfSpots": 6540,
 			"filename": "Ruby Sparks.jpg",
@@ -1827,7 +1827,7 @@
 			"year": 1923
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Safety not Guarunteed",
 			"numberOfSpots": 5400,
 			"filename": "Safety not Guarunteed.jpg",
@@ -1882,7 +1882,7 @@
 			"year": 2009
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Seeking a Friend For The End Of The World",
 			"numberOfSpots": 6360,
 			"filename": "Seeking a Friend For The End Of The World.jpg",
@@ -1937,7 +1937,7 @@
 			"id": 179
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Sinister",
 			"numberOfSpots": 6360,
 			"filename": "Sinister.jpg",
@@ -2146,7 +2146,7 @@
 			"year": 2007
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Trouble With The Curve",
 			"numberOfSpots": 7380,
 			"filename": "Trouble With The Curve.jpg",

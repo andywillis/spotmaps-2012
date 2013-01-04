@@ -1,5 +1,6 @@
 var core = require('../lib/core/core')
   , fs = require('fs')
+  ;
 
 exports = module.exports = serveData;
 
@@ -31,39 +32,40 @@ function serveData(app) {
         , bytes = metadata.bytes
         , etag = bytes + '-' + Date.parse(modified)
         , data = entry.data
+        ;
 
       res.setHeader('Last-Modified', modified);
 
       if (req.headers['if-none-match'] == etag) {
-        res.statusCode = 304
-        res.end()
+        res.statusCode = 304;
+        res.end();
       } else {
         res.setHeader('Cache-Control', 'public, max-age=345600');
         res.setHeader('Expires', new Date(Date.now() + 345600000).toUTCString());
-        res.setHeader('Content-length', bytes)
-        res.setHeader('Content-Type', contentType)
+        res.setHeader('Content-length', bytes);
+        res.setHeader('Content-Type', contentType);
         res.setHeader('ETag', etag);
-        res.statusCode = 200
-        res.end(data)
+        res.statusCode = 200;
+        res.end(data);
       }
     }
 
     if (foundStaticFile) {
-      serve(foundStaticFile)
+      serve(foundStaticFile);
     } else {
       app.dbox.get(core.decode(pathname), function(status, data, metadata) {
         if (status && status === 200) {
-          var entry = app.static.spotmaps[pathname] = {}
-          entry.data = data
-          entry.metadata = metadata
-          serve(entry)
+          var entry = app.static.spotmaps[pathname] = {};
+          entry.data = data;
+          entry.metadata = metadata;
+          serve(entry);
         } else {
           console.log('File not found', pathname);
-          res.send(404)
+          res.send(404);
         }
-      })
+      });
     }
     
-  }
+  };
 
 }

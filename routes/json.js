@@ -15,10 +15,10 @@ function get(app) {
     , films = library.films
     , limit = 5
     , byTitle = function(a, b) {
-        var nameA = a.title.toLowerCase(), nameB = b.title.toLowerCase()
-        if (nameA < nameB) return -1
-        if (nameA > nameB) return 1
-        return 0
+        var nameA = a.title.toLowerCase(), nameB = b.title.toLowerCase();
+        if (nameA < nameB) return -1;
+        if (nameA > nameB) return 1;
+        return 0;
       }
 
   /**
@@ -35,23 +35,23 @@ function get(app) {
       ;
 
     if (val === 'All') {
-      sortedData = films.sort(function(a, b) { return b['id'] - a['id'] })
-      callback(sortedData)
+      sortedData = films.sort(function(a, b) { return b['id'] - a['id']; } );
+      callback(sortedData);
     } else {
       if (key === 'year') {
-        data = core.jsonPath(library, '$..films[?(@.' + key + '===' + val + ')]')
+        data = core.jsonPath(library, '$..films[?(@.' + key + '===' + val + ')]');
       } else {
         if (key === 'director' || key === 'writer' || 'genre') {
-          data = core.jsonPath(library, '$..films[?(@.' + key + '.indexOf("'+ val +'") > -1)]')
+          data = core.jsonPath(library, '$..films[?(@.' + key + '.indexOf("'+ val +'") > -1)]');
         } else {
-          data = core.jsonPath(library, '$..films[?(@.' + key + '==="' + val + '")]')
+          data = core.jsonPath(library, '$..films[?(@.' + key + '==="' + val + '")]');
         }
       }
       if (data) {
-        sortedData = data.sort(byTitle)
-        callback(sortedData)
+        sortedData = data.sort(byTitle);
+        callback(sortedData);
       } else {
-        callback(false)
+        callback(false);
       }
     }
   }
@@ -63,24 +63,24 @@ function get(app) {
    */
 
   return function get(req, res) {
-    var url = core.getUrlObj(req), obj = {}
-    if (url.query.genre !== undefined) obj.genre = url.query.genre
-    if (url.query.year !== undefined) obj.year = url.query.year
-    if (url.query.writer !== undefined) obj.writer = url.query.writer
-    if (url.query.director !== undefined) obj.director = url.query.director
+    var url = core.getUrlObj(req), obj = {};
+    if (url.query.genre !== undefined) obj.genre = url.query.genre;
+    if (url.query.year !== undefined) obj.year = url.query.year;
+    if (url.query.writer !== undefined) obj.writer = url.query.writer;
+    if (url.query.director !== undefined) obj.director = url.query.director;
     extractData(obj, function(data) {
       if (data) {
         if (url.query.api) {
-          var obj = {}
-          obj.films = data
-          res.send(JSON.stringify(obj))
+          var obj = {};
+          obj.films = data;
+          res.send(JSON.stringify(obj));
         } else {
-          res.send(JSON.stringify(data))
+          res.send(JSON.stringify(data));
         }
       } else {
-        res.send(data)
+        res.send(data);
       }
-    })
+    });
   };
 
 }

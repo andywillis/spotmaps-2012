@@ -2,7 +2,7 @@
  * Dependancies
  */
 
-var fs = require('fs')
+var fs = require('fs');
 
 exports = module.exports = bin;
 
@@ -26,21 +26,21 @@ function bin(app) {
       , filename = data.title
       , foundHexFile = app.static.hex[data.title]
       , fileLocation = 'hex/' + filename + '.hex'
+      ;
 
     if (foundHexFile) {
-      console.log('From cache.');
-      res.send(foundHexFile)
+      res.send(foundHexFile);
     } else {
       app.dbox.get(fileLocation, function(status, data, metadata) {
         if (status && status === 200) {
-          app.static.hex[filename] = data
-          res.send(data)
+          app.static.hex[filename] = data;
+          res.send(data);
         } else {
           console.log(status,'Error loading hex file:', fileLocation);
         }
-      })
+      });
     }
 
-  }  
+  };
 
 }

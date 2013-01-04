@@ -35,7 +35,7 @@ $(document).ready(function () {
       , getQuery = (route === '/') ? 'genre=all' : [route.slice(1) + '=', type].join('')
 
       // Other
-      , imageData = undefined
+      , imageData = null
       , slice = Array.prototype.slice
       , imagesLoadedCheck, listCategory = 'genre', list, category, labelType
       , page = 0, pageRange = 10, pageStart = page * pageRange, pageEnd = (page + 1) * pageRange
@@ -54,7 +54,7 @@ $(document).ready(function () {
 
     function processData(spotmapList) {
 
-      var group = core.create({ el: 'div', class: 'group' })
+      var group = core.create({ el: 'div', cls: 'group' })
         , frag = core.create({ type: 'frag' })
         , br = core.create({type: 'el', el: 'br'})
         ;
@@ -63,7 +63,7 @@ $(document).ready(function () {
 
         if (map.display) {
           // Create new elements
-          var frame = core.create({ el: 'div', class: 'frame clearfix' })
+          var frame = core.create({ el: 'div', cls: 'frame clearfix' })
             , br = core.create({type: 'el', el: 'br'})
             ;
 
@@ -171,12 +171,12 @@ $(document).ready(function () {
      * load it in from the server. Call convertAndDisplay().
      */
 
-    function getCanvasData (size ) {
+    function getCanvasData () {
       
       var href = window.location.href.split('?')[1]
         , id = href.split('=')[1]
         , url = '/bin/?id=' + id
-        , size = size || 8
+        , size = 8
         ;
 
       if (imageData) {
@@ -205,13 +205,10 @@ $(document).ready(function () {
         if (err) {
           console.log(err);
         } else {
-          img = core.create({
-            el:'img',
-            class: 'canvas',
-            src: canvas.data.toDataURL(),
-            width: canvas.size[0],
-            height: canvas.size[1]
-          });
+          width = canvas.size[0];
+          height = canvas.size[1];
+          src = canvas.data.toDataURL();
+          img = $('<img class="canvas" src="' + src + '" width="' + width + '" height="' + height + '">');
           $content.empty().append(img);
         }
       });
@@ -302,6 +299,7 @@ $(document).ready(function () {
 
     $document.on('click', '#right', function () {
       page++, pageStart = page * pageRange, pageEnd = (page + 1) * pageRange;
+      window.location = '#2';
       buildGroup();
     });
 
