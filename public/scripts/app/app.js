@@ -26,6 +26,7 @@ $(document).ready(function () {
 
       // Routing
       , pathname = window.location.pathname
+      , hash = window.location.hash
       , route = '/' + pathname.split('/')[1]
       , menu = pathname.split('/')[1]
       , staticMatch = staticRegex.test(pathname)
@@ -38,7 +39,8 @@ $(document).ready(function () {
       , imageData = null
       , slice = Array.prototype.slice
       , imagesLoadedCheck, listCategory = 'genre', list, category, labelType
-      , page = 0, pageRange = 10, pageStart = page * pageRange, pageEnd = (page + 1) * pageRange
+      , page = hash ? parseInt(hash.replace('#', ''), 10) : 0
+      , pageRange = 10, pageStart = (page * pageRange), pageEnd = (page + 1) * pageRange
       , categories = ['genres', 'titles', 'directors', 'writers', 'years']
       ;
 
@@ -299,7 +301,7 @@ $(document).ready(function () {
 
     $document.on('click', '#right', function () {
       page++, pageStart = page * pageRange, pageEnd = (page + 1) * pageRange;
-      window.location = '#2';
+      window.location = '#' + page;
       buildGroup();
     });
 
@@ -309,6 +311,7 @@ $(document).ready(function () {
 
     $document.on('click', '#left', function () {
       page--, pageStart = page * pageRange, pageEnd = (page + 1) * pageRange;
+      window.location = '#' + page;
       buildGroup();
     });
 
@@ -323,7 +326,7 @@ $(document).ready(function () {
      * Add email address
      */
 
-    if (menu === 'about') $('.contact').attr('href', 'mailto:awillis@lavabit.com');
+    if (menu === 'about') $('.contact').attr('href', 'mailto:spotmaps@lavabit.com');
 
     /*
      * Update RSS

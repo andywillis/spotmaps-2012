@@ -34,13 +34,13 @@ app.configure(function () {
   app.use(require('less-middleware')({
     compress:true,
     debug: false,
-    force: true,
+//    force: true,
     once: true,
     prefix: '/stylesheets',
     src: __dirname + '/less',
     dest: __dirname + '/public/stylesheets/'
   }));
-  app.use(require('./lib/metric.js')());
+//  app.use(require('./lib/metric.js')());
   app.use(app.router);
   app.use(express.compress());
   app.use(express.static(path.join(__dirname, "public"), { maxAge: 360000 }));

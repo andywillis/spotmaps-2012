@@ -364,7 +364,7 @@
 			"year": 2012
 		},
 		{
-			"display": false,
+			"display": true,
 			"title": "Brave",
 			"numberOfSpots": 5880,
 			"filename": "Brave.jpg",
@@ -1156,7 +1156,7 @@
 			"year": 1948
 		},
 		{
-			"display": true,
+			"display": false,
 			"title": "Kill Em All",
 			"numberOfSpots": 5400,
 			"filename": "Kill Em All.jpg",
