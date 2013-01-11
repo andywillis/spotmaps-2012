@@ -14,6 +14,7 @@ $(document).ready(function () {
       , $genreList = $('nav ul ul')
       , $loader = $('div#loader')
       , $alphabet = $('.alphabet')
+      , $rgb = $('.rgb')
 
       // Regex
       , staticRegex = /(^\/(list|search|about)+$)/
@@ -39,6 +40,7 @@ $(document).ready(function () {
       , imageData = null
       , slice = Array.prototype.slice
       , imagesLoadedCheck, listCategory = 'genre', list, category, labelType
+//      , brightness = false, rgb = {red: true, green: true, blue: true}
       , page = hash ? parseInt(hash.replace('#', ''), 10) : 0
       , pageRange = 10, pageStart = (page * pageRange), pageEnd = (page + 1) * pageRange
       , categories = ['genres', 'titles', 'directors', 'writers', 'years']
@@ -98,7 +100,12 @@ $(document).ready(function () {
      * is loaded when showMatch (the test for the show route) is true
      * and loops over it building a canvas which is then returned.
      */
-
+/*
+    function getBrightness(r,g,b) {
+      var bright = Math.round(Math.sqrt((r * r * 0.241) + (g * g * 0.691) + (b * b * 0.068)));
+      return [bright, bright, bright];
+    }
+*/
     function createSpotmap(size, callback) {
       if (imageData) {
         var spot = { size: size, border: 'rgba(0,0,0,1)', borderWidth: 0.2 }
@@ -329,14 +336,18 @@ $(document).ready(function () {
     if (menu === 'about') $('.contact').attr('href', 'mailto:spotmaps@lavabit.com');
 
     /*
-     * Update RSS
+     * Load library
      */
      
-    $(document).on('click', '#updateRSS', function(event) {
+    $(document).on('click', '#loadLibrary', function(event) {
       event.preventDefault();
-      url = core.unshake(47,56,100,109,49,110,47,117,112,100,97,116,101,82,83,83);
+      url = core.unshake(47,56,100,109,49,110,47,108,111,97,100,76,105,98,114,97,114,121);
       getData(url, function(err, data) {
-        $('#rssUpdated').fadeIn();
+        if (err) {
+          console.log(err);
+        } else {
+          if (data === 'Library loaded') $('#libraryLoaded').fadeIn(2000).fadeOut(2000);
+        }
       });
     });
 
@@ -377,6 +388,27 @@ $(document).ready(function () {
       convertAndDisplay(parseInt(size, 10));
     });
 
+    /*
+     * Update canvas when brightness is changed.
+     */
+/*
+    $(document).on('click', '.gray', function () {
+      $rgb.toggleClass('selected');
+      $(this).toggleClass('selected');
+      brightness = !brightness;
+      var size = $('.size.selected').html();
+      convertAndDisplay(parseInt(size, 10));
+    });
+
+    $(document).on('click', '.rgb', function () {
+      $(this).toggleClass('selected');
+      var col = $(this).attr('id');
+      console.log(col);
+      rgb[col] = !rgb[col];
+      var size = $('.size.selected').html();
+      convertAndDisplay(parseInt(size, 10));
+    });
+*/
     /*
      * Updates the list screen when a category is selected
      */

@@ -2,21 +2,11 @@ doctype 5
 html
   head
     title Spotmaps
-    meta(charset="utf-8")
-    meta(property="og:image", content="/images/og.png")
-    meta(property="og:title", content="Film colour maps library")
-    meta(property="og:description", content="A project to capture and display colour blueprint information for a library of films.")
-    meta(name="description", content="Film colour maps library")
-    meta(name="author", content="Andy Willis")
-    meta(name="HandheldFriendly", content="True")
-    meta(name="MobileOptimized", content="320")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="cleartype", content="on")
+    include includes/meta
     link(rel="shortcut icon", href="/favicon.ico")
     link(rel="stylesheet", href="/stylesheets/style.css")
     link(rel="alternate", href="/rss/spotmaps.rss", type="application/rss+xml", title="rss")
-    script(src="/scripts/lib/google.js")
-    script(src="/scripts/lib/LAB.js")
+    include includes/google
   body
     include includes/header
     block content

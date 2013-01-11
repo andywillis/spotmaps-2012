@@ -3,7 +3,7 @@
   background-color: @offwhite3;   
 }
 
-#rssUpdated { border-radius: 10px; padding: 5px; background-color: rgba(130,140,50,0.6); margin-left: 30px; display: none }
+#libraryLoaded { border-radius: 10px; padding: 5px; background-color: rgba(130,140,50,0.6); margin-left: 30px; display: none }
 
 #left,
 #right {
@@ -122,6 +122,10 @@ div#noscript {
 
 #loader { z-index: 1000; position: fixed; right: 0; top: 0; background-color: @offred; color: white; padding: 10px; visibility: hidden}
 
+#red {margin-left: 20px}
+
+.rgb,
+.gray,
 .size {
   color: @offwhite;
   border-radius: .3em;
@@ -135,9 +139,16 @@ div#noscript {
 }
 
 div#title { text-align: center; margin-top: 30px }
+
+.rgb.selected,
+.gray.selected,
 .size.selected {border: 1px solid white }
+
 #sizes { padding-top: 20px }
 #sizes ul { width: 100%; display: block; margin: 0 auto ; text-align: center }
+
+.rgb:hover,
+.gray:hover,
 .size:hover { cursor: pointer; text-shadow: 0px 0px 10px rgba(255,255,255,1) }
 
 img.canvas {display: block;margin: 0 auto }

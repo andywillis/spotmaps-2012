@@ -3257,6 +3257,40 @@
 			"genre": ["Drama", "Mystery"],
 			"writer": ["Granik Debra", "Rosellini, Anne"],
 			"year": 2010
+		},
+				{
+			"title": "Moon",
+			"numberOfSpots": 5640,
+			"filename": "Moon.jpg",
+			"id": 301,
+			"display": true,
+			"director": ["Jones, Duncan"],
+			"genre": ["Drama", "Science Fiction"],
+			"writer": ["Parker, Nathan"],
+			"year": 2009,
+			"updated": true
+		},
+		{
+			"title": "Retroactive",
+			"numberOfSpots": 5460,
+			"filename": "Retroactive.jpg",
+			"id": 302,
+			"display": true,
+			"director": ["Morneau, Louis"],
+			"genre": ["Action", "Adventure", "Crime", "Science Fiction", "Thriller"],
+			"writer": ["Hamilton-Wright, Michael", "Strauss, Robert", "Badger, Phillip"],
+			"year": 1997
+		},
+		{
+			"title": "Rurouni Kenshin",
+			"numberOfSpots": 8460,
+			"filename": "Rurouni Kenshin.jpg",
+			"id": 303,
+			"display": true,
+			"director": ["Ohtomo, Keishi"],
+			"genre": ["Action", "Drama", "History"],
+			"writer": ["Fujii, Kiyomi", "Ohtomo, Keishi"],
+			"year": 2012
 		}
 	]
 }

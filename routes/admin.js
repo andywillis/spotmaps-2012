@@ -4,6 +4,7 @@
 
 var fs = require('fs')
   , core = require('../lib/core/core')
+  , loadLibrary = require('../lib/loadLibrary')
   ;
 
 /*
@@ -26,6 +27,11 @@ function admin(app) {
     reqObj = core.getUrlObj(req), pathname = reqObj.pathname.replace('/8dm1n/','');
     switch(pathname) {
 
+      case 'loadLibrary':
+        loadLibrary(app, {updateRSS: true});
+        res.send('Library loaded');
+      break;
+
       case 'metric.log':
         filename = app.ROOT + '/data/log/metric.log';
         fs.exists(filename, function(exists) {
@@ -40,23 +46,6 @@ function admin(app) {
                 });
                 res.end(data);
               }
-            });
-          }
-        });
-      break;
-
-      case 'updateRSS':
-        updateList = core.jsonPath(app.library, '$..films[?(@.updated===true)]');
-        len = updateList.length;
-        number = (len === 1) ? updateList[len - 1].id : updateList[len - 1].id - updateList[len - 2].id;
-        rssTemplate = fs.readFile('./views/includes/rssTemplate.html', 'utf-8', function(err, template) {
-          if (err) {
-            console.log(err);
-          } else {
-            content = template.replace('#{number}', number);
-            fs.writeFile('./public/rss/spotmaps.rss', content, 'utf-8', function() {
-              console.log('RSS feed updated.');
-              res.send('hallo');
             });
           }
         });

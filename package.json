@@ -1,7 +1,7 @@
 {
   "name": "spotmaps",
   "preferGlobal": "false",
-  "version": "0.0.1-80",
+  "version": "0.0.1-87",
   "scripts": {
     "start": "app.js"
   },
@@ -12,7 +12,8 @@
     "static-asset": "0.5.0",
     "dbox": "0.5.5",
     "colors": "0.6.0-1",
-    "less-middleware": "0.1.x"
+    "less-middleware": "0.1.x",
+    "versionator": "0.2.0"
   },
   "author": {
     "name": "Andy Willis",

@@ -20,6 +20,7 @@ function get(app) {
         if (nameA > nameB) return 1;
         return 0;
       }
+    ;
 
   /**
    * Pull all films from the film list that match the genre using jsonPath

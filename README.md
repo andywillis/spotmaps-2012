@@ -4,10 +4,13 @@ Express application to display my film blueprints.
 
 ## To do
 
-* Paging
 * Redis deployment
-* Image holders
-* Improved error checking
+
+## Releases
+
+**0.3** Admin support. Moved library to dropbox with the rest of the static files.
+**0.2** Added paging and RSS subscription.
+**0.1** Main release.
 
 ## License
 spotmaps &copy; 2012 Andy Willis  

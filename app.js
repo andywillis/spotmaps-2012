@@ -6,26 +6,38 @@ var fs = require('fs')
   , express = require('express')
   , config = require('./config')
   , colors = require('colors').setTheme(config.colorTheme)
+  , versionator = require('versionator')
   , core = require('./lib/core/core')
   , http = require('http')
   , path = require('path')
+  , loadLibrary = require('./lib/loadLibrary')
   ;
 
 /*
  * Variables
  */
 
-var app, dbox, dbApp, libraryLocation, film, i, len;
+var app, basic, dbox, dbApp, libraryLocation, film, i, len;
 
 /*
- * Blank the console and configure express
+ * Blank the console
  */
 
 core.clear();
 console.log((config.name + ' v' + config.version).appName);
+
+/*
+ * Configure express
+ */
+
 app = express();
+app.VERSION = '0.3';
 app.ROOT = __dirname;
 app.configure(function () {
+  
+  basic = versionator.createBasic('v' + app.VERSION);
+  app.locals({ versionPath: basic.versionPath });
+  
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view options', { layout: false });
@@ -40,10 +52,11 @@ app.configure(function () {
     src: __dirname + '/less',
     dest: __dirname + '/public/stylesheets/'
   }));
-//  app.use(require('./lib/metric.js')());
+  
   app.use(app.router);
   app.use(express.compress());
   app.use(express.static(path.join(__dirname, "public"), { maxAge: 360000 }));
+
 });
 
 app.configure('development', function () {
@@ -80,27 +93,13 @@ app.static = staticObj = {
  * Load the film library
  */
 
-libraryLocation = './data/library.json';
-libraryImport = JSON.parse(fs.readFileSync(libraryLocation, 'utf-8'));
+//libraryLocation = './data/library.json';
+//libraryImport = JSON.parse(fs.readFileSync(libraryLocation, 'utf-8'));
 
+app.libraryLocation = 'library/library.json';
 app.library = {};
 app.library.films = [];
-
-/*
- * Add the films to the library.
- */
-
-for (i = 0, len = libraryImport.films.length; i < len; i++) {
-  film = libraryImport.films[i];
-  if (film.display === true) app.library.films.push(film);
-}
-
-app.library.menu = require('./lib/count')(app.library.films, 'genre', 'value', 12);
-app.library.genres = require('./lib/count')(app.library.films, 'genre', 'key', null);
-app.library.directors = require('./lib/count')(app.library.films, 'director', 'key', null);
-app.library.writers = require('./lib/count')(app.library.films, 'writer', 'key', null);
-app.library.years = require('./lib/count')(app.library.films, 'year', 'key', null);
-app.library.titles = require('./lib/count')(app.library.films, 'title', 'key', null);
+loadLibrary(app);
 
 /*
  * Describe the site routes, passing app as a parameter.
@@ -118,6 +117,7 @@ app.get('/json/*', require('./routes/json')(app));
 app.get('/bin/*', require('./routes/bin')(app));
 app.get('/static/*', require('./routes/static')(app));
 app.use(require('./routes/fourohfour')(app));
+console.log('Routes loaded.'.green);
 
 /*
  * Run the server

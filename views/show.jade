@@ -5,7 +5,11 @@ block content
     h2 #{title} (#{year})
   div(id="sizes")
     ul
-      - for(var i = 2, len = 20; i < len; i+=2) {
+      - for(var i = 2, len = 20; i <= len; i+=2) {
         li(class="size")= i
       - }
+      //li(id="red", class="rgb selected") R
+      //li(id="green", class="rgb selected") G
+      //li(id="blue", class="rgb selected") B
+      //li(class="gray") Gr
   div(id="content")

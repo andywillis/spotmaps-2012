@@ -1,6 +1,4 @@
-script
-  $LAB
-    .script("/scripts/lib/jquery-1.7.2.min.js").wait()
-    .script("/scripts/lib/underscore-1.4.2-min.js")
-    .script("/scripts/lib/core.js")
-    .script("/scripts/app/app.js")
+script(src="/scripts/lib/jquery-1.7.2.min.js")
+script(src="/scripts/lib/underscore-1.4.2-min.js")
+script(src="/scripts/lib/core.js")
+script(src=versionPath("/scripts/app/app.js"))
