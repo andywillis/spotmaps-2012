@@ -4,7 +4,7 @@ Express website to display my film colour blueprints.
 
 ## To do
 
-* Redis deployment
+Redis deployment
 
 ## Releases
 
