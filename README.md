@@ -1,6 +1,6 @@
-# Film colour blueprints
+# Spotmaps - film colour blueprints
 
-Express application to display my film blueprints.
+Express website to display my film colour blueprints.
 
 ## To do
 
@@ -15,5 +15,5 @@ Express application to display my film blueprints.
 **0.1** Main release.
 
 ## License
-spotmaps &copy; 2012 Andy Willis  
+spotmaps &copy; 2012-13 Andy Willis  
 Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
