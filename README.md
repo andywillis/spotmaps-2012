@@ -8,7 +8,7 @@ Express website to display my film colour blueprints.
 
 ## Releases
 
-**0.3** Admin support. Moved library to dropbox with the rest of the static files.
+**0.3** Admin support. Moved library to dropbox with the rest of the static files. This allows the library to be updated without rebooting the server.
 
 **0.2** Added paging and RSS subscription.
 
