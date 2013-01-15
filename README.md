@@ -8,6 +8,9 @@ Redis deployment
 
 ## Releases
 
+**0.4**  
+Removed inefficiency of grabbing unnecessary roundtrips to the server - loading is quicker.
+
 **0.3**  
 Admin support.  
 Moved library to dropbox with the rest of the static files. This allows the library to be updated without rebooting the server.

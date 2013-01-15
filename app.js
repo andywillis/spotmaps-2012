@@ -31,7 +31,7 @@ console.log((config.name + ' v' + config.version).appName);
  */
 
 app = express();
-app.VERSION = '0.3';
+app.VERSION = '0.4';
 app.ROOT = __dirname;
 app.configure(function () {
   
