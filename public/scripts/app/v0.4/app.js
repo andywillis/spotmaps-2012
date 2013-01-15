@@ -306,20 +306,24 @@ $(document).ready(function () {
       });
     }
 
-
-    window.onhashchange = function (e) {
-      page = parseInt(e.newURL.split('#')[1], 10) || 0;
+    $(window).hashchange(function (e) {
+      page = parseInt(window.location.hash.split('#')[1], 10) || 0;
+      //page = parseInt(e.newURL.split('#')[1], 10) || 0;
       pageStart = page * pageRange, pageEnd = (page + 1) * pageRange;
       buildGroup();
-    };
+    });
 
     $document.swipe({
       swipe:function(event, direction, distance, duration, fingerCount) {
         if (direction === 'left') {
-          window.location = '#' + (++page);
+          if (pageEnd <= dataLen && dataLen > pageRange) {
+            window.location = '#' + (++page);
+          }
         }
         if (direction === 'right') {
-          window.location = '#' + (--page);
+          if (pageStart >= pageRange) {
+            window.location = '#' + (--page);
+          }
         }
       }
     });
