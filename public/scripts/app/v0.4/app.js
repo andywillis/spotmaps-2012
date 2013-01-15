@@ -313,6 +313,17 @@ $(document).ready(function () {
       buildGroup();
     };
 
+    $document.swipe({
+      swipe:function(event, direction, distance, duration, fingerCount) {
+        if (direction === 'left') {
+          window.location = '#' + (++page);
+        }
+        if (direction === 'right') {
+          window.location = '#' + (--page);
+        }
+      }
+    });
+
     /*
      * Next page
      */
