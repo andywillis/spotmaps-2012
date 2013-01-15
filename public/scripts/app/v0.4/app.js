@@ -4,8 +4,7 @@ $(document).ready(function () {
 
     var
         // jQuery
-        $win = $(window)
-      , $document = $(document)
+        $document = $(document)
       , $left = $('#left')
       , $right = $('#right')
       , $info = $('#info')
@@ -282,7 +281,6 @@ $(document).ready(function () {
       if (pageStart <= 0) $left.css({'visibility': 'hidden'});
       if (pageEnd <= dataLen && dataLen > pageRange) $right.css({'visibility': 'visible'});
       if (pageEnd >= dataLen) $right.css({'visibility': 'hidden'});
-      console.log(pageStart, pageEnd);
       var group = processData(parsedJson.slice(pageStart, pageEnd));
       $content.empty();
       $content.append(group);
@@ -308,14 +306,19 @@ $(document).ready(function () {
       });
     }
 
+
+    window.onhashchange = function (e) {
+      page = parseInt(e.newURL.split('#')[1], 10) || 0;
+      pageStart = page * pageRange, pageEnd = (page + 1) * pageRange;
+      buildGroup();
+    };
+
     /*
      * Next page
      */
 
     $document.on('click', '#right', function () {
-      page++, pageStart = page * pageRange, pageEnd = (page + 1) * pageRange;
-      window.location = '#' + page;
-      buildGroup();
+      window.location = '#' + (++page);
     });
 
     /*
@@ -323,9 +326,7 @@ $(document).ready(function () {
      */
 
     $document.on('click', '#left', function () {
-      page--, pageStart = page * pageRange, pageEnd = (page + 1) * pageRange;
-      window.location = '#' + page;
-      buildGroup();
+      window.location = '#' + (--page);
     });
 
     /*
