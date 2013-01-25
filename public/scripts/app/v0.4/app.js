@@ -355,7 +355,7 @@ $(document).ready(function () {
      * Add email address
      */
 
-    if (menu === 'about') $('.contact').attr('href', 'mailto:spotmaps@lavabit.com');
+    if (menu === 'about') $('.contact').attr('href', 'mailto:spotmap@lavabit.com');
 
     /*
      * Load library
